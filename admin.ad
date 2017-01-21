@@ -1,0 +1,107 @@
+= Verwaltungsbereich
+
+Im Verwaltungsbereich werden sämtliche Einstellungen, die zur Organisation der Flohmärkte, Verkäufer, Kategorien und Artikel notwendig sind. Es können ebenso Statistiken und bewertungen eingesehen sowie die Kassensoftware heruntergeladen werden.
+
+Den Verwaltungsbereich erreichen Sie, indem Sie auf der Hauptseite des Flohmarkthelfersystems an der Webadresse '/admin' anhängen.
+
+== Anmeldung
+
+Der Zugang zum Verwaltungsbereich ist durch Passwort geschützt:
+
+ [[[login]]]
+
+Jede Person, die Zugang zum Verwaltungsbereich benötigt, erhält ein Passwort bei der Einrichtung, was nach dem ersten Anmelden im Verwaltungsbereich geändert werden muss. Die Anmeldung erfolgt mit der eMail-Adresse und diesem Passwort. Sollten Sie das Passwort einmal vergessen haben, kontaktieren Sie uns bitte per Mail (mit der Mail-Adresse, die Sie bei der Anmeldung verwenden). Wir setzen für Sie dann ein neues Passwort, dass Sie dann wieder nach einer erfolgreichen Anmeldung ändern sollten.
+
+Nach einer erfolgreichen Anmeldung gelangen Sie auf die Hauptseite des Verwaltungsbereichs. Im oberen rechten Teil können Sie sehen, dass Sie angemeldet sind. Hier können Sie sich auch wieder aus dem Verwaltungsbereich abmelden und ihr Passwort ändern.
+
+ [[[login_info]]]
+
+ [[[password_change]]]
+
+== Hauptseite
+
+Nach einer erfolgreichen Anmeldung befinden Sie sich auf der Hauptseite des Verwaltungsbereichs. Hier können Sie sich direkt die Kassensystem-Software herunterladen und einige Statistiken für das System einsehen:
+
+ [[[admin]]]
+
+Von hier aus erreichen Sie sämtliche Funktionen über das Hauptmenü.
+
+ [[[menu]]]
+
+== Kategorien
+
+Kategorien stehen Verkäufern beim Anlegen von Artikeln zur Verfügung. Jeder Artikel ist einer bestimmten Kategorie zugeordnet. Die Kategorie wird mit der Artikelbeschreibung auf dem Etikett sichtbar sein. Es gibt ebenso Statistiken auf Basis von Kategorien, die es Ihnen erlauben, vor Termin bereits zu sehen, wie viele Artikel pro Kategorie durch Verkäufer eingegeben wurden.
+
+Jede Kategorie hat einen Namen. Optional können Sie für eine Kategorie bestimmen, wie viele Artikel dieser Kategorie pro Reservierung maximal angelegt werden können. Wenn Sie Spenden auf Ihrem Flohmarkt unterstützen, können können Sie ebenso bestimmen, ob Artikel einer Kategorie gespendet werden müssen, sollten diese nicht verkauft werden.
+
+=== Überkategorien
+
+Es ist möglich Hierarchien in den Kategorien zu bilden. Dies erreichen Sie, indem Sie zunächst Kategorien anlegen, die Sie als Überkategorien verwenden wollen (bspw. _Kleidung_, _Spielzeug_, ...) und dann weitere Kategorien anlegen, die Sie zu diesen Überkategorien zuordnen können (bspw. _Hose_ und _Jacke_ zu _Kleidung_, _Brettspiel_ und _Puzzle_ zu _Spielzeug_).
+
+Limitierungen von Überkategorien wirken sich auch auf die Unterkategorien aus. So können Sie festlegen, dass z.B. nur _20_ Artikel der Überkategorie __Kleidung__ erlaubt sind, aber _Spielzeug_ unbegrenzt ist. Weiterhin gelten natürlich die Limitierungen jeder Unterkategorie. Es gilt dabei stets das strengste Limit. Wenn bspw. _Kleidung_ auf 10 Artikel limitiert ist, _Schuhe_ aber als Unterkategorie mit 3, so kann jede Reservierung maximal 3 Artikel mit Kategorie _Schuhe_ anlegen, und weitere 7 Artikel mit anderen Kategorien dieser Überkategorie.
+
+=== Übersicht, bearbeiten, löschen
+
+Die Kategorieübersicht zeigt eine Liste aller angelegter Kategorien mit Name, Überkategorie, maximaler Artikelanzahl und ggf. Spendenzwang.
+
+ [[[categories/index]]]
+
+Sie können jede Kategorie bearbeiten oder löschen.
+
+NOTE: Eine gelöschte Kategorie ist immer noch im System vorhanden. Sie steht nur nicht mehr zur Auswahl bei der Artikeleingabe.
+
+ [[[categories/edit]]]
+
+== Verkäufer
+
+In der Verkäuferübersicht sind sämtliche Benutzer aufgelistet, welche sich auf der Webseite registriert haben. Es wird Name, eMail-Adresse, Gesamtanzahl eingegebener Artikel angezeigt, sowie ob der Verkäufer bereits aktiv ist.
+
+NOTE: Ein Verkäufer ist erst aktiv, nachdem er das erste mal in der Registrierungsbestätigungsmail einen Link angeklickt hat, der in den geschützten Verkäuferbereich führt. Nicht aktive Verkäufer können keine Reservierung erhalten oder per automatisch Mail angeschrieben werden, da womöglich die angegebene Mailadresse falsch ist.
+
+ [[[sellers/index]]]
+
+Über das Suchfeld kann die Verkäuferliste gefiltert werden. Es wird in allen Stammdaten nach den eingegebenen Text gesucht.
+
+ [[[sellers/search]]]
+
+NOTE: Erst mit Drücken von ENTER/RETURN wird die Suche durchgeführt. Wenn Sie wieder alle Verkäufer sehen wollen, löschen Sie den Text im Suchfeld und drücken erneut ENTER/RETURN.
+
+In der Übersicht können neue Verkäufer angelegt werden und vorhandene Verkäufer bearbeitet, gelöscht sowie die Details angezeigt werden.
+
+NOTE: Ein Löschen eines Verkäufers löscht die persönlichen Daten des Verkäufers und entfernt ihn aus der Liste der Verkäufer. Die mit dem Verkäufer in Verbindung stehenden Reservierungen, Artikel und Bewertungen verbleiben im System.
+
+=== Details
+
+In der Detailansicht eines Verkäufers sind dessen Stammdaten sowie sämtliche aktuelle und vergangene Reservierungen und eine Gesamtzahl aller vom Verkäufer eingegebener Artikel und erzeugten Etiketten aufgelistet.
+
+ [[[sellers/show]]]
+
+Man kann pro Reservierung zur Detailansicht des Termins springen oder die Artikel des auflisten und bearbeiten.
+
+NOTE: Diese Artikelansicht erlaubt die Bearbeitung der Artikel und Erzeugung der Etiketten für eine Reservierung *auch nach Artikeleingabeende*. Es können ebenso einzelne oder alle Etiketten wieder freigegeben werden.
+
+=== Bearbeiten/anlegen
+
+In der Bearbeitung eines Verkäufers lassen sich dessen Stammdaten verändern.
+
+ [[[sellers/edit]]]
+
+WARNING: Bitte achten Sie auf die Korrektheit der eMail-Adresse, wenn Sie diese ändern wollen. Sollte diese nicht korrekt sein, kann der Verkäufer keine Nachrichten mehr erhalten oder es bekommt sogar eine dritte Person die Mails und erhält damit Zugang zum geschützten Bereich des Verkäufers.
+
+NOTE: Ein frisch angelegter Verkäufer gilt noch als nicht aktiv. Es wird zunäcsht eine Registrierungsbestätigungsmail an die eingegebene eMail-Adresse geschickt. Erst mit Klick auf einen Link in der Reservierungsbestätigungsmail wird der Verkäufer aktiviert.
+
+== Termine
+
+=== Termin anlegen/bearbeiten
+
+=== Termin Detailansicht
+
+=== Reservierungen
+
+=== Statistiken
+
+=== Bewertungen
+
+=== Mails
+
+== Mails
