@@ -78,7 +78,7 @@ In der Detailansicht eines Verkäufers sind dessen Stammdaten sowie sämtliche a
 
 Man kann pro Reservierung zur Detailansicht des Termins springen oder die Artikel des auflisten und bearbeiten.
 
-NOTE: Diese Artikelansicht erlaubt die Bearbeitung der Artikel und Erzeugung der Etiketten für eine Reservierung *auch nach Artikeleingabeende*. Es können ebenso einzelne oder alle Etiketten wieder freigegeben werden.
+NOTE: Diese Artikelansicht erlaubt die Bearbeitung der Artikel und Erzeugung der Etiketten für eine Reservierung *auch bereits vor Reservierungsstart und nach Artikeleingabeende*. Es können ebenso einzelne oder alle Etiketten wieder freigegeben werden. Auch können mehr Artikel angelegt werden, als es die maximale Artikelzahl pro Reservierung zulässt.
 
 === Bearbeiten/anlegen
 
@@ -92,7 +92,71 @@ NOTE: Ein frisch angelegter Verkäufer gilt noch als nicht aktiv. Es wird zunäc
 
 == Termine
 
+Hier können alle Flohmarkttermine und die zugehörigen Reservierungen verwaltet werden.
+
+=== Übersicht
+
+In der Übersicht befinden sich alle vergangenen, aktuellen und zukünftigen Termine. Es wird der Name sowie Verkaufsdatum und Reservierungsstart angezeigt. Es können neue Termine angelegt und bestehende Termine bearbeitet und gelöscht werden.
+
+ [[[events/index]]]
+
+WARNING: Das Löschen eines Termins löscht auch sämtliche dafür angelegte Reservierungen, Artikel und Bewertungen. Sie haben danach keinen Zugriff mehr auf die Ergebnisse eines Termins. Das Löschen ist also nur zu empfehlen, wenn der Termin schon sehr lange vorbei ist und Sie keine Informationen dafür mehr benötigen oder wenn Sie einen Termin absagen müssen.
+
 === Termin anlegen/bearbeiten
+
+Beim Anlegen/Bearbeiten eines Termins stehen zahlreiche Möglichkeiten zur Auswahl.
+
+==== Basisangaben
+
+ [[[events/edit/base]]]
+
+Der *Name* des Termins prominent auf der Hauptseite des Websystems sowie in eMails und Abrechnungen/Dokumenten gezeigt.
+
+In den *Details* eines Termins können Sie beliebig viel Informationen erfassen, die auf der Hauptseite des Websystems in der Terminübersicht dargestellt werden.
+
+TIP: Sie können den Text besonders formattieren, indem Sie eine spezielle Notation benutzen. Details dazu finden Sie https://de.wikipedia.org/wiki/Markdown[hier].
+
+Die *maximale Anzahl von Reservierungen* definiert, wie viele Reservierungsnummern zur Verfügung stehen. Solange die Anzahl aktueller Reservierungen eines Termins kleiner ist als die maximale Anzahl, können Verkäufer eine Reservierung durchführen, sollten sie nicht bereits schon ihr Reservierungskontingent erschöpft haben.
+
+NOTE: Im Verwaltungsbereich können auch noch Reservierungen vergeben werden, selbst wenn die maximale Anzahl von Reservierungen erreicht oder überschritten ist.
+
+Der *Typ* eines Termins legt fest, ob es sich um einen Flohmarkt auf Kommissionsbasis handelt oder ob Tische/Standplätze vergeben werden. Bei Kommissionsflohmärkten werden Artikel durch die Verkäufer eingegeben und bei der Organisation vor Termin abgegeben und vom Organisationsteam sortiert. Nach Termin wird nicht verkaufte Ware zurücksortiert und den Verkäufern wieder zurückgegeben. Bei Tischflohmärkten erhält jede Reservierung einen Tisch / Standplatz zugeordnet und kümmert sich damit selbst um den Verkauf. Bei Kommissionsflohmärkten wird in der Regel eine Kommissionsgebühr erhoben (prozentualer Anteil am Verkaufspreis), während bei Tischflohmärkten ausschließlich eine Reservierungsgebühr zu entrichten ist. Die Eingabe von Artikeln durch Verkäufer ist nur bei Kommissionsflohmärkten verfügbar.
+
+NOTE: Oft wird eine Reservierung im Rahmen von Kommissionsflohmärkten auch als Listenplatz bezeichnet.
+
+Die *maximale Anzahl von Artikeln je Reservierung* definiert, wie viele Artikel eine Reservierung insgesamt anlegen darf. Diese Einstellung ist nur bei Flohmärkten auf Kommissionsbasis relevant.
+
+TIP: Die *maximale Anzahl von Artikeln für einen Termin* ergibt sich aus *Anzahl maximaler Reservierungen* multipliziert mit *maximaler Anzahl von Artikeln pro Reservierung*.
+
+In der Regel hat jeder Verkäufer die Möglichkeit, eine Reservierung pro Termin zu erhalten, sofern noch Reservierungsplätze verfügbar sind. Es kann jedoch bei *Reservierungen pro Verkäufer* festgelegt werden, dass ein Verkäufer mehr als eine Reservierung für diesen Termin durchführen kann.
+
+NOTE: Jede Reservierung hat eine eigene Reservierungsnummer. Abrechnungen erfolgen immer auf Basis von Reservierungen und damit Reservierungsnummern, auch wenn sich hinter mehreren Reservierugnsnummern identische Verkäufer befinden. Die Reservierungsgebühr fällt pro Reservierung an.
+
+Mit der Option *Termin steht fest* kann definiert werden, ob der eingestellte Verkaufstermin vollständig ist oder ob es sich um ein ungefähres Datum handelt. So kann man schon lange bevor das exakte Datum eines Termins feststeht, den Termin eintragen und so auf der Hauptseite sichtbar machen. Das Datum des Termins wird dann in Mails und auf der Hauptseite nur mit Monat und Jahr angegeben.
+
+==== Reservierungs- und Artikeleingabephase
+
+ [[[events/edit/reservation]]]
+
+Dem eigentlichen Verkaufszeiten ist die Reservierungs- und Artikeleingabephase vorangestellt. Mit Startpunkt der Reservierungsphase können Verkäufer eine Reservierung für den Termin durchführen, sofern noch Reservierungsplätze verfügbar sind. Erst mit Erhalt einer Reservierung können Verkäufer Artikel für einen Termin eingeben.
+
+NOTE: Über den Verwaltungsbereich können bereits Reservierungen an Verkäufer vor dem Reservierungsstart und sogar noch nach Artikeleingabeende vergeben werden.
+
+TIP: Zwischen Artikeleingabeende und Abgabezeit der Artikel durch die Verkäufer mindestens einige Stunden Abstand lassen. Dies gibt dem Verwaltungsteam die Zeit, die Abschlussmail an die Verkäufer zu schicken und die Verkaufsdaten auf die Kassensystem-Software zu übertragen.
+
+==== Artikelabgabephase
+
+Mit Abschluss der Artikeleingabephase müssen alle Verkäufer ihre Reservierungen durchgeführt, Artikel eingegeben und Etiketten erzeugt und an der Ware angebracht haben. Die Artikelabgabezeit bestimmt, wann die Verkäufer ihre Ware beim Organisationsteam abgeben müssen.
+
+ [[[events/edit/handover]]]
+
+Es können mehrere Zeitfenster (auch an verschiedenen Tagen) definiert werden. Dazu klickt man auf *Weiteres Zeitfenster hinzufügen*. Zusätzliche Zeitfenster können auch wieder entfernt werden.
+
+ [[[events/edit/handover/details]]]
+
+==== Verkaufsphase
+
+Die Verkaufsphase kann sich über mehrere Zeitfenster und Tage erstrecken. Es können weitere Termine
 
 === Termin Detailansicht
 
