@@ -1,3 +1,272 @@
-= Kassensoftware
+= Kassensystem-Software
 
-...
+Die Kassensystem-Software wird im Verwaltungsbereich zum Herunterladen angeboten. Es handelt sich um eine Installationsdatei, die auf einem handelsüblichen Windows-Rechner installiert werden kann.
+
+== Kassenanzahl
+
+Es steht Ihnen frei, wie viele Kassen Sie einsetzen wollen. Sie können sogar nur eine einzige Kasse für den den Flohmarkt verwenden. Die Kassensystem-Software ist auf beliebig viele Kassen installierbar. Jede Kasse für sich protokolliert alle Verkäufe und Stornos (in Folge auch Transaktionen genannt), die an ihr getätigt wurden.
+
+Spätestens zum Zwecke der Abrechnung müssen die Transaktionen aller Kassen zusammengeführt werden. Das Übertragen von Transaktionen zwischen den Kassen wird Synchronisierung genannt. Die Synchronisierung kann sowohl über ein lokales Netzwerk (egal ob kabellos = WLAN oder kabelgebunden = LAN) als auch über einen Wechseldatenträger (USB-Stick) automatisch durchgeführt werden.
+
+In einem weiteren Verlauf wird erläutert, wie die Synchronisierung eingerichtet und überwacht/durchgeführt werden muss.
+
+== Systemvoraussetzungen
+
+Die Software ist standardmäßig lauffähig auf Windows (Vista, 7, 10). Es wird ein 64Bit-System empfohlen, aber auch ein 32Bit-System ist möglich.
+
+Darüber hinaus ist die Software auch auf aktuellen Linux-Systemen (z.B. Ubuntu, Debian, Suse) und Mac OS X (10.8.3+, 10.9+) lauffähig. Ein Installationsprogramm dafür ist aktuell nicht verfügbar, kann jedoch auf Anfrage bereitgestellt werden.
+
+Es werden mindestens 1GB RAM und 200 MB Festplattenspeicher vorausgesetzt.
+
+Zum Installieren der Software und Austausch der Daten wird ein Wechseldatenträger (USB-Stick) mit mindestens 100 MB freien Speicherplatz vorausgesetzt.
+
+Für die Synchronisierung über Netzwerk ist ein WLAN-Adapter (üpblicherweise in Laptops eingebaut) oder ein LAN-Anschluss (für kabelgebundenes Netzwerk) erforderlich. Des weiteren sind Administratorrechte zum Einrichten des Netzwerks und zur Freigabe der Kommunikation über dieses Netzwerk erforderlich.
+
+== Vorbereitungen
+
+Unabhängig davon, ob Sie Internet beim Verkauf verfügbar haben oder nicht und egal wie viele Kassen Sie verwenden, sollten Sie folgende Vorbereitungen durchführen.
+
+. Laden Sie aus dem Verwaltungsbereich die Kassensoftware *flohmarkthelfer-setup.exe* herunter:
+
+ [[[download_software]]]
+
+. Nachdem das Artikeleingabeende erreicht ist, rufen Sie die Termindetails auf und lösen Sie die Bearbeitungsabschlussmail aus:
+
+ [[[reservation_closed]]]
+
+. Laden Sie die Daten des Termins (Datei *flohmarkthelfer.data*) in den Termindetails herunter:
+
+ [[[download_data]]]
+
+. Kopieren Sie die Installationsdatei *flohmarkthelfer-setup.exe* und die Termindaten *flohmarkthelfer.data* in ein extra dafür angelegtes und ansonsten leeres Verzeichnis auf einen USB-Datenträger (z.B. *E:\flohmarkthelfer*).
+
+== Netzwerkeinrichtung
+
+Sollten Sie mehrere Kassen einsetzen und eine Synchronisierung der Kassen über Netzwerk durchführen wollen (wir empfehlen dies aus Gründen der maximalen Ausfallsicherheit und Anwendbarkeit), sollten Sie die Kassen in einem lokalen Netzwerk miteinander verbinden. Hierbei können Sie ein kabelgebundes Netzwerk (LAN) oder ein kabelloses Netzwerk (WLAN) verwenden.
+
+=== Netzwerk mit zwei Kassen
+
+Sollten Sie nur zwei Kassen benötigen, können Sie diese direkt miteinander verbinden.
+
+==== kabelgebunden
+Wenn Sie kabelgebunden arbeiten wollen, benötigen Sie dafür bei beiden Kassen eine Netzwerkbuchse und ein sogenanntes Crossover-Kabel. Details zum Einrichten eines kabelgebundenen Netzwerks über Crossover-Kabel für Windows 7 http://www.grundlagen-computer.de/netzwerk/windows-7-netzwerk-einrichten-zwischen-2-pcs-teil-2[finden Sie hier]. Weitere Anleitungen und Videos auch für andere Betriebssystem finden Sie, wenn Sie nach den Stichworten "Netzwerk crossover windows" im Internet suchen.
+
+==== kabellos
+
+Bei einem kabellosen Netzwerk benötigen Sie einen WLAN-Adapter auf jeder Kasse. Jedes Laptop hat in der Regel einen WLAN-Adapter eingebaut. Um zwei Geräte miteinander kabellos zu verbinden, muss ein Ad-hoc-Netzwerk zwischen beiden Geräten aufgebaut werden. Details zum Einrichten eines Ad-hoc-Netzwerks für Windows finden Sie beispielsweise http://www.informationsarchiv.net/articles/1203/[hier]. Sie können auch im Internet nach "ad-hoc netzwerk einrichten windows" suchen, um weitere Quellen zu finden. Auch die Hilfe Ihres Betriebssystems sollte Ihnen Details zum Einrichten eines ad-hoc-Netzwerks zeigen können.
+
+=== Netzwerk mit mehr als zwei Kassen
+
+Zur Verbindung von mehr als zwei Kassen in einem Netzwerk ist ein Router erforderlich. Dies kann ein Router mit LAN-Kabelanschluss für ein kabelgebundenes Netzwerk oder ein WLAN-Router für ein kabelloses Netzwerk sein. Handelsübliche WLAN-Router gibt es von AVM (Fritz!Box), TP-Link, Netgear und vielen anderen Herstellern.
+
+WARNING: Aus Gründen der Datensicherheit und zum Schutz des Netzwerks benutzen Sie bitte ein geschütztes WLAN (WPA). In der Regel bieten aktuelle WLAN-Router geschützte Netzwerke standardmäßig an.
+
+Wir bieten auch zum Verleih vorkonfigurierte WLAN-Router an.
+
+== Installation
+
+Zur Installation der Kassensystem-Software stecken Sie den USB-Datenträger in jede der zu verwendenden Kassen nacheinander ein und starten das Programm *flohmarkthelfer-setup.exe*.
+
+Im ersten Schritt werden Sie nach dem Ordner im Programmverzeichnis gefragt, unter die Start-Verknüpfung angelegt werden soll. Auf dem Deskop wird auch eine Verknüpfung zum Flohmarkthelfer Kassensystem angelegt. Sie können diese Einstellung so lassen und einfach auf *Weiter* klicken.
+
+image:images/setup1.png[]
+
+Im zweiten Schritt wird nach dem Namen der Kasse, der Basis-Webadresse des Flohmarkt-Websystems sowie einem Verzeichnis zur automatischen Synchronisation und für Sicherheitskopien gefragt.
+
+image:images/setup2.png[]
+
+Der *Name der Kasse* wird als Kennung im Verbund mehrerer Kassensysteme benutzt. In der Regel nimmt man hier eine Nummerierung der Kassen vor. Wenn Sie nur eine Kasse einsetzen, ist dieser Wert uninteressant.
+
+Als *Hostnamen des Online-Systems* tragen Sie bitte den Teil der Webadresse zu Ihrem Online-System ein, welches nach *http://* zu sehen ist. Abschließende */* sollten ebenso entfernt werden. Ist die Internetadresse bspw. *http://meinflohmarkt.flohmarkthelfer.de/*, tragen Sie bitte *meinflohmarkt.flohmarkthelfer.de* in dieses Feld ein. In den Einstellungen lässt sich später dieser Wert wieder ändern.
+
+Wenn Sie mehrere Kassen haben, diese aber nicht über ein Netzwerk (WLAN) miteinander verbinden können, haben Sie die Möglichkeit, die Daten zwischen den Kassen per USB-Datenträger zu synchronisieren. Als *Verzeichnis zur automatischen Synchronisation* geben Sie dazu bitte den Verzeichnispfad an, der auf den eingesteckten USB-Stick verweist. Das Verzeichnis kann das gleiche sein, in dem sich *flohmarkthelfer-setup.exe* und *flohmarkthelfer.data* befinden. Der Datenträger sollte möglichst genug freien Speicherplatz für die Synchronisation haben (ca. 10 MB minimum). Sollten Sie die Synchronisation über USB-Datenträger nicht benötigen, ignorieren Sie den eingestellten Wert. Sie können ihn später mit einer Neuinstallation der Kassensoftware oder in der Konfigurationsdatei ändern.
+
+Im dritten Installationsschritt können Sie weitere Optionen festlegen.
+
+image:images/setup3.png[]
+
+Im *Standardmodus* werden in der Kassensoftware lediglich die Funktionen bereitgestellt, die ausschließlich für den Betrieb einer Kasse vorgesehen sind. Dazu zählt das Verkaufen, das Stornieren, die Artikelsuche und das Anzeigen der Statistiken.
+
+Im *erweiterten Modus* werden neben den Standard weitere Funktionen bereitgestellt. Dazu gehören das Testscannen von Barcodes, das erneute Erzeugen und Ausdrucken von Etiketten und Barcodes, das nachträgliche Einsehen von Transaktionen und Ausdrucken von Rechnungen, das Erstellen der Gesamtabrechnung sowie der Zugriff auf die Einstellungen zum Synchronisieren mit dem Online-System und mit anderen Kassensystemen.
+
+TIP: Lassen Sie eine Kasse im *erweiterten Modus* für die Artikelannahme und -abgabe laufen. Alle anderen Kassen können im Standardmodus bleiben.
+
+Ein Wechsel des Modus ist entweder durch eine Neuinstallation der Kassensoftware oder durch eine Änderung in der Konfigurationsdatei möglich.
+
+Mit der Option *PLZ bei Verkauf erfassen* haben Sie die Möglichkeit, beim Verkauf den Käufer nach seiner PLZ zu fragen und diese mit anzugeben. Dabei wird ein weiteres Feld beim Verkaufsdialog angezeigt, in dem die PLZ eingegeben werden kann (nicht zwingend). Dies kann später zur Erstellung einer Statistik über den Herkunft der Käufer benutzt werden. Dies kann helfen, um in Zukunft das Aushängen von Plakaten zum Aufmerksammachen auf den Flohmarkt zu optimieren.
+
+Mit der Option *Datenbank leeren* können Sie dafür sorgen, dass bei der Installation sämtliche Artefakte einer vorhergehenden Benutzung der Kassensoftware (z.B. von vergangenen Flohmärkten oder durch Testverkäufe/Proben der Software) gelöscht werden.
+
+WARNING: Aktivieren Sie diese Option nicht, wenn Sie bereits auf dem Kassensystem Verkäufe durchgeführt haben, die nicht verloren gehen sollen.
+
+NOTE: Haben Sie neben dem Installationsprogramm *flohmarkthelfer-setup.exe* auch die Termindaten (*flohmarkthelfer.data*) im gleichen Verzeichnis liegen, wird Ihnen beim ersten Start der Kassensoftware noch einmal die Option gegeben, die aktuellen Daten zu löschen und mit den mitgelieferten Termindaten zu ersetzen.
+
+Nach der Installation der Software befindet sich sowohl unter dem Startmenü als auch auf dem Desktop ein Eintrag zum Starten des Flohmarkthelfer Kassensystems.
+
+image:images/desktop.png[]
+
+== Start
+
+Sollten Sie die Netzwerksynchronisierung zwischen den Kassen verwenden wollen, stellen Sie bitte vor Start des Kassensystems sicher, dass die Kasse eine Netzwerkverbindung hat. Dazu gibt es in der Regel ein kleines Symbol in der globalen Statusleiste des Betriebssystems.
+
+Beim Start des Kassensystems wird zunächst ein Startbild angezeigt.
+
+image:images/splash.png[]
+
+Abhängig davon, wie schnell Ihr Rechner ist, kann es einige Sekunden dauern, bis das Programm geladen ist. Bei sehr langsamen Laptops mit sehr wenig Speicher kann dies durchaus bis zu eine Minute dauern.
+
+Starten Sie die Software nach der erstmaligen Installation und haben Sie die Termindaten im gleichen Verzeichnis wie das Installationsprogramm gelegt, so erscheint die folgende Meldung:
+
+image:images/import.png[]
+
+Stimmen Sie hier bitte zu, damit die Daten des Termins für den kommenden Verkauf importiert werden.
+
+WARNING: Beachten Sie, dass dabei alle eventuell bereits getätigten Transaktionen auf der Kasse zurückgesetzt werden.
+
+Der Import war erfolgreich, wenn folgende Meldung angezeigt wird:
+
+image:images/import_success.png[]
+
+Sollten Sie das Programm versehentlich ein zweites Mal gestartet haben, sehen Sie folgende Meldung:
+
+image:images/2ndstart.png[]
+
+Klicken Sie einfach auf *OK* und wechseln in das Fenster des zuerst gestarteten Programms.
+
+Sollte das Netzwerk nicht korrekt eingerichtet und verfügbar sein, werden Sie folgende Meldung sehen:
+
+image:images/networkerror.png[]
+
+Wenn Sie die Kassensoftware ohne Netzwerksynchronisierung nutzen wollen, bestätigen Sie bitte die Meldung. Wenn Sie mit *No/Nein* antworten, beendet sich das Kassensystem.
+
+== Hauptfenster
+
+Abhängig davon, ob Sie bei der Installation den Standardmodus oder den erweiterten Modus ausgewählt haben, erscheint ein anderes Hauptfenster. Im unteren Bereich ist der Status der Netzwerkverbindungen und Synchronisierung zu sehen. Details finden Sie hierzu im Kapitel *Synchronisierung*.
+
+=== Standardmodus
+
+image:images/standard.png[]
+
+Es stehen die Funktionen *Verkauf*, *Storno*, *Artikelsuche* und *Statistiken* zur Verfügung.
+
+=== erweiterter Modus
+
+image:images/expert.png[]
+
+Neben den gleichen Funktionen wie im Standardmodus werden hier zusätzliche Funktionen bereitgestellt.
+
+== Verkauf
+
+In der Verkaufsfunktion befindet sich im oberen Bereich eine Eingabezeile, in der Sie den Artikelcode eingeben müssen. Diese Eingabe können Sie ganz bequem mittels Einscannen des Barcodes auf dem Etikett mit einem handelsüblichen Barcode-Scanner durchführen. Sollte der Barcodescanner einmal nicht den Barcode auslesen, können Sie alternativ den unter dem Barcode angegebenen Artikelcode per Tastatur eingeben und dann RETURN/ENTER drücken.
+
+NOTE: Der Typ der verwendeten Barcodes ist *EAN-128*. Dies ist der meist genutzte Barcode-Standard in Europa und die meisten Barcode-Scanner können diesen ohne Probleme lesen.
+
+Mit Einlesen des Barcodes oder Eingabe des Artikelcodes erscheint der hinzugefügte Artikel in der Artikelliste darunter. Sie können sofort den nächsten Artikel einlesen.
+
+image:images/sale.png[]
+
+NOTE: In der Regel gibt jeder Barcode ein akustisches Signal (Piepton), wenn der Barcode gelesen werden konnte und dabei wird der Barcode vom Barcodeleser so eingegeben als hätte man den Code per Tatstatur eingegeben. Sollte der Artikel trotz Piepton nicht in der Artikelliste auftauchen, und kein Fehler angezeigt werden, vergewissen Sie sich bitte, dass die Eingabeaufforderung in der Eingabezeile aktiv ist und das Verkaufsfenster das aktive Fenster ist.
+
+Mit jedem eingelesenen Artikel erhöht sich die Artikelanzahl und Summe im unteren Bereich.
+
+=== Doppeltes Einscannen
+
+Sollten Sie versehentlich einen Artikel doppelt oder mehrfach einscannen, erscheint eine Warnung und der Artikel wird nicht erneut hinzugefügt.
+
+image:images/saledoublescan.png[]
+
+=== Bereits verkaufte Artikel
+
+Sollte ein Artikel bereits verkauft worden sein, wird ebenso eine Warnung angezeigt.
+
+image:images/sale_alreadysold.png[]
+
+Die Ursache hierfür kann sein, dass der Verkäufer das Etikett mehrfach ausgedruckt und an mehreren Artikeln angebracht hat. Dies ist nicht zulässig. Jeder Artikel muss ein eindeutiges Etikett haben. Der Artikel kann daher nicht verkauft werden. Sie müssen entweder den Artikel zur Seite legen oder Sie verkaufen den Artikel an den Käufer separat.
+
+=== Unbekannte Artikelcodes
+
+Sollten Sie einen Artikel einscannen, den das System nicht kennt, wird folgendes angezeigt:
+
+image:images/sale_unknown.png[]
+
+Dieser Artikel kann dann nicht verkauft werden.
+
+Mögliche Ursachen dafür können sein:
+
+- Sie haben möglicherweise den falschen Barcode gescannt. Bitte vergewissern Sie sich, dass Sie das korrekte Etikett scannen.
+- Sie haben sich bei der manuellen Eingabe des Artikelcodes vertippt. Überprüfen Sie Ihre Eingabe.
+- Das Etikett stammt von einem anderen Flohmarkttermin. Dieser Artikel kann daher hier nicht verkauft werden. Legen Sie den Artikel beiseite oder verkaufen Sie den Artikel separat.
+
+=== Verkauf abschließen
+
+Sollten alle Artikel für einen Käufer eingelesen sein, drücken Sie einfach die Taste *ENTER* oder *RETURN* (oder klicken Sie auf *Fertig*). Daraufhin erscheint ein Dialog zum Abschließen der Transaktion.
+
+image:images/salefinalize.png[]
+
+Hier wird noch einmal die Kaufsumme angezeigt und es kann nun optional das Bargeld des Käufers eingetragen werden, damit das auszuzahlende Wechselgeld berechnet werden kann. Mit Drücken von ENTER oder RETURN wird das Wechselgeld auf Basis der Eingabe bei BAR-Zahlung berechnet.
+
+image:images/salefinalizebar.png[]
+
+TIP: Sie benötigen im Normalfall keine Maus. Sie brauchen nur das Nummernfeld der Tastatur, um ggf. Brageldangaben zu machen und die ENTER-Taste zu drücken.
+
+Nachdem das Geld bezahlt und das Rückgeld ausgezahlt wurde, muss nun die Transaktion abgeschlossen werden, indem noch einmal *ENTER* oder *RETURN* betätigt (oder *OK* geklcikt) wird.
+
+Mit Bestätigung des Verkaufs mit einem erneuten *OK*/*ENTER*/*RETURN* wird das Fenster geschlossen und das Verkaufsfenster wieder im Vordergrund angezeigt und zurückgesetzt. Alle verkauften Artikel sind aus der Artikelliste verschwunden und die Artikelanzahl und Summe sind wieder auf 0.
+
+Sollte es notwendig sein, einen Verkauf doch noch nicht abzuschließen (Bargeld des Kunden reicht nicht aus oder es soll noch etwas hinzukommen bzw. zurückgegeben werden), kann der Dialog abgebrochen werden (ESC-Taste oder *Cancel* betätigen). Damit wird das Fenster auch geschlossen, das Verkaufsfenster weist aber immer noch alle Artikel des Verkaufs auf. Es kann nun die Korrektur vorgenommen werden (weitere Artikel hinzufügen oder bestimmte Artikel entfernen). Danach kann wie gewohnt der Verkauf abgeschlossen werden.
+
+NOTE: Erst mit Abschließen des Verkaufs wird eine Transaktion erzeugt und protokolliert sowie an die anderen Kassensysteme synchronisiert. Die Artikel gelten erst mit Erzeugung der Transaktion als verkauft.
+
+== Statistiken
+
+In den Statistiken finden Sie Informationen zu der in der in den Termindaten befindlichen Artikel und Transaktionen.
+
+image:images/stats.png[]
+
+Die *Anzahl der Artikel* sollte nach dem Importieren der Daten aus dem Online-System mit den Terminstatistiken im Onlinesystem für diesen Termin übereinstimmen.
+
+Die *Anzahl der Transaktionen* sat, wie viele Verkäufe und Stornos insgesamt durchgeführt wurden.
+
+*Anzahl* und *Summe verkaufter Artikel* geben Auskunft des aktuellen Verkaufsstands.
+
+Unter *Verbunden mit* werden alle Kassensysteme aufgelistet, mit denen das aktuelle Kassensystem verbunden ist. Details hierzu unter *Synchronisierung*.
+
+== Synchronisierung
+
+Auch bereits während des Verkaufs empfiehlt es sich, die Kassen zu synchronisieren. Um bei einem zwar sehr unwahrscheinlichen, jedoch nicht ausgeschlossenen Fall des Totalausfalls einer Kasse während des Verkaufs (Laptop fällt runter, Festplatte defekt) den Verlust der Transaktionen dieser Kasse zu vermeiden, sorgt eine automatische und sofortige netzwerkbasierte Synchronisierung.
+
+Solange ein Kassensystem mit anderen Kassensystemen verbunden ist, werden erzeugte Transaktionen von einer Kasse sofort auf alle verbundenen Kassen automatisch synchronisiert. Sollte die Netzwerkverbindung zwischen verschiedenen Kassen zeitweise gestört sein, versuchen alle Kassen, die eine Verbindung verloren haben, diese wieder automatisch herzustellen. Nach erfolgreicher Herstellung der Verbindung, werden automatisch alle Transaktionen untereinander abgeglichen. Somit werden auch nachträglich alle Transaktionen abgegelichen, die während der Trennung erzeugt wurden.
+
+=== Status
+
+Sowohl im Standard- als auch im erweiteren Modus wird am unteren Rand des Hauptfensters der aktuelle Status der Netzwerkkommunikation und Synchronisierung über Wechseldatenträger angezeigt.
+
+==== Netzwerkverbindungen
+
+Sollten Sie die Netzwerksynchronisierung nutzen, vergewissern Sie sich, dass spätestens eine Minute nach dem Starten aller Kassensysteme im Netzwerkverbund bei jeder Kasse angezeigt wird, dass sie mit den anderen Kassen verbunden ist. Anstelle "*Keine Verbindung*" sollte dann (je nachdem wie viele Kassen im Verbund eingerichtet wurden) "*Verbunden mit N System(en)*" angezeigt werden.
+
+Wenn Sie auf die Funktion *Statistiken* klicken, können Sie Details über die anderen verbunden Kassensysteme sehen.
+
+image:images/networkdetails.png[]
+
+Unter *Verbunden mit* sind alle verbundenen Kassensysteme aufgelistet. Dabei wir der Name der Kasse (angegeben bei der Installation der Kassensystem-Software), die Netzwerk-IP-Adresse, der Name des Rechners (falls ermittelbar) sowie der Zeitunterschied (*dT*) zwischen der verbundenen und der eigenen Kasse angezeigt.
+
+NOTE: Sollte der Zeitunterschied zwischen den Kassen größer als wenige Minuten sein, stellen Sie bitte die Uhrzeiten der Kassen gleich ein, da die Transaktionen mit der Uhrzeit der Kasse auf denen sie erzeugt wurden, protokolliert werden und so ggf. nicht mehr in korrekte chronologische Reihenfolge gebracht werden können.
+
+Sollte bei einer Kasse auch nach einer Minute Wartezeit weniger Verbindungen angezeigt werden als wie es andere Kassen im Netzwerkverbund gibt, so versuchen Sie zunächst einfach einen Neustart der Kassensystem-Software. Hat der Neustart keine Verbesserung gebracht, prüfen Sie bitte die Netzwerkeinstellungen des Betriebssystems. Besteht die Netzwerkverbindung, kann die Ursache der fehlerhaften Kommunikation eine zu strikt eingestellte Firewall-Software auf dem System sein. Deaktivieren Sie daher temporär die Firewall in Ihrem Betriebssystem. Details zum Ausschalten/Deaktivieren der Firewall finden Sie im Internet bei der Suche nach "Windows firewall ausschalten".
+
+WARNING: Vergessen Sie bitte nicht, die Firewall nach Ende des Verkaufs und abgeschlossener Synchronisierung wieder zu aktivieren. In der Regel warnt Sie auch Ihr Betriebssystem, solange Sie die Firewall ausgeschaltet haben.
+
+==== Wechseldatenträgersyncrhonisierung
+
+Der Status der Synchronisierung über Wechseldatenträger ist rechts neben dem Status für Netzwerkverbindungen zu sehen Das Wort *SYNC* wird abhängig vom aktuellen Zustand der Synchronisierung über USB-Stick in verschiedenen Farben dargestellt. Die in Klammern dahinter angegebene Zahl gibt an, wie oft die Synchronisierung über USB durchgeführt wurde.
+
+NOTE: Sollten Sie die Synchronisierung über Netzwerk durchführen und sind alle Kassen per Netzwerk korrekt verbunden, ignorieren Sie diesen Status.
+
+Die Farben bedeuten im einzelnen:
+
+[red]#SYNC# (rot):: Das Verzeichnis zur Synchronisierung ist nicht verfügbar. Der USB-Stick ist entweder nicht in einen USB-Port der Kasse eingesteckt oder es wurde das Verzeichnis nicht korretk bei der Installation angegeben.
+
+[green]#SYNC# (grün):: Das Verzeichnis zur Synchronisierung ist verfügbar. Es wird aktuell keine Synchronisierung durchgeführt. Der USB-Stick kann sicher entfernt werden.
+
+[blue]#SYNC# (blau):: Das Verzeichnis zur Synchronisierung ist verfügbar und es läuft aktuell eine Synchronisierung. Der USB-Stick sollte nicht entfernt werden, solange die Synchronisierung läuft.
