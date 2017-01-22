@@ -217,6 +217,32 @@ Sollte es notwendig sein, einen Verkauf doch noch nicht abzuschließen (Bargeld 
 
 NOTE: Erst mit Abschließen des Verkaufs wird eine Transaktion erzeugt und protokolliert sowie an die anderen Kassensysteme synchronisiert. Die Artikel gelten erst mit Erzeugung der Transaktion als verkauft.
 
+== Storno
+
+Sollte ein bereits verkaufter Artikel wieder zurückgegeben werden (bspw. ist nach dem Verkauf eine Verschmutzung/Beschädigung des Artikels aufgefallen), kann durch die Stornofunktion dieser Artikel wieder zurückgenommen werden.
+
+image:images/refund.png[]
+
+Der Inhalt des Fensters ähnelt dem Verkaufsfenster. Auch hier können Artikelcodes eingescannt werden und der Storno mit einfachem ENTER/RETURN/Fertig zum Abschluss gebracht werden.
+
+image:images/refundfinalize.png[]
+
+Die Eingabe eines Rückgelds entfällt hier. Die Kassen sollten in der Lage sein, das Geld exakt herauszugeben.
+
+Auch bei Stornos gilt, dass die Transaktion erst erzeugt, protokolliert und synchronisiert wird, wenn das *Storno abschließen* mit RETURN/ENTER/OK bestätigt wird.
+
+== Artikelsuche
+
+Hin und wieder gehen Etiketten bei Artikeln verloren. Ist an der Kasse das Etikett für einen Artikel nicht zu finden, kann man unter Umständen über die Artikelsuche den notwendigen Artikelcode finden. Dazu kann man bis zu 3 Suchbegriffe eingeben, um so die möglichen Artikel einzuschränken.
+
+TIP: Informieren Sie Ihre Verkäufer, dass die Artikelbeschreibung so genau wie möglich sein sollte, was das Auffinden der Artikel über die Suche erleichtert.
+
+image:images/search.png[]
+
+In diesem Beispiel konnte anhand der Suchbegriffe das Ergebnis auf zwei Artikel reduziert werden. Eines der Artikel ist bereits verkauft. Damit ist die Wahrscheinlichkeit hoch, dass es sich bei dem zu verkaufenden Artikel um den anderen handelt.
+
+WARNING: Es ist nicht garantiert, dann der richtige Artikel gefunden werden kann. Im Zweifel dürfen Sie den Artikel nicht verkaufen, da Sie damit möglicherweise einen Verkäufer auf Kosten eines anderen Verkäufers einen Umsatz zuordnen.
+
 == Statistiken
 
 In den Statistiken finden Sie Informationen zu der in der in den Termindaten befindlichen Artikel und Transaktionen.
