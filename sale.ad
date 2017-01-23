@@ -22,6 +22,10 @@ Zum Installieren der Software und Austausch der Daten wird ein Wechseldatenträg
 
 Für die Synchronisierung über Netzwerk ist ein WLAN-Adapter (üpblicherweise in Laptops eingebaut) oder ein LAN-Anschluss (für kabelgebundenes Netzwerk) erforderlich. Des weiteren sind Administratorrechte zum Einrichten des Netzwerks und zur Freigabe der Kommunikation über dieses Netzwerk erforderlich.
 
+Es werden Abrechnung, Unterschriftenlisten, Rechnungen und Etiketten als PDF-Dokumente erzeugt. Zum Anzeigen und ggf. Ausdrucken dieser Dokumente benötigen Sie ein entsprechendes Programm auf der Kasse installiert. Moderne Betriebssysteme können PDF-Dokumente standardmäßig anzeigen. Alternativ kann auch ein entsprechendes Anzeigeprogramm wie https://get.adobe.com/de/reader/[Adobe Acrobat] oder https://www.foxitsoftware.com/de/products/pdf-reader/[Foxit Reader] installiert werden.
+
+Wollen Sie vor Ort die Dokumente ausdrucken, benötigen Sie einen an mindestens einer der Kassen eingerichteten Drucker.
+
 == Vorbereitungen
 
 Unabhängig davon, ob Sie Internet beim Verkauf verfügbar haben oder nicht und egal wie viele Kassen Sie verwenden, sollten Sie folgende Vorbereitungen durchführen.
@@ -39,6 +43,8 @@ Unabhängig davon, ob Sie Internet beim Verkauf verfügbar haben oder nicht und 
  [[[download_data]]]
 
 . Kopieren Sie die Installationsdatei *flohmarkthelfer-setup.exe* und die Termindaten *flohmarkthelfer.data* in ein extra dafür angelegtes und ansonsten leeres Verzeichnis auf einen USB-Datenträger (z.B. *E:\flohmarkthelfer*).
+
+HINT: Wenn Sie auf einem Kassensystem Internetanschluss haben können (zum Beispiel per WLAN-Hotspot über Mobiltelefon) können Sie mit Hilfe der Online-Datenaustauschfunktionen in den Einstellungen der Kassensoftware die Daten aus dem Online-System herunterladen. Damit können Sie auf das Herunterladen und Ablegen der Daten auf dem USB-Stick verzichten. sie benötigen aber das in den Termindetails zu sehende Token.
 
 == Netzwerkeinrichtung
 
@@ -80,6 +86,8 @@ Der *Name der Kasse* wird als Kennung im Verbund mehrerer Kassensysteme benutzt.
 Als *Hostnamen des Online-Systems* tragen Sie bitte den Teil der Webadresse zu Ihrem Online-System ein, welches nach *http://* zu sehen ist. Abschließende */* sollten ebenso entfernt werden. Ist die Internetadresse bspw. *http://meinflohmarkt.flohmarkthelfer.de/*, tragen Sie bitte *meinflohmarkt.flohmarkthelfer.de* in dieses Feld ein. In den Einstellungen lässt sich später dieser Wert wieder ändern.
 
 Wenn Sie mehrere Kassen haben, diese aber nicht über ein Netzwerk (WLAN) miteinander verbinden können, haben Sie die Möglichkeit, die Daten zwischen den Kassen per USB-Datenträger zu synchronisieren. Als *Verzeichnis zur automatischen Synchronisation* geben Sie dazu bitte den Verzeichnispfad an, der auf den eingesteckten USB-Stick verweist. Das Verzeichnis kann das gleiche sein, in dem sich *flohmarkthelfer-setup.exe* und *flohmarkthelfer.data* befinden. Der Datenträger sollte möglichst genug freien Speicherplatz für die Synchronisation haben (ca. 10 MB minimum). Sollten Sie die Synchronisation über USB-Datenträger nicht benötigen, ignorieren Sie den eingestellten Wert. Sie können ihn später mit einer Neuinstallation der Kassensoftware oder in der Konfigurationsdatei ändern.
+
+WARNING: Das gewählte Verzeichnis zur Synchronisierung muss auf den Wechseldatenträger zeigen und muss bei allen Kassen auf das selbe Verzeichnis verweisen. Achten Sie darauf, dass der Wechseldatenträger bei unterschiedlichen Kassen unter einem anderen Laufwerksbuchstaben (D:, E:, F: usw.) zu finden sein kann.
 
 Im dritten Installationsschritt können Sie weitere Optionen festlegen.
 
@@ -154,6 +162,70 @@ Es stehen die Funktionen *Verkauf*, *Storno*, *Artikelsuche* und *Statistiken* z
 image:images/expert.png[]
 
 Neben den gleichen Funktionen wie im Standardmodus werden hier zusätzliche Funktionen bereitgestellt.
+
+== Synchronisierung
+
+In den Kapiteln *Netzwerkeinstellung* und *Installation* wurde bereits auf die Möglichkeit und das Einrichten der Synchronisierung zwischen mehreren Kassen eingegangen.
+
+Es empfiehlt sich, schon während des Verkaufs eine Synchronisierung der Kassen untereinander aufrechtzuhalten. Am bequemsten, zuverlässigsten und schnellsten funktioniert dies über Netzwerk (WLAN). Aber auch eine Synchronisierung über einen USB-Wechseldatenträger sind möglich.
+
+=== Netzwerksynchronisierung
+
+Um bei einem zwar sehr unwahrscheinlichen, jedoch nicht ausgeschlossenen Fall des Totalausfalls einer Kasse während des Verkaufs (Laptop fällt runter, Festplatte defekt) den Verlust der Transaktionen dieser Kasse zu vermeiden, sorgt eine automatische und sofortige netzwerkbasierte Synchronisierung für die notwendige Sicherheit.
+
+Solange ein Kassensystem mit anderen Kassensystemen verbunden ist, werden erzeugte Transaktionen von einer Kasse sofort auf alle verbundenen Kassen automatisch synchronisiert. Sollte die Netzwerkverbindung zwischen verschiedenen Kassen zeitweise gestört sein, versuchen alle Kassen, die eine Verbindung verloren haben, diese wieder automatisch herzustellen. Nach erfolgreicher Herstellung der Verbindung, werden automatisch alle Transaktionen untereinander abgeglichen. Somit werden auch nachträglich alle Transaktionen abgegelichen, die während der Trennung erzeugt wurden.
+
+=== Synchronisierung über Wechseldatenträger
+
+Die Synchronisierung über Wechseldatenträger funktioniert wie folgt:
+
+Die Kassensystem-Software greift in regelmäßigen Abständen (alle 10 Sekunden) auf das bei der Installation angegebene verzeichnis zur Synchronisierung zu. Ist dieses Verzeichnis nicht verfügbar (da der USB-Stick zum Beispiel aktuell nicht in der Kasse eingestekct ist), wird die Synchronisierung nicht durchgeführt.
+
+Ist das Verzeichnis verfügbar, werden sämtliche der Kassensystem-Software bekannten Transaktionen in ein Transaktionsprotokoll in dieses Verzeichnis abgelegt. Dabei wird der Name des Rechners im Dateinamen und als Dateiendung *.transactions* verwendet. Im Anschluss daran, werden alle anderen Dateien mit Dateiendung *.transactions* in diesem Verzeichnis gesucht und nacheinander eingelesen. Transaktionen, die in diesen Dateien enthalten sind, werden dabei in die lokale Datenbank der Kassensystem-Software eingetragen.
+
+Ist der Vorgang der Synchronisierung abgeschlossen, wird für einen definierten Zeitbereich (ca. eine Minute) keine weitere Synchronisierung durchgeführt.
+
+Die Synchronisierungsphase dauert dabei insgesamt nur wenige Sekunden. In der Statusanzeige im Hauptfenster wird die Synchronisierungsphase und -anzahl angezeigt.
+
+Sollten Sie die Synchronisierung über USB-Stick durchführen wollen/müssen, stecken Sie bei allen Kassen reihum den selben USB-Stick einmal ein und warten danach maximal 10 Sekunden. Danach sollte spätestens die Statusanzeige von [red]#rot# auf [blue]#blau# und wenige Sekunden danach auf [green]#grün# springen. Damit ist die Synchronisierung abgeschlossen und Sie können den USB-Stick entfernen und zur nächsten Kasse gehen.
+
+Wärhend der Synchronisierungsphase kann ganz normal an der Kasse weiter verkauft werden. Die Synchronisierung läuft unabhängig davon.
+
+TIP: Um ganz sicher zu gehen, dass alle Transaktionsdaten auf den Wechseldatenträger vollständig geschrieben wurden, benutzen Sie die Auswerffunktion für Wechseldatenträger des Betriebssystems. In der Regel ist das Entfernen von USB-Sticks ohne Auswerffunktion kein Problem. Es kann aber sein, dass beim nächsten Einstecken an einer anderen Kasse eine Warung angezeigt wird, dass der Wechseldatenträger nicht korrekt entfernt wurde.
+
+=== Status
+
+Sowohl im Standard- als auch im erweiteren Modus wird am unteren Rand des Hauptfensters der aktuelle Status der Netzwerkkommunikation und Synchronisierung über Wechseldatenträger angezeigt.
+
+==== Netzwerkverbindungen
+
+Sollten Sie die Netzwerksynchronisierung nutzen, vergewissern Sie sich, dass spätestens eine Minute nach dem Starten aller Kassensysteme im Netzwerkverbund bei jeder Kasse angezeigt wird, dass sie mit den anderen Kassen verbunden ist. Anstelle "*Keine Verbindung*" sollte dann (je nachdem wie viele Kassen im Verbund eingerichtet wurden) "*Verbunden mit N System(en)*" angezeigt werden.
+
+Wenn Sie auf die Funktion *Statistiken* klicken, können Sie Details über die anderen verbunden Kassensysteme sehen.
+
+image:images/networkdetails.png[]
+
+Unter *Verbunden mit* sind alle verbundenen Kassensysteme aufgelistet. Dabei wir der Name der Kasse (angegeben bei der Installation der Kassensystem-Software), die Netzwerk-IP-Adresse, der Name des Rechners (falls ermittelbar) sowie der Zeitunterschied (*dT*) zwischen der verbundenen und der eigenen Kasse angezeigt.
+
+NOTE: Sollte der Zeitunterschied zwischen den Kassen größer als wenige Minuten sein, stellen Sie bitte die Uhrzeiten der Kassen gleich ein, da die Transaktionen mit der Uhrzeit der Kasse auf denen sie erzeugt wurden, protokolliert werden und so ggf. nicht mehr in korrekte chronologische Reihenfolge gebracht werden können.
+
+Sollte bei einer Kasse auch nach einer Minute Wartezeit weniger Verbindungen angezeigt werden als wie es andere Kassen im Netzwerkverbund gibt, so versuchen Sie zunächst einfach einen Neustart der Kassensystem-Software. Hat der Neustart keine Verbesserung gebracht, prüfen Sie bitte die Netzwerkeinstellungen des Betriebssystems. Besteht die Netzwerkverbindung, kann die Ursache der fehlerhaften Kommunikation eine zu strikt eingestellte Firewall-Software auf dem System sein. Deaktivieren Sie daher temporär die Firewall in Ihrem Betriebssystem. Details zum Ausschalten/Deaktivieren der Firewall finden Sie im Internet bei der Suche nach "Windows firewall ausschalten".
+
+WARNING: Vergessen Sie bitte nicht, die Firewall nach Ende des Verkaufs und abgeschlossener Synchronisierung wieder zu aktivieren. In der Regel warnt Sie auch Ihr Betriebssystem, solange Sie die Firewall ausgeschaltet haben.
+
+==== Wechseldatenträgersynchronisierung
+
+Der Status der Synchronisierung über Wechseldatenträger ist rechts neben dem Status für Netzwerkverbindungen zu sehen Das Wort *SYNC* wird abhängig vom aktuellen Zustand der Synchronisierung über USB-Stick in verschiedenen Farben dargestellt. Die in Klammern dahinter angegebene Zahl gibt an, wie oft die Synchronisierung über USB durchgeführt wurde.
+
+NOTE: Sollten Sie die Synchronisierung über Netzwerk durchführen und sind alle Kassen per Netzwerk korrekt verbunden, ignorieren Sie diesen Status.
+
+Die Farben bedeuten im einzelnen:
+
+[red]#SYNC# (rot):: Das Verzeichnis zur Synchronisierung ist nicht verfügbar. Der USB-Stick ist entweder nicht in einen USB-Port der Kasse eingesteckt oder es wurde das Verzeichnis nicht korretk bei der Installation angegeben.
+
+[green]#SYNC# (grün):: Das Verzeichnis zur Synchronisierung ist verfügbar. Es wird aktuell keine Synchronisierung durchgeführt. Der USB-Stick kann sicher entfernt werden.
+
+[blue]#SYNC# (blau):: Das Verzeichnis zur Synchronisierung ist verfügbar und es läuft aktuell eine Synchronisierung. Der USB-Stick sollte nicht entfernt werden, solange die Synchronisierung läuft.
 
 == Verkauf
 
@@ -257,42 +329,128 @@ Die *Anzahl der Transaktionen* sat, wie viele Verkäufe und Stornos insgesamt du
 
 Unter *Verbunden mit* werden alle Kassensysteme aufgelistet, mit denen das aktuelle Kassensystem verbunden ist. Details hierzu unter *Synchronisierung*.
 
-== Synchronisierung
+== Annahme Verkäuferliste
 
-Auch bereits während des Verkaufs empfiehlt es sich, die Kassen zu synchronisieren. Um bei einem zwar sehr unwahrscheinlichen, jedoch nicht ausgeschlossenen Fall des Totalausfalls einer Kasse während des Verkaufs (Laptop fällt runter, Festplatte defekt) den Verlust der Transaktionen dieser Kasse zu vermeiden, sorgt eine automatische und sofortige netzwerkbasierte Synchronisierung.
+Für die Annahme der zu verkaufenden Artikel der Verkäufer kann eine Unterschriftenliste für die Verkäufer erzeugt werden, damit die Verkäufer noch einmal per Unterschrift den Teilnahmebedingungen zustimmen.
 
-Solange ein Kassensystem mit anderen Kassensystemen verbunden ist, werden erzeugte Transaktionen von einer Kasse sofort auf alle verbundenen Kassen automatisch synchronisiert. Sollte die Netzwerkverbindung zwischen verschiedenen Kassen zeitweise gestört sein, versuchen alle Kassen, die eine Verbindung verloren haben, diese wieder automatisch herzustellen. Nach erfolgreicher Herstellung der Verbindung, werden automatisch alle Transaktionen untereinander abgeglichen. Somit werden auch nachträglich alle Transaktionen abgegelichen, die während der Trennung erzeugt wurden.
+== Rückgabe Verkäuferliste
 
-=== Status
+Mit dieser Unterschriftenliste kann die Vollständigkeit der nicht verkauften Artikel sowie der ausbezahlte Betrag des Anteils vom Verkauf bei der Abholung durch die Verkäufer quitttiert werden.
 
-Sowohl im Standard- als auch im erweiteren Modus wird am unteren Rand des Hauptfensters der aktuelle Status der Netzwerkkommunikation und Synchronisierung über Wechseldatenträger angezeigt.
+Optional kann auf der Liste neben jeder Reservierung der Auszahlbetrag angezeigt werden. Aus Datenschutzgründen kann diese Spalte jedoch auch weggelassen werden. Sollten Sie den Auszahlbetrag mit ausgeben wollen, so besteht des weiteren die Option, ob vom Auszahlbetrag die Reservierungsgebühr abgezogen werden soll oder nicht. Dies hängt davon ab, ob die Reservierungsgebühr bereits im Vorfeld (zum Beispiel bei der Annahme der Artikel) bezahlt wurde.
 
-==== Netzwerkverbindungen
+== Barcode-Test
 
-Sollten Sie die Netzwerksynchronisierung nutzen, vergewissern Sie sich, dass spätestens eine Minute nach dem Starten aller Kassensysteme im Netzwerkverbund bei jeder Kasse angezeigt wird, dass sie mit den anderen Kassen verbunden ist. Anstelle "*Keine Verbindung*" sollte dann (je nachdem wie viele Kassen im Verbund eingerichtet wurden) "*Verbunden mit N System(en)*" angezeigt werden.
+Mit Hilfe dieser Funktion können Sie bei der Annahme der Artikel exemplarisch oder vollständig die Barcodes durch die Verkäufer ausgedruckten und an der Ware angebrachten Etiketten testen, ohne einen Verkauf auszulösen. Es wird nicht nur geprüft, ob der Barcode lesbar ist, sondern auch ob der der damit erkannte Artikel in der Datenbank enthalten ist.
 
-Wenn Sie auf die Funktion *Statistiken* klicken, können Sie Details über die anderen verbunden Kassensysteme sehen.
+image:images/barcodetest.png[]
 
-image:images/networkdetails.png[]
+Vergewissern Sie sich, dass in der obersten Zeile die Eingabe aktiviert ist und lesen dann mit dem Barcode-Scanner die Etiketten ein. Es sollte damit der Artikel in der Liste darunter hinzugefügt werden.
 
-Unter *Verbunden mit* sind alle verbundenen Kassensysteme aufgelistet. Dabei wir der Name der Kasse (angegeben bei der Installation der Kassensystem-Software), die Netzwerk-IP-Adresse, der Name des Rechners (falls ermittelbar) sowie der Zeitunterschied (*dT*) zwischen der verbundenen und der eigenen Kasse angezeigt.
+Sie können die Tabelle jederzeit über Betätigen von *Tabelle leeren* zurücksetzen. Bester Zeitpunkt ist dafür das Beginnen von Testscans bei einem neuen Verkäufer.
 
-NOTE: Sollte der Zeitunterschied zwischen den Kassen größer als wenige Minuten sein, stellen Sie bitte die Uhrzeiten der Kassen gleich ein, da die Transaktionen mit der Uhrzeit der Kasse auf denen sie erzeugt wurden, protokolliert werden und so ggf. nicht mehr in korrekte chronologische Reihenfolge gebracht werden können.
+Sollte ein Artikel nicht in der Datenbank vorkommen, wird dies mit rotem Text angezeigt. Dieser Artikel kann nicht auf dem Flohmarkt verkauft werden.
 
-Sollte bei einer Kasse auch nach einer Minute Wartezeit weniger Verbindungen angezeigt werden als wie es andere Kassen im Netzwerkverbund gibt, so versuchen Sie zunächst einfach einen Neustart der Kassensystem-Software. Hat der Neustart keine Verbesserung gebracht, prüfen Sie bitte die Netzwerkeinstellungen des Betriebssystems. Besteht die Netzwerkverbindung, kann die Ursache der fehlerhaften Kommunikation eine zu strikt eingestellte Firewall-Software auf dem System sein. Deaktivieren Sie daher temporär die Firewall in Ihrem Betriebssystem. Details zum Ausschalten/Deaktivieren der Firewall finden Sie im Internet bei der Suche nach "Windows firewall ausschalten".
+TIP: Sollte ein Artikel mit falschem Etikett eines Verkäufers beim Test-Scannen auffallen, sollten Sie gleich alle Artikel dieses Verkäufers auf Gültigkeit prüfen und ungültige Artikel nicht annehmen.
 
-WARNING: Vergessen Sie bitte nicht, die Firewall nach Ende des Verkaufs und abgeschlossener Synchronisierung wieder zu aktivieren. In der Regel warnt Sie auch Ihr Betriebssystem, solange Sie die Firewall ausgeschaltet haben.
+Sollten Sie beim Barcode-Testscannen feststellen, dass viele der Etiketten eines Verkäufers nicht einlesbar sind, können Sie zumindest die Nummern unter dem Barcode eingeben und damit prüfen, dass diese gültig und in der Datenbank vorhanden sind.
 
-==== Wechseldatenträgersyncrhonisierung
+== Barcodes drucken
 
-Der Status der Synchronisierung über Wechseldatenträger ist rechts neben dem Status für Netzwerkverbindungen zu sehen Das Wort *SYNC* wird abhängig vom aktuellen Zustand der Synchronisierung über USB-Stick in verschiedenen Farben dargestellt. Die in Klammern dahinter angegebene Zahl gibt an, wie oft die Synchronisierung über USB durchgeführt wurde.
+Sind sämtliche Etiketten von bestimmten Verkäufern nicht durch den Barcode-Leser erkennbar und sogar die Nummern unter den Barcodes nicht lesbar, so können Sie direkt vor Ort die Etiketten noch einmal auszudrucken.
 
-NOTE: Sollten Sie die Synchronisierung über Netzwerk durchführen und sind alle Kassen per Netzwerk korrekt verbunden, ignorieren Sie diesen Status.
+image:images/barcodesprint.png[]
 
-Die Farben bedeuten im einzelnen:
+Geben Sie hierbei die Reservierungsnummer an. Sie haben die Möglichkeit, die kompletten Etiketten auszudrucken oder nur den Barcode mit der darunter befindlichen Nummer.
 
-[red]#SYNC# (rot):: Das Verzeichnis zur Synchronisierung ist nicht verfügbar. Der USB-Stick ist entweder nicht in einen USB-Port der Kasse eingesteckt oder es wurde das Verzeichnis nicht korretk bei der Installation angegeben.
+image:images/barcodesprint2.png[]
 
-[green]#SYNC# (grün):: Das Verzeichnis zur Synchronisierung ist verfügbar. Es wird aktuell keine Synchronisierung durchgeführt. Der USB-Stick kann sicher entfernt werden.
+Nun Klicken Sie bitte auf den Text darunter, um das erzeugte Dokument zu öffnen und auszudrucken.
 
-[blue]#SYNC# (blau):: Das Verzeichnis zur Synchronisierung ist verfügbar und es läuft aktuell eine Synchronisierung. Der USB-Stick sollte nicht entfernt werden, solange die Synchronisierung läuft.
+image:images/barcodepdf.png[]
+
+image:images/labelpdf.png[]
+
+In beiden Fällen empfehlen wir die Verwendung von Klebeetiketten, die recht schnell über die nicht lesbaren Etiketten geklebt werden können. Im Einzelhandel und Schreibwarengeschäften gibt es A4-Bögen mit entsprechende Klebeetikett-Größen.
+
+NOTE: Verwenden Sie Klebeetiketten-Bögen der Größe A4 mit Raster 5x3 für komplette Etiketten und 14x4 für die reinen Barcodes.
+
+== Abrechnung
+
+WARNING: Bevor Sie die finale Abrechnung des Flohmarkts durchführen, vergewissern Sie sich bitte, dass alle Kassen die gleiche Anzahl von Transaktionen und verkauften Artikeln in den *Statistiken* aufweisen. Sollte dies nicht der Fall sein, sorgen Sie für eine korrekte Synchronisierung (über Netzwerk oder USB-Stick) zwischen den Kassen.
+
+Mit der Abrechnungsfunktion stehen verschiedene Methoden zur Verfügung. Klicken Sie einfach auf die jeweilige Abrechnung, die Sie erzeugen und öffnen/ausdrucken wollen.
+
+image:images/finalization.png[]
+
+Über die *Gesamtübersicht* erhalten Sie eine Abrechnung, welches die Einnahmen des Flohmarkts in der Summe zeigt und die Auszahlbeträge an die Verkäufer auflistet. Ebenso werden hier Auflistungen der Verkäufer nach denen, die Artikel zurückbekommen und denen, die keine Ware mehr zurückbekommen. Sollten Spenden für den Termin aktiviert gewesen sein, findet sich hier auch eine Aufstellung der Verkäufer die ihre gesamte Ware gespendet haben.
+
+image:images/finalizationtotal.png[]
+
+Über die Abrechnung für *Alle Verkäufer* erzeugen Sie eine detaillierte Abrechnung für alle Reservierungen. Auf jeder Abrechnung ist für die Reservierung eine Gesamtübersicht zu sehen sowie Detaillisten der verkauften, zurückgegebenen und gespendeten Artikel.
+
+image:images/finalizationall.png[]
+
+Damit können Sie alle Abrechnungsblätter für die Reservierungen erzeugen und drucken und diese den Verkäufern beim Abholen der nicht verkauften Ware und ihren Verkaufsanteil übergeben.
+
+Mit Klick auf bestimmte Reservierungen können einzelne Abrechnungen für diese Reservierungen erstellt werden. Die Einzelabrechnungen unterscheiden sich vom Inhalt und Aussehen her nicht von den Blättern aus der Abrechnung für *alle Verkäufer*.
+
+TIP: Der Umwelt zuliebe drucken Sie am besten gar keine Abrechnungen aus. Die Gesamtabrechnung können Sie direkt am Laptop ansehen. Die Einzelabrechnungen werden mit dem Hochladen der Transaktionen und dem anschließenden Auslösen der Abschlussmail an alle Reservierungen automatisch verschickt.
+
+== Einstellungen
+
+In den Einstellungen haben Sie die Möglichkeit, die Daten mit dem Online-System und mit den anderen im Netzwerk verbundenen Kassensystemen auszutauschen.
+
+image:images/settings.png[]
+
+=== Datenaustausch mit Online-System
+
+Anstelle die Termindaten über USB in den Kassensystemen zu installieren, können Sie dies mit Hilfe dieser Funktion auch direkt bei bestehender Internetverbindung durchführen.
+
+Vergewissern Sie sich hierbei auf die Korrektheit der Angabe bei *Homepage*. Hier muss der Anteil der Internetadresse des Online-Systems stehen, der nach "http://" kommt. und vor dem nächsten "/" kommt.
+
+Ebenso müssen Sie das *Token* eintragen, was im Online-System unter den Termindetails [red]#rot# dargestellt zu finden ist. Dieses Token ist bereits vorausgefüllt, sollten Sie die Daten bereits auf das Kassensystem übertragen haben.
+
+==== Daten herunterladen
+
+Mit Betätigen von *Daten herunterladen* wird versucht, eine Verbindung zum Online-System herzustellen und die Daten des Termins, zu dem der Token gehört auf das Kassensystem zu installieren. Eine entsprechende Meldung warnt davor, dass die aktuellen Daten des Kassensystems dabei überschrieben werden.
+
+image:images/downloadcheck.png[]
+
+Bestätigen Sie mit Yes/Ja, sofern Sie auf dem Kassensystem keine Transaktionen hinterlegt haben, die nicht verloren gehen sollen und noch nicht zum Online-System hochgeladen wurden.
+
+Je nachdem wie schnell Ihre Internetverbindung ist, kann der das Herunterladen der Daten einige Sekunden bis wenige Minuten dauern. Ein erfolgreicher Datenimport wird Ihnen danach angezeigt.
+
+image:images/downloaddone.png[]
+
+==== Transaktionen hochladen
+
+Nach Abschluss des Verkaufs müssen Sie sämtliche Transaktionen zum Online-System hochladen. Erst damit werden auch im Online-System alle verkauften Artikel als verkauft markiert und die Abschlussmail kann ausgelöst werden, welche für jede Reservierung eine Detailabrechnung des Termins enthält.
+
+WARNING: Bevor Sie das finale Hochladen der Transaktionen durchführen und die Abschlussmail auslösen, vergewissern Sie sich bitte, dass alle Kassen die gleiche Anzahl von Transaktionen und verkauften Artikeln in den *Statistiken* aufweisen. Sollte dies nicht der Fall sein, sorgen Sie für eine korrekte Synchronisierung (über Netzwerk oder USB-Stick) zwischen den Kassen.
+
+Benutzen Sie direkt nach Kassenschluss (noch bevor die Verkäufer ihre nicht verkaufte Ware abholen) ein Smartphone mit Internetverbindung zum Erstellen eines WLAN-Hotspots. Verbinden Sie sich mit der Kasse im erweiterten Modus mit diesem WLAN-Hotspot, laden die Transaktionen hoch und lösen die Abschlussmail im Verwaltungsbereich für diesen Termin aus.
+
+image:images/uploadcheck.png[]
+
+image:images/uploaddone.png[]
+
+TIP: Da die Abschlussmail die Detailabrechnung für jeden Verkäufer enthält, brauchen Sie keine Detailabrechnung vor Ort auszudrucken und sparen so Papier und schonen die Umwelt.
+
+Sollte sich Ihr Flohmarkt über mehrere Tage hinweg ausdehnen, empfiehlt es sich, die bis dahin angefallenen Transaktionen am Ende jeden Tages zum Online-System hochzuladen.
+
+NOTE: Solange die Kasse mit dem WLAN-Hotspot und damit dem Internet verbunden ist, ist sie nicht mit den anderen Kassen verbundnen. Damit die Synchronisierung mit den anderen Kassen wieder aufgenommen werden kann, vergessen Sie nach der Kommunikation mit dem Online-System über einen WLAN-Hotspot nicht, den Hostpot wieder zu deaktivieren und mit der Kasse dem lokalen WLAN-Netzwerk wieder beizutreten.
+
+=== Datenaustausch mit anderen Kassen
+
+Sollten Sie die Termindaten nicht per USB-Stick sondern per Netzwerk auf die anderen mit dieser Kasse verbundenen Kassen verteilen wollen, so können Sie die *Daten zu anderen Kassensystemen übertragen*.
+
+image:images/pushcheck.png[]
+
+Nach erfolgreicher Übertragung und Importieren dieser Daten wird an den anderen Kassen jeweils eine Bestätigunsmeldung angezeigt.
+
+==== Daten exportieren
+
+Sollte es bei der Übertragung der Daten im Netzwerk Probleme geben, haben Sie mit *Daten exportieren* die Möglichkeit, die Termindaten als Datei zu speichern, so als hätten Sie diese aus dem Online-System als Datei heruntergeladen. Sie können diese Datei dann wie gewohnt per USB-Stick zusammen mit dem Installationsprogramm auf die anderen Kassensysteme aufspielen.
+
+Wählen Sie beim Exportieren der Daten das Verzeichnis des USB-Sticks, in dem Sie auch das Installationsprogramm kopiert haben.
