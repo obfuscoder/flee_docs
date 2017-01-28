@@ -1,5 +1,7 @@
-= Veranstalter
+== Anleitung für Veranstalter
 
 include::admin.ad[]
 
 include::sale.ad[]
+
+include::quick.ad[]

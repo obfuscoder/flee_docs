@@ -1,6 +1,6 @@
-== Kurzanleitung Verkauf
+==== Verkauf
 
-=== Kassensystem-Software starten
+===== Kassensystem-Software starten
 
 . Vergewissern Sie sich, dass der Rechner mit dem lokalen Netzwerk verbunden ist, bevor Sie dier Kassensoftware starten.
 . Starten Sie die Kassensystem-Software
@@ -11,7 +11,7 @@ image:images/splash.png[]
 +
 image:images/standard.png[]
 
-=== Verkauf
+===== Verkauf durchführen
 
 . Klicken Sie auf Verkauf.
 . Der Verkaufsdialog sollte vor Erfassen der Artikel eines neuen Käufers komplett leer sein.
@@ -37,7 +37,7 @@ image:images/salefinalize.png[]
 +
 image:images/sale_empty.png[]
 
-=== Storno
+===== Storno durchführen
 
 . Klicken Sie auf Storno. Der Stornodialog sollte vor Erfassen der Artikel eines neuen Stornos komplett leer sein.
 . Scannen Sie nacheinander die Artikel ein, die zurückgegeben werden sollen. Sollte ein Scannen nicht funktionieren, geben Sie die Nummer unter dem Barcode mit der Tastatur ein und Bestätigen die Eingabe mit *ENTER/RETURN*.

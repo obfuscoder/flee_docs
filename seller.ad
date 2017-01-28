@@ -1,8 +1,8 @@
-= Verkäufer
+== Anleitung für Verkäufer
 
 Um als Verkäufer bei zukünftigen Flohmarktterminen dabei sein zu können, muss man sich zunächst registrieren. Registrierte Verkäufer können per Mail auf kommende Flohmärkte aufmerksam gemacht werden. Mit der Registrierung erhalten Verkäufer Zugriff auf einen geschützten Bereich, unter dem sie dann für kommende und aktuelle Termine Reservierungen durchführen und ihre Artikel eingeben und Etiketten drucken können.
 
-== Registrierung
+=== Registrierung
 
 Die Registrierung ist über die Hauptseite erreichbar.
 
@@ -12,7 +12,7 @@ Bei der Registrierung wird zur Eingabe von Daten aufgefordert, die für die Abre
 
  [[[register]]]
 
-=== Zugangsdaten erneut anfordern
+==== Zugangsdaten erneut anfordern
 
 Sollte ein Verkäufer die Mail mit den Informationen über den Zugang zum geschützten Bereich haben, kann diese Mail erneut an den Verkäufer zugesendet werden. Dazu befindet sich auf der Hauptseite eine entsprechende Funktion.
 
@@ -22,19 +22,19 @@ Es muss dann noch einmal die bei der Registrierung genutzte eMail-Adresse angege
 
  [[[resend]]]
 
-== Geschützter Bereich
+=== Geschützter Bereich
 
 In der Registrierungsbestätigung und später in weiteren Mails, die vom System verschickt werden, befindet sich ein Link, der den Verkäufer den Zugang zum geschützten Bereich erlaubt.
 
  [[[seller]]]
 
-=== Stammdaten ändern
+==== Stammdaten ändern
 
 Im geschützten Bereich hat der Verkäufer immer die Möglichkeit, seine Stammdaten zu ändern oder diese komplett zu löschen. Auch besteht die Möglichkeit, zwar als Verkäufer im System zu verbleiben, aber in Zukunft keine Mails mehr zu erhalten.
 
  [[[seller/edit]]]
 
-== Reservierung
+=== Reservierung
 
 Sofern Reservierungen für Termine möglich sind, werden diese auf der Hauptseite des geschützten Bereichs aufgelistet.
 
@@ -50,7 +50,7 @@ Sollten für einen Termin bereits alle freien Plätze reserviert sein, besteht d
 
 Sobald wieder ein Platz für diesen Termin zur Verfügung steht, erhalten alle Verkäufer auf der Warteliste einen Hinweis per Mail. Jeder Verkäufer auf der Warteliste hat die gleiche Chance auf frei gewordene Plätze. Daher kann es sein, dass beim Anklicken des Reservieren-Links in der Mail der beim Verschicken der Mail frei gewordene Platz bereits wieder vergeben ist. Der Verkäufer muss sich dann erneut auf die Warteliste setzen, um über weitere freiwerdende Plätze informiert zu werden.
 
-== Artikelverwaltung
+=== Artikelverwaltung
 
 In der Artikelverwaltung werden alle Artikel für diese Reservierung angezeigt, die bereits eingegeben wurden. Solange noch nicht die maximale Anzahl erlaubter Artikel für eine Reservierung angelegt wurden, können weitere Artikel angelegt werden.
 
@@ -62,7 +62,7 @@ Artikel, für die noch kein Etikett erzeugt wurden, können jederzeit bearbeitet
 
 Abhängig von den Einstellungen kann es sein, dass für bestimmte Kategorien die Artkielanzahl dieser Kategorien pro Reservierung begrenz ist. Sollten Spenden für einen Flohmarkt möglich sein, kann für jeden Artikel bestimmt werden, ob dieser gespendet werden soll, falls er nicht verkauft werden sollte. Auch hier kann es sein, dass Artikel bestimmter Kategorien in jedem Fall zu spenden sind, sollten sie nicht verkauft werden.
 
-== Etiketten erzeugen und drucken
+=== Etiketten erzeugen und drucken
 
 Etiketten können jederzeit für angelegte Artikel erzeugt und gedruckt werden. Dabei kann vorausgewählt werden, für welche Artikel die Etiketten erzeugt werden sollen.
 
@@ -80,11 +80,11 @@ Artikel, für die Etiketten erzeugt wurden, können jederzeit erneut ausgedruckt
 
 WARNING: Es ist darauf zu achten, dass freigegebene Etiketten nicht mehr verwendet werden dürfen. Diese Etiketten sind dem System nicht mehr bekannt und Artikel, die mit freigegebenen Etiketten versehen sind, können nicht verkauft werden.
 
-== Abrechnung
+=== Abrechnung
 
 Mit Abschluss des Flohmarkts erhalten Verkäufer für jede Reservierung eine Abschlussmail mit der Abrechnung. Darin enthalten sind die Liste der verkauften und nicht verkauften Artikel, sowie die Auszahlbeträge abzüglich der Gebühren.
 
-== Bewertung
+=== Bewertung
 
 In der Abschlussmail enthalten ist ein Link, der den Verkäufern eine Bewertung des Flohmarkts und des Systems erlaubt.
 

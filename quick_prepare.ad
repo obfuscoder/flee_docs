@@ -1,6 +1,6 @@
-== Kurzanleitung Vorbereitung Verkauf
+==== Vorbereitung Verkauf
 
-=== Vorbereitung Installation Kassensoftware und Termindaten
+===== Vorbereitung Wechseldatenträger
 
 Führen Sie diese Schritte nach Erreichen des Artikeleingabeendes aus:
 
@@ -18,7 +18,7 @@ Führen Sie diese Schritte nach Erreichen des Artikeleingabeendes aus:
 . Kopieren Sie *flohmarkthelfer-setup.exe* und *flohmarkthelfer.data* in dieses Verzeichnis.
 . Entfernen Sie den USB-Stick sicher (auswerfen).
 
-=== Einrichtung Netzwerk
+===== Einrichtung Netzwerk
 
 . Vergewissern Sie sich, dass der WLAN-Router gestartet und einsatzbereit ist. Sie benötigen den Namen des WLAN-Netzes des Routers (bspw. *flohmarkthelfer* beim Leihgerät) und das WLAN-Passwort.
 . Für das Einrichten der Netzwerkverbindung sind gegebenenfalls Administratorrechte erforderlich.
@@ -26,7 +26,7 @@ Führen Sie diese Schritte nach Erreichen des Artikeleingabeendes aus:
 . Klicken Sie in der Iconleiste rechts unten auf das WLAN-Symbol, wählen das WLAN-Netz zum Verbinden aus und geben das WLAN-Passwort ein.
 . Sollte das Betriebssystem fragen, ob dies ein Heim-, öffentliches oder Büronetzwerk ist, wählen Sie *Heimnetzwerk*.
 
-=== Einrichtung Barcodescanner
+===== Einrichtung Barcodescanner
 
 . Schließen Sie den Barcodescanner über USB an die Kasse an.
 . Es kann einige Sekunden dauern, bis der Scanner vom Betriebssystem erkannt wird und zur Verwendung bereitsteht. In der Regel wird dies beim Scanner mit einem akustischen oder optischen Signal bestätigt. Ebenso müsste das Betriebssystem einen Hinweis auf das neu erkannte Eingabegerät anzeigen.
@@ -34,7 +34,7 @@ Führen Sie diese Schritte nach Erreichen des Artikeleingabeendes aus:
 . Scannen Sie testweise einige Barcodes ein. Die Barcodenummern sollten nun in dem Programmfenster von *Notepad* angezeigt werden.
 . Schließen Sie *Notepad* wieder.
 
-=== Installation Kassensoftware und Termindaten auf Kassen
+===== Installation Kassensoftware und Termindaten
 
 Führen Sie folgende Schritte für jede Kasse aus:
 
