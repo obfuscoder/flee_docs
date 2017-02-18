@@ -180,6 +180,8 @@ Mit der *Reservierungsgebühr* können Sie eine Basisgebühr pro Reservierung de
 
 NOTE: Bei Terminen auf Tischbasis ist ausschließlich die Reservierungsgebühr zu definieren. Eine Abrechnung erfolgt hierbei nicht.
 
+Bei aktivierter Option *Reservierungsgebühr wird im Voraus bezahlt* werden von Auszahlungsbeträgen auf Abrechnungen für diesen Termin keine Reservierungsgebühren abgezogen.
+
 ===== Termin Detailansicht
 
 In der Detailansicht können Sie die Stammdaten des Termins sehen und haben zudem Zugriff auf die Reservierungen, Statistiken und Bewertungen.
