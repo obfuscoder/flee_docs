@@ -240,7 +240,7 @@ Diese Mail enthält zum einen die Abrechnung für eine Reservierung. Zum anderen
 
  [[[reservations/index]]]
 
-Es lassen sich sowohl Reservierungsgebühr als auch Kommissionsanteil pro Reservierung individuell einstellen. Findet keine individuelle Einstellung statt, gelten die Daten, die beim Termin voreingestellt sind.
+Es lassen sich Reservierungsgebühr, Kommissionsanteil und maximale Artikelzahl pro Reservierung individuell einstellen. Findet keine individuelle Einstellung statt, gelten die Daten, die beim Termin voreingestellt sind.
 
  [[[reservations/edit]]]
 
