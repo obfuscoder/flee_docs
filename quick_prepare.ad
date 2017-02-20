@@ -97,3 +97,5 @@ image:images/stats.png[]
 . Vergewissern Sie sich, dass im unteren Bereich des Hauptfensters der Text [green]#*SYNC*# in grün dargestellt wird, solange der USB-Stick in der Kasse eingesteckt ist.
 
 Nachdem Sie die Software auf allen Kassen installiert und gestartet haben, sollten diese sich miteinander verbunden haben. Bei allen Kassen sollte nun im unteren Bereich des Hauptfensters *Verbunden mit N System(en)* zu sehen sein. Dabei steht *N* für die Anzahl anderer Kassen.
+
+Nutzen Sie die Funktion **Annahme Verkäuferliste**, um eine Unterschriftenliste aller Verkäufer für die Artikelannahme zur erzeugen und auszudrucken. Bei der Artikelannahme können Sie die Funktion **Barcode-Test** nutzen, um einige Etiketten von jedem Verkäufer probeweise zu scannen.

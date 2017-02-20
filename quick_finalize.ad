@@ -1,3 +1,56 @@
 ==== Abschluss und Abrechnung
 
-...
+Bevor Sie die Abrechnung durchführen, prüfen Sie, dass alle Kassen in den **Statistiken** die selbe Anzahl von Transaktionen, verkaufter Artikel und Umsatz anzeigen:
+
+image:images/stats.png[]
+
+Sollten die Zahlen abweichen, vergewissern Sie sich über die funktionierende Synchronisation zwischen den Kassen mit abweichenden Zahlen. Nutzen Sie gegebenenfalls einen USB-Stick, um die Transaktionen zwischen den Kassen zu synchronisieren.
+
+Sofern die Statistiken aller Kassen identisch sind, können Sie alle bis auf eine Kasse schließen. Die letzte Kasse muss für die Abrechnung im erweiterten Modus gestartet und an ihr sollte wenn möglich ein Drucker eingeschlossen sein.
+
+Führen Sie folgende Schritte zur Abrechnung aus:
+
+. Klicken Sie auf **Rückgabe Verkäuferliste** um eine Unterschriftenliste für die Verkäufer zur Rückgabe der nicht verkauften Ware sowie den Umsatzanteil der Verkäufer zu erzeugen. Sie haben dabei die Option, den Auszahlbetrag mit in einer Spalte ausgeben zu lassen.
+. Klicken Sie auf **Abrechnung**, um das Abrechnungsfenster zu öffnen.
++
+image:images/finalization.png[]
++
+. Klicken Sie auf **Gesamtübersicht**, um die Gesamtabrechnung für den internen Gebrauch zu erzeugen. Es wird ein Dokument erzeugt, welches eine Gesamtübersicht, die einzelnen Auszahlbeträge für die Reservierungen sowie Listen von Komplettspendern und Verkäufern mit zurückzugebenden Artikeln enthält.
++
+image:images/finalizationtotal.png[]
++
+. Klicken Sie auf **Alle Verkäufer** um ein Dokument zu erzeugen, welches eine Abrechnung für jeden einzelnen Verkäufer mit Details enthält. Es werden alle verkauften Artikel und den Umsatzwerten und Anteilen aufgelistet sowie eine Liste der nicht verkauften und zurückgegebenen sowie gespendeten Artikel erzeugt. Jede Abrechnung beginnt auf einer neuen Seite.
++
+image:images/finalizationall.png[]
++
+Alternativ können Sie die Abrechnungen für einzelne Verkäufer erzeugen, indem Sie die entsprechende Position anklicken.
++
+Damit ist die Vor-Ort-Abrechnung abgeschlossen.
++
+. Verbinden Sie nun das Laptop mit dem Internet. Dies können Sie über die mobile WLAN-Hotspot-Funktion eines Smartphones oder aber bequem von zu Hause mit Ihrem eigenen Internetanschluss machen.
+.. Bei der Benutzung eines WLAN-Hotspots über Ihr Smartphone aktivieren Sie den Hotspot und wählen dann auf dem Laptop bei den WLAN-Netzen den Namen Ihres WLAN-Hotspots aus und verbinden sich damit (ggf. erfordert dies die Eingabe eines Passworts, was Sie im Smartphone konfigurieren können).
+.. Bei der Benutzung Ihres Internetanschlusses zu Hause verbinden Sie das Laptop wie gewohnt mit dem WLAN oder per Kabel.
+. Klicken Sie auf **Einstellungen**:
++
+image:images/settings.png[]
++
+. Öffnen Sie auf dem Kassenlaptop den Webbrowser und rufen Sie den Verwaltungsbereich des Flohmarkthelfer-Online-Systems auf. Loggen Sie sich dazu ggf. mit Ihren Zugangsdaten zum Verwaltungszbereich ein.
++
+ [[[login]]]
++
+. Klicken Sie auf **Termin** und Klicken Sie auf das **Ansicht**-Symbol für den aktuellen Termin.
++
+ [[[events/show]]]
++
+. Vergewissern Sie sich, dass in den **Einstellungen** bei **Homepage** die Adresse des Online-Systems und bei **Token** der selbe Wert wie auf der Detailansichtsseite steht.
+. Klicken Sie nun auf **Transaktionen hochladen**.
++
+image:images/uploadcheck.png[]
++
+. Bestätigen Sie mit *Ja/Yes**. Nach kurzer Zeit wurden alle Transaktionen hochgeladen und alle verkauften Artikel entsprechend auch im Online-System markiert.
++
+image:images/uploaddone.png[]
++
+. Klicken Sie bei den Termindetails im Online-System auf **Statistiken** und prüfen Sie, dass die Anzahl verkaufter Artikel mit der Anzahl in den Statistiken der Kassensoftware übereinstimmt.
+. Klicken Sie in den Termindetails im Online-System auf **Abschlussmail verschicken**. Nun werden nach und nach an jede Reservierung eine Abschlussmail mit der Abrechnung im Anhang verschickt. Sie müssen nicht darauf warten, dass alle Mails verschickt wurden.
+. Schließen Sie den Browser und Beenden Sie das Flohmarkthelfer-Kassensystem.
