@@ -32,15 +32,15 @@ Unabhängig davon, ob Sie Internet beim Verkauf verfügbar haben oder nicht und 
 
 . Laden Sie aus dem Verwaltungsbereich die Kassensoftware *flohmarkthelfer-setup.exe* herunter:
 
- [[[download_software]]]
+image:images/web/download_software.png[]
 
 . Nachdem das Artikeleingabeende erreicht ist, rufen Sie die Termindetails auf und lösen Sie die Bearbeitungsabschlussmail aus:
 
- [[[reservation_closed]]]
+image:images/web/mails_reservation_closed.png[]
 
 . Laden Sie die Daten des Termins (Datei *flohmarkthelfer.data*) in den Termindetails herunter:
 
- [[[download_data]]]
+image:images/web/download_data.png[]
 
 . Kopieren Sie die Installationsdatei *flohmarkthelfer-setup.exe* und die Termindaten *flohmarkthelfer.data* in ein extra dafür angelegtes und ansonsten leeres Verzeichnis auf einen USB-Datenträger (z.B. *E:\flohmarkthelfer*).
 

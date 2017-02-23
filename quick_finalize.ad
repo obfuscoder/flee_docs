@@ -36,11 +36,11 @@ image:images/settings.png[]
 +
 . Öffnen Sie auf dem Kassenlaptop den Webbrowser und rufen Sie den Verwaltungsbereich des Flohmarkthelfer-Online-Systems auf. Loggen Sie sich dazu ggf. mit Ihren Zugangsdaten zum Verwaltungszbereich ein.
 +
- [[[login]]]
+image:images/web/login.png[]
 +
 . Klicken Sie auf **Termin** und Klicken Sie auf das **Ansicht**-Symbol für den aktuellen Termin.
 +
- [[[events/show]]]
+image:images/web/events_show.png[]
 +
 . Vergewissern Sie sich, dass in den **Einstellungen** bei **Homepage** die Adresse des Online-Systems und bei **Token** der selbe Wert wie auf der Detailansichtsseite steht.
 . Klicken Sie nun auf **Transaktionen hochladen**.
