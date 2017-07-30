@@ -248,6 +248,20 @@ Es können hier auch neue Reservierungen angelegt werden, selbst wenn die Reserv
 
 image:images/web/reservations_new.png[]
 
+===== Sperren
+
+Über die Detailansicht eines Termins gelangen Sie zu den *Sperren* für diesen Termin. Eine Sperre für einen Verkäufer für einen Termin verhindert, dass dieser Verkäufer eine Reservierung für diesen Termin durchführen kann. Es werden alle gesetzten Sperren zu diesen Termin angezeigt. Jede Sperre gilt für einen Verkäufer und zeigt auch den Grund der Sperre an.
+
+image:images/web/suspensions_index.png[]
+
+Es können neue Sperren hinzugefügt werden. Dabei können ein oder mehrere Verkäufer ausgewählt werden. Außerdem muss der Grund der Sperre angegeben werden. Dieser Grund wird dem/den Verkäufer(n) angezeigt, wenn diese die Reservierung für diesen Termin durchführen wollen.
+
+image:images/web/suspensions_new.png[]
+
+Eine Sperre kann jederzeit gelöscht oder der Grund dafür bearbeitet werden.
+
+image:images/web/suspensions_edit.png[]
+
 ===== Statistiken
 
 In den Statistiken sieht man die für den Termin angelegten Artikel gruppiert nach Kategorie. Gleiches gilt für die erzeugten Etiketten. Ebenso ist eine Übersicht aller Reservierungen gruppiert nach Ort sowie die Warteliste zu sehen.
