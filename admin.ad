@@ -50,6 +50,16 @@ NOTE: Eine gelöschte Kategorie ist immer noch im System vorhanden. Sie steht nu
 
 image:images/web/categories_edit.png[]
 
+==== Stammartikel
+
+Es können *Stammartikel* unabhängig von Terminen mit festen Preisen angelegt werden. Diese Stammartikel sind für allgemeine Artikel gedacht, die keinem Verkäufer zugeordnet sind. So können damit bspw. Verpackungsmaterial (Tüten), zusätzliche Gebühren, Pauschalartikel von Spenden aber auch Artikel für einen nebenbei stattfindenden Kuchenbasar angelegt werden.
+
+Stammartikel können - im Gegensatz zu durch Verkäufer angelegte Artikel - mehrfach verkauft werden, auch mehrmals pro Transaktion.
+
+Etiketten für die Stammartikel lassen sich jederzeit ausdrucken. Diese Etiketten kann man dann auf die Artikel aufbringen oder ausgedruckt neben der Kasse liegen lassen und dann bei Bedarf direkt vom Blatt einscannen.
+
+Stammartikel können weder gelöscht, noch deren Preis geändert werden, da sie terminübergreifend Verwendung finden.
+
 ==== Verkäufer
 
 In der Verkäuferübersicht sind sämtliche Benutzer aufgelistet, welche sich auf der Webseite registriert haben. Es wird Name, eMail-Adresse, Gesamtanzahl eingegebener Artikel angezeigt, sowie ob der Verkäufer bereits aktiv ist.
