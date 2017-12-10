@@ -49,7 +49,7 @@ Sollten für einen Termin bereits alle freien Plätze reserviert sein, besteht d
 
 image:images/web/seller_notifications.png[]
 
-Sobald wieder ein Platz für diesen Termin zur Verfügung steht, erhalten alle Verkäufer auf der Warteliste einen Hinweis per Mail. Jeder Verkäufer auf der Warteliste hat die gleiche Chance auf frei gewordene Plätze. Daher kann es sein, dass beim Anklicken des Reservieren-Links in der Mail der beim Verschicken der Mail frei gewordene Platz bereits wieder vergeben ist. Der Verkäufer muss sich dann erneut auf die Warteliste setzen, um über weitere freiwerdende Plätze informiert zu werden.
+Sobald wieder ein Platz für diesen Termin zur Verfügung steht, wird dieser automatisch an die nächste Person auf der Warteliste vergeben. Diese Person erhält eine Reservierungsbestätigung per Mail.
 
 === Artikelverwaltung
 
