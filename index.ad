@@ -2,6 +2,7 @@
 :toc: right
 :toc-title: Inhaltsverzeichnis
 :toclevels: 4
+:last-update-label!:
 
 include::home.ad[]
 
