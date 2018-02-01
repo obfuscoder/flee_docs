@@ -44,54 +44,54 @@ Führen Sie folgende Schritte für jede Kasse aus:
 . Klicken Sie durch die Installationsdialoge und machen dabei folgende Angaben:
 .. Bei *Verknüpfungsverzeichnis* lassen Sie den Standardwert *Flohmarkthelfer Kassensystem*
 +
-image:images/setup1.png[]
+image:images/sale/setup1.png[]
 +
 .. Als *Name der Kasse* geben Sie einen geeigneten eindeutigen Namen für die Kasse ein.
 +
-image:images/setup2.png[]
+image:images/sale/setup2.png[]
 +
 .. Bei *Hostname des Online-Systems* geben Sie bitte den Teil der Webadresse des Online-Systems ein, der nach "http://" kommt ein. Z.B. bei einer Adresse http://meinflohmarkt.flohmarkthelfer.de/ geben Sie bitte *meinflohmarkt.flohmarkthelfer.de* ein.
 .. Beim *Verzeichnis zur automatischen Synchronisierung* geben Sie bitte das Verzeichnis auf das Verzeichnis des USB-Sticks ein (z.B. *E:\flohmarkthelfer*).
 .. Bei *Modus setzen* wählen Sie bitte *Standardmodus* für eine Kasse, mit der Sie nur den Verkauf durchführen wollen. Wählen Sie *erweiterter Modus* für eine Kasse, mit der Sie auch Listen und Etiketten erzeugen/drucken oder Scantests und Abrechnungen durchführen wollen.
 +
-image:images/setup3.png[]
+image:images/sale/setup3.png[]
 +
 .. Wählen Sie mit ja oder nein aus, ob Sie *PLZ beim Verkauf erfassen wollen*.
 .. Wählen Sie *Datenbank leeren* aus.
 +
-image:images/setup4.png[]
+image:images/sale/setup4.png[]
 +
-image:images/setup5.png[]
+image:images/sale/setup5.png[]
 +
 . Nach der Installation finden Sie auf dem Desktop die Verknüpfung *Flohmarkthelfer Kassensystem*.
 +
-image:images/desktop.png[]
+image:images/sale/desktop.png[]
 +
 . Vergewissern Sie sich, dass der Rechner mit dem lokalen Netzwerk verbunden ist.
 . Starten Sie dieses Programm erstmalig.
 +
-image:images/splash.png[]
+image:images/sale/splash.png[]
 +
 . Bestätigen Sie die Meldung, die Termindaten zu importieren, mit *Ja/Yes*:
 +
-image:images/import.png[]
+image:images/sale/import.png[]
 +
 . Kurz darauf wird eine Erfolgsmeldung angezeigt:
 +
-image:images/import_success.png[]
+image:images/sale/import_success.png[]
 +
 . Ab jetzt wird versucht, eine Netzwwerkverbindung mit anderen Kassen herzustellen. Gegebenenfalls wird eine Warnmeldung vom Betriebssystem angezeigt. Sie müssen der Kassensoftware den *Zugriff auf das Netzwerk erlauben*. Gegebenenfalls benötigen Sie dafür Administrator-Rechte.
 . Das Hauptmenü erscheint:
 +
-image:images/standard.png[]
+image:images/sale/standard.png[]
 +
 oder
 +
-image:images/expert.png[]
+image:images/sale/expert.png[]
 +
 . Klicken Sie auf *Statistiken* und vergewissern Sie sich, dass bei *Anzahl Artikel* die gleiche Anzahl steht, die Sie im Verwaltungsbereich des Online-Systems unter den Terminstatistiken gesehen haben. Ebenso prüfen Sie, dass bei einer frischen Installation bei *Anzahl Transaktionen* und *Anzahl verkaufter Artikel* jeweils *0* stehen sollte (Das Beispielbild wurde nach einem Verkauf gemacht, daher stehen hier keine Nullen):
 +
-image:images/stats.png[]
+image:images/sale/stats.png[]
 +
 . Schließen Sie die Statistiken wieder
 . Vergewissern Sie sich, dass im unteren Bereich des Hauptfensters der Text [green]#*SYNC*# in grün dargestellt wird, solange der USB-Stick in der Kasse eingesteckt ist.

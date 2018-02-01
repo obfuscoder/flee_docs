@@ -26,6 +26,12 @@ image:images/web/admin.png[]
 
 Von hier aus erreichen Sie sämtliche Funktionen über das Hauptmenü.
 
+==== Stammdaten
+
+Unter dem Menü **Stammdaten** befinden sich Basisfunktionen zum Verwalten der Kategorien, Stammartikel, Standarmails und Systemeinstellungen:
+
+image:images/web/master_data.png[]
+
 ==== Kategorien
 
 Kategorien stehen Verkäufern beim Anlegen von Artikeln zur Verfügung. Jeder Artikel ist einer bestimmten Kategorie zugeordnet. Die Kategorie wird mit der Artikelbeschreibung auf dem Etikett sichtbar sein. Es gibt ebenso Statistiken auf Basis von Kategorien, die es Ihnen erlauben, vor Termin bereits zu sehen, wie viele Artikel pro Kategorie durch Verkäufer eingegeben wurden.
@@ -52,13 +58,114 @@ image:images/web/categories_edit.png[]
 
 ==== Stammartikel
 
-Es können *Stammartikel* unabhängig von Terminen mit festen Preisen angelegt werden. Diese Stammartikel sind für allgemeine Artikel gedacht, die keinem Verkäufer zugeordnet sind. So können damit bspw. Verpackungsmaterial (Tüten), zusätzliche Gebühren, Pauschalartikel von Spenden aber auch Artikel für einen nebenbei stattfindenden Kuchenbasar angelegt werden.
+Es können *Stammartikel* unabhängig von Terminen mit festen Preisen angelegt werden. Diese Stammartikel sind für allgemeine Artikel gedacht, die keinem Verkäufer zugeordnet sind. So können damit bspw. Verpackungsmaterial (Tüten), zusätzliche Gebühren, Pauschalartikel von Spenden aber auch Artikel für einen nebenbei stattfindenden Kuchenbasar angelegt werden:
 
-Stammartikel können - im Gegensatz zu durch Verkäufer angelegte Artikel - mehrfach verkauft werden, auch mehrmals pro Transaktion.
+image:images/web/stock_items.png[]
+
+Stammartikel können - im Gegensatz zu durch Verkäufer angelegte Artikel - mehrfach verkauft werden, auch mehrmals pro Transaktion und über mehrere Termine hinweg.
 
 Etiketten für die Stammartikel lassen sich jederzeit ausdrucken. Diese Etiketten kann man dann auf die Artikel aufbringen oder ausgedruckt neben der Kasse liegen lassen und dann bei Bedarf direkt vom Blatt einscannen.
 
 Stammartikel können weder gelöscht, noch deren Preis geändert werden, da sie terminübergreifend Verwendung finden.
+
+==== Standardmails
+
+Das Online-System verschickt bei bestimmten Aktionen und/oder Zeitpunkten automatische Mails an die Verkäufer. Diese Standardmails sind im einzelnen:
+
+===== Registrierungsbestätigung
+
+Die Mail wird mit der Registrierung eines Verkäufers an die vom Verkäufer angegebene eMail-Adresse verschickt. sie enthält einen Link, mit dem ein Verkäufer in den geschützten Bereich gelangt. Erst mit dem erstmaligen Anklicken dieses Links wird das Verkäuferkonto aktiviert und es taucht in Mail- und Reservierungszielgruppen auf.
+
+===== Reservierungseinladung
+
+Die Mail kann an alle registrierten Verkäufer vor Start der Reservierungsphase geschickt werden, um die Verkäufer auf den Termin und die Reservierungsphase hinzuweisen. In der Mail ist standardmäßig ein Link enthalten, mit der ein Verkäufer direkt eine Reservierung nach Erreichen der Reservierungsphase eine Reservierung durchführen kann, sofern noch Plätze frei sind.
+
+===== Reservierungsbestätigung
+
+Diese Mail wird automatisch an einen Verkäufer geschickt, sobald eine Reservierung durchgeführt werden konnte. Diese Reservierung kann manuell (durch Verkäufer selbst oder durch einen Administrator im Verwaltungsbereich) oder automatisch (durch Freiwerden eines Platzes, beim Nachrücken von der Warteliste) erfolgen. In der Mail steht üblicherweise die Reservierungsnummer sowie das Datum, bis wann die Artikel einzugeben sind.
+
+===== Erinnerung vor Bearbeitungsschluss
+
+Diese Mail kann an alle Verkäufer mit einer Reservierung für einen Termin verschickt werden, um diese auf das Ende der Artikeleingabe hinzuweisen. Üblicherweise wird dieses Datum in der Mail angegeben.
+
+===== Bearbeitungsabschlussmail
+
+Diese Mail sollte an alle Verkäufer mit Reservierung unmittelbar nach Artikeleingabeende verschickt werden, um diese auf die Artikelabgabetermine hinzuweisen. Im Anhang dieser Mail befindet sich ein Dokument mit den Etiketten aller vom Verkäufer eingegebener Artikel.
+
+===== Abschlussmail
+
+Diese Mail sollte nach der Verkaufsphase (und nach dem Hochladen aller Transaktionen aus dem Kassensystem in das Online-System) ausgelöst werden. Es wird eine Rechnung an alle Verkäufer mit Reservierung verschickt und es kann in der Mail noch einmal auf den Termin für die Abholung nicht verkaufter Ware sowie den Umsatzanteil hingewiesen werden.
+
+image:images/web/message_templates.png[]
+
+Jede Standardmail kann individuell angepasst oder auf den Ursprungszustand zurückgesetzt werden. Es wird empfohlen, die Mailinhalte nicht komplett umzugestalten. Der Kerninhalt sollte erhalten bleiben.
+
+image:images/web/edit_message_template.png[]
+
+Der Inhalt wird als Text- und als HTML-Mail verschickt. Als Formattierung wird die https://de.wikipedia.org/wiki/Markdown[Markdown-Syntax] benutzt.
+
+Es können Platzhalter sowohl in der Betreffzeile als auch im Inhalt der Mail benutzt werden, die beim Verschicken der Mails mit den tatsächlichen Daten ersetzt werden. Alle Platzhalter sind in der Form `{{ platzhalter }}` anzugeben. Es stehen folgende Platzhalter zur Verfügung:
+
+===== Verkäuferdaten
+
+`{{ registration_info }}`:: vollständige Registrierungsdaten inkl. Name, Adresse, Telefonnummer und eMail-Adresse
+`{{ seller_first_name }}`:: Vorname
+`{{ seller_last_name }}`:: Nachname
+`{{ seller_street }}`:: Straße
+`{{ seller_zip_code }}`:: Postleitzahl
+`{{ seller_city }}`:: Ort
+`{{ seller_phone }}`:: Telefonnummer
+`{{ seller_email }}`:: eMail-Adresse
+
+===== Termindaten (sofern Bezug vorhanden in Standardmail):
+
+`{{ event_name }}`:: Name
+`{{ event_shopping_time }}`:: Verkaufszeiten
+`{{ event_reservation_start }}`:: Reservierungsstart
+`{{ event_reservation_end }}`:: Artikeleingabeende
+`{{ event_handover_time }}`:: Artikelabgabezeiten
+`{{ event_pickup_time }}`:: Artikelabholzeiten
+`{{ event_max_reservations }}`:: maximale Anzahl möglicher Reservierungen
+`{{ event_max_items_per_reservation }}`:: maximale Anzahl Artikel pro Reservierung
+`{{ event_max_reservations_per_seller }}`:: maximale Anzahl Reservierungen pro Verkäufer
+`{{ event_commission_rate }}`:: Kommissionsanteil
+`{{ event_reservation_fee }}`:: Reservierungsgebühr
+
+===== Reservierungsdaten (sofern Bezug vorhanden in Standardmail):
+
+`{{ reservation_number }}`:: Reservierungsnummer
+
+===== Links
+
+Als Einsprungslinks in den gesicherten Bereich für Verkäufer stehen folgende Platzhalter zur Verfügung:
+
+`{{ login_url }}`:: Hauptseite
+`{{ reserve_url }}`:: Reservierung durchführen (nur in Reservierungseinladung)
+`{{ review_url }}`:: Zur Bewertung des Termins (nur in Abschlussmail)
+`{{ results_url }}`:: Zum Abschlussbericht des Termins (nur in Abschlussmail)
+
+Damit daraus ein anklickbarer und leserlicher Link wird, bitte folgende Syntax verwenden:
+
+`[Text des Einsprunglinks]({{ platzhalter }})`
+
+Darüberhinaus können natürlich andere Seiten mit dieser Schreibweise auch ohne Platzhalter verlinkt werden.
+
+==== Systemeinstellungen
+
+In diesem Bereich können Sie die Basiseinstellungen des Online-Systems vornehmen. Dazu gehören:
+
+* Name des Systems (auf Hauptseite und im Menü sichtbar)
+* Adresse des Veranstaltungsorts (wird auf Hauptseite angezeigt)
+* Rechnungsadresse (diese wird für die Abrechnung des Flohmarkthelfer-Systems benutzt)
+* Einleitungstext auf Hauptseite
+* Epilog auf Hauptseite
+* Teilnahmebedingungen
+* Standardwerte für
+** Basis für Preisangaben
+** Reservierungsgebühr
+** Umsatzanteil des Veranstalters
+** Funktion Spenden nicht verkaufter Artikel
+** Wert für Spende bei Artikeleingabe
 
 ==== Verkäufer
 
@@ -70,7 +177,7 @@ image:images/web/sellers_index.png[]
 
 Über das Suchfeld kann die Verkäuferliste gefiltert werden. Es wird in allen Stammdaten nach den eingegebenen Text gesucht.
 
-image:images/web/sellers_search.png[]
+image:images/web/search.png[]
 
 NOTE: Erst mit Drücken von ENTER/RETURN wird die Suche durchgeführt. Wenn Sie wieder alle Verkäufer sehen wollen, löschen Sie den Text im Suchfeld und drücken erneut ENTER/RETURN.
 
@@ -198,17 +305,19 @@ image:images/web/events_show.png[]
 
 In der Detailansicht eines Termins ist neben den eingegebenen Daten auch ein *Token* zu finden. Dieses Token können Sie zur Übertragung der Daten für diesen Termin in die Kassensystem-Software benutzen. Steht Ihnen auf keinem Laptop mit dem Kassensystem eine Internetverbindung zum Websystem zur Verfügung, können Sie alternativ die Daten des Flohmarkts nach Reservierungs- und Artikeleingabephase über *Daten herunterladen* in eine Datei speichern und zum Beispiel mit einem USB-Stick auf die Kassensysteme verteilen.
 
-===== Vordefinierte Mails
+===== Standardmails
 
-In der Detailansicht haben Sie abhängig von der aktuellen Phase des Termins die Möglichkeit, bestimmte vordefinierte Mails an die Verkäufer auszulösen.
+In der Detailansicht haben Sie abhängig von der aktuellen Phase des Termins die Möglichkeit, vordefinierte Standardmails an die Verkäufer auszulösen. Der Inhalt der Standardmails kann zuvor in den Stammdaten individuell angepasst werden.
 
-Dabei stehen folgende Mails zur Vefügung:
+Die in der Termindetailansicht auslösbaren Mails sind:
 
 ====== Reservierungseinladung
 
 *Bedingung:* Reservierungs-/Artikeleingabephase noch nicht beendet
 
-Alle potenziellen Verkäufer erhalten eine Mail mit Informationen über den Termin inklusive einen Link mit dem direkt eine Reservierung durchgeführt werden kann. Der Zeitpunkt des Reservierungsstarts steht in der Mail. Der Link zur Reservierung führt nur dann zu einer Reservierung, wenn der Startzeitpunkt erreicht ist und noch Reservierungen verfügbar sind.
+*Zielgruppe:* Alle Verkäufer, die noch keine Reservierung für diesen Termin haben
+
+*Inhalt:* Informationen über den Termin inklusive einen Link mit dem direkt eine Reservierung durchgeführt werden kann. Der Zeitpunkt des Reservierungsstarts steht üblicherweise in der Mail. Der Link zur Reservierung führt nur dann zu einer Reservierung, wenn der Startzeitpunkt erreicht ist und noch Reservierungen verfügbar sind.
 
 image:images/web/mails_invitation.png[]
 
@@ -220,7 +329,9 @@ NOTE: Sollte diese Mail für einen Termin bereits ausgelöst wurden sein, werden
 
 *Bedingung:* Die Reservierungs- und Artikeleingabephase läuft noch
 
-Alle Verkäufer, die eine Reservierung für diesen Termin haben werden darauf hingewiesen, dass die Artikeleingabe bald endet (mit Angabe des Datums) und daran erinnert, ihre Artikel bis dahin einzugeben.
+*Zielgruppe:* Alle Verkäufer, die eine Reservierung für diesen Termin haben
+
+*Inhalt:* Es wird darauf hingewiesen, dass die Artikeleingabe bald endet (mit Angabe des Datums) und daran erinnert, die Artikel bis dahin einzugeben oder die Reservierung für Wartende freizugeben.
 
 image:images/web/mails_reservation_closing.png[]
 
@@ -230,7 +341,9 @@ TIP: Lösen Sie die Mail spätestens 2 Tage vor Artikeleingabeende aus.
 
 *Bedingung:* Die Reservierungs- und Artikeleingabephase ist beendet
 
-Diese Mail enthält neben den Informationen zum Abgabezeitrahmen der Artikel auch nochmal die Etiketten aller Artikel zum Ausdrucken, sollte das der Verkäufer selber noch nicht gemacht haben.
+*Zielgruppe:* Alle Verkäufer, die eine Reservierung für den Termin haben
+
+*Inhalt:* Neben den Informationen zum Abgabezeitrahmen der Artikel enthält diese Mail einen Anhang mit den Etiketten aller Artikel zum Ausdrucken.
 
 image:images/web/mails_reservation_closed.png[]
 
@@ -238,9 +351,11 @@ TIP: Lösen Sie die Mail unmittelbar nach Artikeleingabeende aus, noch bevor Sie
 
 ====== Abschluss
 
-*Bedingung:* Verkaufsphase muss beendet sein
+*Bedingung:* Verkaufsphase beendet
 
-Diese Mail enthält zum einen die Abrechnung für eine Reservierung. Zum anderen gibt sie dem Verkäufer die Möglichkeit, eine Statistik über den Termin einzusehen und den den Termin zu bewerten und Vorschläge zur Verbesserung zu geben.
+*Zielgruppe:* alle Verkäufer mit einer Reservierung für den Termin
+
+*Inhalt:* Diese Mail enthält zum einen die Abrechnung für eine Reservierung. Zum anderen gibt sie dem Verkäufer die Möglichkeit, eine Statistik über den Termin einzusehen und den Termin zu bewerten und Vorschläge zur Verbesserung zu geben.
 
 image:images/web/mails_finalize.png[]
 
@@ -272,11 +387,23 @@ Eine Sperre kann jederzeit gelöscht oder der Grund dafür bearbeitet werden.
 
 image:images/web/suspensions_edit.png[]
 
+===== Leihgeräte
+
+Über diesen Punkt können Leihgeräte bestellt werden, die zum Durchführen des Termins benötigt werden.
+
+image:images/web/rentals.png[]
+
+Da die Anzahl der uns zur Verfügung stehenden Leihgeräte beschränkt ist, ist eine zeitnahe Eintragung der benötigten Leihgeräte zu empfehlen. Die Eintragung der Leihgeräte gilt für uns als Hinweis und zur Planung der Leihgeräteverteilung. Sie ist keine Garantie, dass die Geräte auch wirklich zur Verfügung stehen. Es ist daher empfohlen, sich separat per Mail mit uns in Verbindung zu setzen.
+
 ===== Statistiken
 
-In den Statistiken sieht man die für den Termin angelegten Artikel gruppiert nach Kategorie. Gleiches gilt für die erzeugten Etiketten. Ebenso ist eine Übersicht aller Reservierungen gruppiert nach Ort sowie die Warteliste zu sehen.
+In den Statistiken sieht man die für den Termin angelegten Artikel gruppiert nach Kategorie. Gleiches gilt für verkaufte Ware. Es lassen sich die Rohdaten über **Tabelle anzeigen** darstellen und somit in ein Tabellenverarbeitungsprogramm überführen, um weitere Auswertungen durchzuführen.
 
 image:images/web/events_stats.png[]
+
+Es finden sich hier auch Details zu den Einnahmen, dem Gesamtumsatz sowie Ausgaben (System- und Leihgebühren).
+
+Ebenso ist eine Übersicht aller Reservierungen gruppiert nach Ort (Postleitzahl) sowie die Warteliste zu sehen.
 
 ===== Bewertungen
 

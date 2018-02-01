@@ -75,11 +75,11 @@ Zur Installation der Kassensystem-Software stecken Sie den USB-Datenträger in j
 
 Im ersten Schritt werden Sie nach dem Ordner im Programmverzeichnis gefragt, unter die Start-Verknüpfung angelegt werden soll. Auf dem Deskop wird auch eine Verknüpfung zum Flohmarkthelfer Kassensystem angelegt. Sie können diese Einstellung so lassen und einfach auf *Weiter* klicken.
 
-image:images/setup1.png[]
+image:images/sale/setup1.png[]
 
 Im zweiten Schritt wird nach dem Namen der Kasse, der Basis-Webadresse des Flohmarkt-Websystems sowie einem Verzeichnis zur automatischen Synchronisation und für Sicherheitskopien gefragt.
 
-image:images/setup2.png[]
+image:images/sale/setup2.png[]
 
 Der *Name der Kasse* wird als Kennung im Verbund mehrerer Kassensysteme benutzt. In der Regel nimmt man hier eine Nummerierung der Kassen vor. Wenn Sie nur eine Kasse einsetzen, ist dieser Wert uninteressant.
 
@@ -91,7 +91,7 @@ WARNING: Das gewählte Verzeichnis zur Synchronisierung muss auf den Wechseldate
 
 Im dritten Installationsschritt können Sie weitere Optionen festlegen.
 
-image:images/setup3.png[]
+image:images/sale/setup3.png[]
 
 Im *Standardmodus* werden in der Kassensoftware lediglich die Funktionen bereitgestellt, die ausschließlich für den Betrieb einer Kasse vorgesehen sind. Dazu zählt das Verkaufen, das Stornieren, die Artikelsuche und das Anzeigen der Statistiken.
 
@@ -111,7 +111,7 @@ NOTE: Haben Sie neben dem Installationsprogramm *flohmarkthelfer-setup.exe* auch
 
 Nach der Installation der Software befindet sich sowohl unter dem Startmenü als auch auf dem Desktop ein Eintrag zum Starten des Flohmarkthelfer Kassensystems.
 
-image:images/desktop.png[]
+image:images/sale/desktop.png[]
 
 ==== Start
 
@@ -119,13 +119,13 @@ Sollten Sie die Netzwerksynchronisierung zwischen den Kassen verwenden wollen, s
 
 Beim Start des Kassensystems wird zunächst ein Startbild angezeigt.
 
-image:images/splash.png[]
+image:images/sale/splash.png[]
 
 Abhängig davon, wie schnell Ihr Rechner ist, kann es einige Sekunden dauern, bis das Programm geladen ist. Bei sehr langsamen Laptops mit sehr wenig Speicher kann dies durchaus bis zu eine Minute dauern.
 
 Starten Sie die Software nach der erstmaligen Installation und haben Sie die Termindaten im gleichen Verzeichnis wie das Installationsprogramm gelegt, so erscheint die folgende Meldung:
 
-image:images/import.png[]
+image:images/sale/import.png[]
 
 Stimmen Sie hier bitte zu, damit die Daten des Termins für den kommenden Verkauf importiert werden.
 
@@ -133,17 +133,17 @@ WARNING: Beachten Sie, dass dabei alle eventuell bereits getätigten Transaktion
 
 Der Import war erfolgreich, wenn folgende Meldung angezeigt wird:
 
-image:images/import_success.png[]
+image:images/sale/import_success.png[]
 
 Sollten Sie das Programm versehentlich ein zweites Mal gestartet haben, sehen Sie folgende Meldung:
 
-image:images/2ndstart.png[]
+image:images/sale/2ndstart.png[]
 
 Klicken Sie einfach auf *OK* und wechseln in das Fenster des zuerst gestarteten Programms.
 
 Sollte das Netzwerk nicht korrekt eingerichtet und verfügbar sein, werden Sie folgende Meldung sehen:
 
-image:images/networkerror.png[]
+image:images/sale/networkerror.png[]
 
 Wenn Sie die Kassensoftware ohne Netzwerksynchronisierung nutzen wollen, bestätigen Sie bitte die Meldung. Wenn Sie mit *No/Nein* antworten, beendet sich das Kassensystem.
 
@@ -153,13 +153,13 @@ Abhängig davon, ob Sie bei der Installation den Standardmodus oder den erweiter
 
 ===== Standardmodus
 
-image:images/standard.png[]
+image:images/sale/standard.png[]
 
 Es stehen die Funktionen *Verkauf*, *Storno*, *Artikelsuche* und *Statistiken* zur Verfügung.
 
 ===== erweiterter Modus
 
-image:images/expert.png[]
+image:images/sale/expert.png[]
 
 Neben den gleichen Funktionen wie im Standardmodus werden hier zusätzliche Funktionen bereitgestellt.
 
@@ -203,7 +203,7 @@ Sollten Sie die Netzwerksynchronisierung nutzen, vergewissern Sie sich, dass sp�
 
 Wenn Sie auf die Funktion *Statistiken* klicken, können Sie Details über die anderen verbunden Kassensysteme sehen.
 
-image:images/networkdetails.png[]
+image:images/sale/networkdetails.png[]
 
 Unter *Verbunden mit* sind alle verbundenen Kassensysteme aufgelistet. Dabei wir der Name der Kasse (angegeben bei der Installation der Kassensystem-Software), die Netzwerk-IP-Adresse, der Name des Rechners (falls ermittelbar) sowie der Zeitunterschied (*dT*) zwischen der verbundenen und der eigenen Kasse angezeigt.
 
@@ -235,7 +235,7 @@ NOTE: Der Typ der verwendeten Barcodes ist *EAN-128*. Dies ist der meist genutzt
 
 Mit Einlesen des Barcodes oder Eingabe des Artikelcodes erscheint der hinzugefügte Artikel in der Artikelliste darunter. Sie können sofort den nächsten Artikel einlesen.
 
-image:images/sale.png[]
+image:images/sale/sale.png[]
 
 NOTE: In der Regel gibt jeder Barcode ein akustisches Signal (Piepton), wenn der Barcode gelesen werden konnte und dabei wird der Barcode vom Barcodeleser so eingegeben als hätte man den Code per Tatstatur eingegeben. Sollte der Artikel trotz Piepton nicht in der Artikelliste auftauchen, und kein Fehler angezeigt werden, vergewissen Sie sich bitte, dass die Eingabeaufforderung in der Eingabezeile aktiv ist und das Verkaufsfenster das aktive Fenster ist.
 
@@ -245,13 +245,13 @@ Mit jedem eingelesenen Artikel erhöht sich die Artikelanzahl und Summe im unter
 
 Sollten Sie versehentlich einen Artikel doppelt oder mehrfach einscannen, erscheint eine Warnung und der Artikel wird nicht erneut hinzugefügt.
 
-image:images/saledoublescan.png[]
+image:images/sale/saledoublescan.png[]
 
 ===== Bereits verkaufte Artikel
 
 Sollte ein Artikel bereits verkauft worden sein, wird ebenso eine Warnung angezeigt.
 
-image:images/sale_alreadysold.png[]
+image:images/sale/sale_alreadysold.png[]
 
 Die Ursache hierfür kann sein, dass der Verkäufer das Etikett mehrfach ausgedruckt und an mehreren Artikeln angebracht hat. Dies ist nicht zulässig. Jeder Artikel muss ein eindeutiges Etikett haben. Der Artikel kann daher nicht verkauft werden. Sie müssen entweder den Artikel zur Seite legen oder Sie verkaufen den Artikel an den Käufer separat.
 
@@ -259,7 +259,7 @@ Die Ursache hierfür kann sein, dass der Verkäufer das Etikett mehrfach ausgedr
 
 Sollten Sie einen Artikel einscannen, den das System nicht kennt, wird folgendes angezeigt:
 
-image:images/sale_unknown.png[]
+image:images/sale/sale_unknown.png[]
 
 Dieser Artikel kann dann nicht verkauft werden.
 
@@ -273,11 +273,11 @@ Mögliche Ursachen dafür können sein:
 
 Sollten alle Artikel für einen Käufer eingelesen sein, drücken Sie einfach die Taste *ENTER* oder *RETURN* (oder klicken Sie auf *Fertig*). Daraufhin erscheint ein Dialog zum Abschließen der Transaktion.
 
-image:images/salefinalize.png[]
+image:images/sale/salefinalize.png[]
 
 Hier wird noch einmal die Kaufsumme angezeigt und es kann nun optional das Bargeld des Käufers eingetragen werden, damit das auszuzahlende Wechselgeld berechnet werden kann. Mit Drücken von ENTER oder RETURN wird das Wechselgeld auf Basis der Eingabe bei BAR-Zahlung berechnet.
 
-image:images/salefinalizebar.png[]
+image:images/sale/salefinalizebar.png[]
 
 TIP: Sie benötigen im Normalfall keine Maus. Sie brauchen nur das Nummernfeld der Tastatur, um ggf. Brageldangaben zu machen und die ENTER-Taste zu drücken.
 
@@ -293,11 +293,11 @@ NOTE: Erst mit Abschließen des Verkaufs wird eine Transaktion erzeugt und proto
 
 Sollte ein bereits verkaufter Artikel wieder zurückgegeben werden (bspw. ist nach dem Verkauf eine Verschmutzung/Beschädigung des Artikels aufgefallen), kann durch die Stornofunktion dieser Artikel wieder zurückgenommen werden.
 
-image:images/refund.png[]
+image:images/sale/refund.png[]
 
 Der Inhalt des Fensters ähnelt dem Verkaufsfenster. Auch hier können Artikelcodes eingescannt werden und der Storno mit einfachem ENTER/RETURN/Fertig zum Abschluss gebracht werden.
 
-image:images/refundfinalize.png[]
+image:images/sale/refundfinalize.png[]
 
 Die Eingabe eines Rückgelds entfällt hier. Die Kassen sollten in der Lage sein, das Geld exakt herauszugeben.
 
@@ -309,7 +309,7 @@ Hin und wieder gehen Etiketten bei Artikeln verloren. Ist an der Kasse das Etike
 
 TIP: Informieren Sie Ihre Verkäufer, dass die Artikelbeschreibung so genau wie möglich sein sollte, was das Auffinden der Artikel über die Suche erleichtert.
 
-image:images/search.png[]
+image:images/sale/search.png[]
 
 In diesem Beispiel konnte anhand der Suchbegriffe das Ergebnis auf zwei Artikel reduziert werden. Eines der Artikel ist bereits verkauft. Damit ist die Wahrscheinlichkeit hoch, dass es sich bei dem zu verkaufenden Artikel um den anderen handelt.
 
@@ -319,7 +319,7 @@ WARNING: Es ist nicht garantiert, dann der richtige Artikel gefunden werden kann
 
 In den Statistiken finden Sie Informationen zu der in der in den Termindaten befindlichen Artikel und Transaktionen.
 
-image:images/stats.png[]
+image:images/sale/stats.png[]
 
 Die *Anzahl der Artikel* sollte nach dem Importieren der Daten aus dem Online-System mit den Terminstatistiken im Onlinesystem für diesen Termin übereinstimmen.
 
@@ -343,7 +343,7 @@ Optional kann auf der Liste neben jeder Reservierung der Auszahlbetrag angezeigt
 
 Mit Hilfe dieser Funktion können Sie bei der Annahme der Artikel exemplarisch oder vollständig die Barcodes durch die Verkäufer ausgedruckten und an der Ware angebrachten Etiketten testen, ohne einen Verkauf auszulösen. Es wird nicht nur geprüft, ob der Barcode lesbar ist, sondern auch ob der der damit erkannte Artikel in der Datenbank enthalten ist.
 
-image:images/barcodetest.png[]
+image:images/sale/barcodetest.png[]
 
 Vergewissern Sie sich, dass in der obersten Zeile die Eingabe aktiviert ist und lesen dann mit dem Barcode-Scanner die Etiketten ein. Es sollte damit der Artikel in der Liste darunter hinzugefügt werden.
 
@@ -359,17 +359,17 @@ Sollten Sie beim Barcode-Testscannen feststellen, dass viele der Etiketten eines
 
 Sind sämtliche Etiketten von bestimmten Verkäufern nicht durch den Barcode-Leser erkennbar und sogar die Nummern unter den Barcodes nicht lesbar, so können Sie direkt vor Ort die Etiketten noch einmal auszudrucken.
 
-image:images/barcodesprint.png[]
+image:images/sale/barcodesprint.png[]
 
 Geben Sie hierbei die Reservierungsnummer an. Sie haben die Möglichkeit, die kompletten Etiketten auszudrucken oder nur den Barcode mit der darunter befindlichen Nummer.
 
-image:images/barcodesprint2.png[]
+image:images/sale/barcodesprint2.png[]
 
 Nun Klicken Sie bitte auf den Text darunter, um das erzeugte Dokument zu öffnen und auszudrucken.
 
-image:images/barcodepdf.png[]
+image:images/sale/barcodepdf.png[]
 
-image:images/labelpdf.png[]
+image:images/sale/labelpdf.png[]
 
 In beiden Fällen empfehlen wir die Verwendung von Klebeetiketten, die recht schnell über die nicht lesbaren Etiketten geklebt werden können. Im Einzelhandel und Schreibwarengeschäften gibt es A4-Bögen mit entsprechende Klebeetikett-Größen.
 
@@ -381,15 +381,15 @@ WARNING: Bevor Sie die finale Abrechnung des Flohmarkts durchführen, vergewisse
 
 Mit der Abrechnungsfunktion stehen verschiedene Methoden zur Verfügung. Klicken Sie einfach auf die jeweilige Abrechnung, die Sie erzeugen und öffnen/ausdrucken wollen.
 
-image:images/finalization.png[]
+image:images/sale/finalization.png[]
 
 Über die *Gesamtübersicht* erhalten Sie eine Abrechnung, welches die Einnahmen des Flohmarkts in der Summe zeigt und die Auszahlbeträge an die Verkäufer auflistet. Ebenso werden hier Auflistungen der Verkäufer nach denen, die Artikel zurückbekommen und denen, die keine Ware mehr zurückbekommen. Sollten Spenden für den Termin aktiviert gewesen sein, findet sich hier auch eine Aufstellung der Verkäufer die ihre gesamte Ware gespendet haben.
 
-image:images/finalizationtotal.png[]
+image:images/sale/finalizationtotal.png[]
 
 Über die Abrechnung für *Alle Verkäufer* erzeugen Sie eine detaillierte Abrechnung für alle Reservierungen. Auf jeder Abrechnung ist für die Reservierung eine Gesamtübersicht zu sehen sowie Detaillisten der verkauften, zurückgegebenen und gespendeten Artikel.
 
-image:images/finalizationall.png[]
+image:images/sale/finalizationall.png[]
 
 Damit können Sie alle Abrechnungsblätter für die Reservierungen erzeugen und drucken und diese den Verkäufern beim Abholen der nicht verkauften Ware und ihren Verkaufsanteil übergeben.
 
@@ -401,7 +401,7 @@ TIP: Der Umwelt zuliebe drucken Sie am besten gar keine Abrechnungen aus. Die Ge
 
 In den Einstellungen haben Sie die Möglichkeit, die Daten mit dem Online-System und mit den anderen im Netzwerk verbundenen Kassensystemen auszutauschen.
 
-image:images/settings.png[]
+image:images/sale/settings.png[]
 
 ===== Datenaustausch mit Online-System
 
@@ -415,13 +415,13 @@ Ebenso müssen Sie das *Token* eintragen, was im Online-System unter den Termind
 
 Mit Betätigen von *Daten herunterladen* wird versucht, eine Verbindung zum Online-System herzustellen und die Daten des Termins, zu dem der Token gehört auf das Kassensystem zu installieren. Eine entsprechende Meldung warnt davor, dass die aktuellen Daten des Kassensystems dabei überschrieben werden.
 
-image:images/downloadcheck.png[]
+image:images/sale/downloadcheck.png[]
 
 Bestätigen Sie mit Yes/Ja, sofern Sie auf dem Kassensystem keine Transaktionen hinterlegt haben, die nicht verloren gehen sollen und noch nicht zum Online-System hochgeladen wurden.
 
 Je nachdem wie schnell Ihre Internetverbindung ist, kann der das Herunterladen der Daten einige Sekunden bis wenige Minuten dauern. Ein erfolgreicher Datenimport wird Ihnen danach angezeigt.
 
-image:images/downloaddone.png[]
+image:images/sale/downloaddone.png[]
 
 ====== Transaktionen hochladen
 
@@ -431,9 +431,9 @@ WARNING: Bevor Sie das finale Hochladen der Transaktionen durchführen und die A
 
 Benutzen Sie direkt nach Kassenschluss (noch bevor die Verkäufer ihre nicht verkaufte Ware abholen) ein Smartphone mit Internetverbindung zum Erstellen eines WLAN-Hotspots. Verbinden Sie sich mit der Kasse im erweiterten Modus mit diesem WLAN-Hotspot, laden die Transaktionen hoch und lösen die Abschlussmail im Verwaltungsbereich für diesen Termin aus.
 
-image:images/uploadcheck.png[]
+image:images/sale/uploadcheck.png[]
 
-image:images/uploaddone.png[]
+image:images/sale/uploaddone.png[]
 
 TIP: Da die Abschlussmail die Detailabrechnung für jeden Verkäufer enthält, brauchen Sie keine Detailabrechnung vor Ort auszudrucken und sparen so Papier und schonen die Umwelt.
 
@@ -445,7 +445,7 @@ NOTE: Solange die Kasse mit dem WLAN-Hotspot und damit dem Internet verbunden is
 
 Sollten Sie die Termindaten nicht per USB-Stick sondern per Netzwerk auf die anderen mit dieser Kasse verbundenen Kassen verteilen wollen, so können Sie die *Daten zu anderen Kassensystemen übertragen*.
 
-image:images/pushcheck.png[]
+image:images/sale/pushcheck.png[]
 
 Nach erfolgreicher Übertragung und Importieren dieser Daten wird an den anderen Kassen jeweils eine Bestätigunsmeldung angezeigt.
 
