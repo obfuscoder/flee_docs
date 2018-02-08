@@ -152,7 +152,11 @@ Darüberhinaus können natürlich andere Seiten mit dieser Schreibweise auch ohn
 
 ==== Systemeinstellungen
 
-In diesem Bereich können Sie die Basiseinstellungen des Online-Systems vornehmen. Dazu gehören:
+In diesem Bereich können Sie die Basiseinstellungen des Online-Systems vornehmen.
+
+image:images/web/system_settings.png[]
+
+Zu den Basiseinstellungen gehören:
 
 * Name des Systems (auf Hauptseite und im Menü sichtbar)
 * Adresse des Veranstaltungsorts (wird auf Hauptseite angezeigt)
@@ -166,6 +170,58 @@ In diesem Bereich können Sie die Basiseinstellungen des Online-Systems vornehme
 ** Umsatzanteil des Veranstalters
 ** Funktion Spenden nicht verkaufter Artikel
 ** Wert für Spende bei Artikeleingabe
+
+==== Einbetten von Bilddateien
+
+An allen Stellen an denen Sie formattierte Eingaben machen können (bspw. Hauptseite, Teilnahmebedingungen, eMails), können auch Bilddateien eingebunden werden.
+
+Diese Bilddateien müssen im Internet mittels Webbrowser über eine URL (`http://...` bzw. `https://...`) aufrufbar sein.
+
+Das Bild kann in dem formattierten Text mit folgendem Format eingebunden werden:
+
+`![Bildbeschreibung](http://adresse/der/bilddatei.jpg)`
+
+Mittels Klick auf das Bildsymbol (image:images/web/image_symbol.png[]) in der Symbolleiste des Bearbeitungsfensters wird an der aktuellen Position in diesem Bearbeitungsfenster dieser Platzhalter eingefügt:
+
+image:images/web/image_placeholder.png[]
+
+Nun muss noch die Webadresse der Bilddatei und eine Bildbeschreibung eingetragen werden:
+
+image:images/web/image_final.png[]
+
+Die Bildbeschreibung ist sichtbar, wenn sich bei der Bildanzeige der Mauszeiger über dem Bild befindet.
+
+WARNING: Bitte beachten Sie, dass einige eMail-Programme standardmäßig beim Anzeigen einer eMail eingebettete Bilder aus dem Internet nicht nachladen und anzeigen. Dies muss erst durch den Nutzer bestätigt werden. Daher ist das Einbetten von Bildern in Mails nicht zu empfehlen.
+
+===== Dienste zum Speichern und Bereitstellen von Bildern
+
+Sollten Sie selbst keine Möglichkeit haben, auf einen Webserver das Logo bereitzustellen, empfehlen wir den Dienst *Imgur*. Zum Benutzen dieses Dienstes geht man auf die Webseite https://imgur.com/upload:
+
+image:images/web/imgur_upload.png[]
+
+Dann klickt man auf den *Upload*-Button und wählt die Bilddatei aus. Diese wird daraufhin hochgeladen und anschließend auf einer Webseite angezeigt:
+
+image:images/web/imgur_uploaded.png[]
+
+Nun geht man mit dem Mauszeiger über das Bild. Es erscheint ein Menü rechts oberhalb. Man klickt nun auf das Häkchen-Symbol rechts neben den "Copy" Link. In dem Menü, was damit aufklappt, wählt man "Get share links":
+
+image:images/web/imgur_dropdown.png[]
+
+Hier findet man die Option "Markdown" und klickt auf den "Copy" Button bei dieser Option:
+
+image:images/web/imgur_share_options.png[]
+
+Damit hat man die URL der Bilddatei mit Markdown-Syntax in die Zwischenablage kopiert.
+
+Im Verwaltungsbereich kann man nun in den Systemeinstellungen diesen Link im gewünschten Bearbeitungsbereich an geeigneter Stelle einfügen. Dies geht per STRG+V oder UMSCHALT+EINFG oder Rechtsklick mit Maus und "Einfügen" wählen.
+
+image:images/web/imgur_paste.png[]
+
+Damit die Bilddatei direkt angezeigt wird muss unmittelbar davor noch ein Ausrufezeichen (!) gesetzt werden und es kann der Text *Imgur* gegen einen geeigneteren Bildnamen ausgetauscht werden:
+
+image:images/web/imgur_final.png[]
+
+Man kann sich bei *Imgur* auch einen Zugang einrichten, um so mehrere Bilder zu verwalten und jederzeit abändern zu können. Letztendlich ist dies aber nicht notwendig. Man kann auch jederzeit ein neues Bild hochladen und den eingebetteten Link anpassen.
 
 ==== Verkäufer
 
