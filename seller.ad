@@ -81,6 +81,12 @@ image:images/web/items_labels.png[]
 
 WARNING: Es ist darauf zu achten, dass freigegebene Etiketten nicht mehr verwendet werden dürfen. Diese Etiketten sind dem System nicht mehr bekannt und Artikel, die mit freigegebenen Etiketten versehen sind, können nicht verkauft werden.
 
+==== Etikettenformat
+
+Es werden 6x3 Etiketten pro A4-Blatt generiert. Jedes Etikett hat die Größe von 64 x 45 mm. Sollten Sie Klebeetiketten verwenden wollen, können Sie diese hier verwenden:
+
+https://www.avery-zweckform.com/produkt/universal-etiketten-3671
+
 === Abrechnung
 
 Mit Abschluss des Flohmarkts erhalten Verkäufer für jede Reservierung eine Abschlussmail mit der Abrechnung. Darin enthalten sind die Liste der verkauften und nicht verkauften Artikel, sowie die Auszahlbeträge abzüglich der Gebühren.

@@ -373,7 +373,16 @@ image:images/sale/labelpdf.png[]
 
 In beiden Fällen empfehlen wir die Verwendung von Klebeetiketten, die recht schnell über die nicht lesbaren Etiketten geklebt werden können. Im Einzelhandel und Schreibwarengeschäften gibt es A4-Bögen mit entsprechende Klebeetikett-Größen.
 
-NOTE: Verwenden Sie Klebeetiketten-Bögen der Größe A4 mit Raster 5x3 für komplette Etiketten und 14x4 für die reinen Barcodes.
+===== Etikettenformat
+
+Die Kassensoftware druckt 5x3 Etiketten pro A4-Blatt aus. Das
+Etikettenformat ist 70 x 50,8 mm.
+
+https://www.avery-zweckform.com/produkt/universal-etiketten-3669
+
+Bei den Barcodeetiketten werden 14x4 pro Blatt erzeugt, was einer Etikettengröße von 52,5 x 21,2 mm entspricht.
+
+https://www.avery-zweckform.com/produkt/universal-etiketten-3668
 
 ==== Abrechnung
 
