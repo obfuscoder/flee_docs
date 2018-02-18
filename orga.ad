@@ -4,4 +4,6 @@ include::admin.ad[]
 
 include::sale.ad[]
 
+include::mobile.ad[]
+
 include::quick.ad[]

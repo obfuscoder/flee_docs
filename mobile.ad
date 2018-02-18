@@ -1,0 +1,107 @@
+=== Mobiles Kassensystem
+
+Neben des Standard-Kassensystems, welches für Laptops geeignet ist, wird außerdem ein mobiles Kassensystem für Smartphones und Tablets angeboten. Dieses Mobile Kassensystem unterstützt alle Android-Geräte.
+
+Es werden im Mobilen Kassensystem nicht alle Funktionen angeboten, die das Standard-Kassensystem beinhaltet. Zum Beispiel ist eine Abrechnung nur mit dem Standard-Kassensystem möglich.
+
+Das mobile Kassensystem synchronisiert Transaktionen mit allen anderen Kassensystemen vollautomatisch über eine WLAN-Verbindung. Sie können auch mehrere mobile Kassensysteme zeitgleich einsetzen.
+
+==== Vorbereitungen
+
+Das mobile Kassensystem ist derzeit noch nicht im Google Play Store verfügbar. Stattdessen können Sie es im Verwaltungsbereich des Onlinesystems herunterladen.
+
+Damit Ihr Gerät das Herunterladen und Installieren von Apps aus anderen Quellen als den Google Play Store ermöglicht, müssen Sie dies zunächst in den Sicherheits-Einstellungen Ihres Gerätes erlauben:
+
+image:images/mobile/settings.png[]
+
+image:images/mobile/security_settings.png[]
+
+image:images/mobile/security_settings_sources_confirm.png[]
+
+image:images/mobile/security_settings_sources_activated.png[]
+
+==== Installation
+
+Benutzen Sie den Browser auf Ihren mobilen Gerät, um sich im Verwaltungsbereich des Online-Systems einzuloggen:
+
+image:images/mobile/login.png[]
+
+Auf der Hauptseite des Verwaltungsbereichs finden Sie den Link zum Herunterladen der mobilen Kassensystemsoftware:
+
+image:images/mobile/download_link.png[]
+
+Mit Anklicken des Links wird der Download gestartet. Bestätigen Sie die mögliche Sicherheitswarnung:
+
+image:images/mobile/download_confirm.png[]
+
+Nach erfolgreichem Download können Sie die App installieren:
+
+image:images/mobile/downloaded.png[]
+
+image:images/mobile/install_confirm.png[]
+
+image:images/mobile/installed.png[]
+
+==== Termindaten installieren
+
+Das mobile Kassensystem benötigt wie alle anderen Kassensysteme die Termindaten. Diese müssen zum mobilen Kassensystem von einen der Standard-Kassensystem übertragen werden. Dazu verbinden Sie bitte das mobile Gerät mit dem gleichen WLAN, mit dem sich auch die Standard-Kassensysteme verbinden. Sie können dazu mit Ihrem mobilen Gerät einen WLAN-Hotspot einrichten. Ein WLAN-Router ist nicht erforderlich.
+
+Sie finden nach der Installation die App **Flohmarkthelfer** auf ihrem mobilen Gerät. Wenn Sie diese App starten, erscheint das Hauptfestenster, was sogleich den Verkauf von Artikeln ermöglicht:
+
+image:images/mobile/start.png[]
+
+Oben rechts wird die Anzahl der Verbindungen mit anderen Kassensystemen angezeigt. Die Verbindung wird automatisch über WLAN hergestellt.
+
+Wenn Sie dieses Feld berühren, erscheint ein Fenster mit statistischen Informationen und, falls Verbindungen zu anderen Kassensystemen bestehen, auch Informationen über diese Verbindungspartner.
+
+image:images/mobile/stats.png[]
+
+Prüfen Sie zu Beginn des Verkaufs, dass die hier angegebenen Daten mit denen der anderen Kassensysteme übereinstimmen. Sollten die Angaben nicht mit den Daten der anderen Kassensysteme übereinstimmen, was in der Regel zu Beginn eines Verkaufstermins bei den mobilen Kassen der Fall ist, müssen zunächst die Termindaten auf das mobile Kassensystem übertragen werden.
+
+Hierzu gehen Sie bei einem Kassensystem, welches im erweiterten Modus betrieben wird und mit dem mobilen Kassensystem verbunden ist, in die Einstellungen und benutzen die Funktion **Daten zu anderen Kassensystemen übertragen**:
+
+image:images/sale/settings.png[]
+
+Damit werden die Termindaten zu dem mobilen Kassensystem übertragen und beim erneuten Aufruf der Statistiken stimmen die Daten mit denen der anderen Kassensysteme überein.
+
+==== Benutzung
+
+===== Artikel manuell eingeben
+
+Sie können sofort mit der Eingabe von Artikelnummern beginnen. Es müssen die Nummern unter dem Barcodes eingegeben werden.
+
+image:images/mobile/start.png[]
+
+===== Barcodes scannen
+
+Bequemer und schneller geht es natürlich mit der Scan-Funktion, sollte Ihr mobiles Gerät über eine Kamera verfügen, die hoch genug auflöst, um die Barcodes automatisch lesen zu können. Tippen Sie dazu auf die Funktion **Scannen**. Sofern Sie der Applikation den Zugriff auf die Kamera noch nicht erlaubt haben, erscheint nun eine Sicherheitsabfrage dafür:
+
+image:images/mobile/camera_confirm.png[]
+
+Damit wird die Kamera aktiviert und Sie können diese über die Barcodes halten.
+
+image:images/mobile/scan.png[]
+
+Sobald der Barcode erkannt wurde, wird der Artikel automatisch zur Liste hinzugefügt.
+
+image:images/mobile/items_added.png[]
+
+===== Kauf bestätigen
+
+Haben Sie alle Artikel für einen Verkauf hinzugefügt, rehcnen Sie die angezeigte Summe beim Käufer ab und tippen anschließend auf **Kauf bestätigen**.
+
+image:images/mobile/sale_confirm.png[]
+
+Damit wird die Verkaufstransaktion gespeichert und an alle verbundenen Kassensysteme automatisch synchronisiert. Außerdem wird die Artikelliste geleert und Sie können den nächsten Verkauf durchführen.
+
+===== Artikel entfernen
+
+Sollten Sie einen oder mehrere Artikel aus der Artikelliste wieder entfernen wollen, ohne diese zu verkaufen, tippen Sie auf die jeweiligen Artikel. Diese werden damit markiert und es erscheint ein Papierkorbsymbol oben rechts.
+
+image:images/mobile/delete_items.png[]
+
+Sobald Sie den Papierkorb antippen, werden alle markierten Artikel aus der Liste entfernt.
+
+===== Verkaufsabschluss
+
+Vergewissern Sie sich vor Durchführung der Abrechnung, dass die Daten des mobilen Kassensystems mit denen der anderen Kassensysteme übereinstimmen. Nutzen Sie hierzu die Statistikinformation.
