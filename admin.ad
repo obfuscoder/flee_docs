@@ -78,7 +78,7 @@ Die Mail wird mit der Registrierung eines Verkäufers an die vom Verkäufer ange
 
 ===== Reservierungseinladung
 
-Die Mail kann an alle registrierten Verkäufer vor Start der Reservierungsphase geschickt werden, um die Verkäufer auf den Termin und die Reservierungsphase hinzuweisen. In der Mail ist standardmäßig ein Link enthalten, mit der ein Verkäufer direkt eine Reservierung nach Erreichen der Reservierungsphase eine Reservierung durchführen kann, sofern noch Plätze frei sind.
+Die Mail kann an alle registrierten Verkäufer vor Start der Reservierungsphase geschickt werden, um die Verkäufer auf den Termin und die Reservierungsphase hinzuweisen. In der Mail ist standardmäßig ein Link enthalten, mit der ein Verkäufer direkt mit Erreichen des Reservierungsstarts eine Reservierung durchführen kann, sofern noch Plätze frei sind und die Reservierung durch Verkäufer erlaubt ist (siehe Systemeinstellungen).
 
 ===== Reservierungsbestätigung
 
@@ -156,22 +156,89 @@ In diesem Bereich können Sie die Basiseinstellungen des Online-Systems vornehme
 
 image:images/web/system_settings.png[]
 
-Zu den Basiseinstellungen gehören:
+Zu den Systemeinstellungen gehören:
 
-* Name des Systems (auf Hauptseite und im Menü sichtbar)
-* Adresse des Veranstaltungsorts (wird auf Hauptseite angezeigt)
-* Rechnungsadresse (diese wird für die Abrechnung des Flohmarkthelfer-Systems benutzt)
-* Einleitungstext auf Hauptseite
-* Epilog auf Hauptseite
-* Teilnahmebedingungen
-* Standardwerte für
-** Basis für Preisangaben
-** Reservierungsgebühr
-** Umsatzanteil des Veranstalters
-** Funktion Spenden nicht verkaufter Artikel
-** Wert für Spende bei Artikeleingabe
+===== Name
 
-==== Einbetten von Bilddateien
+Dieser Text wird auf der Hauptseite, im Titel des benutzten Webbrowsers sowie als Absender bei eMails verwendet.
+
+===== Kurzname
+
+Dieser Text wird im Hauptmenü oben links angezeigt. Sollte dieses Feld nicht ausgefüllt sein, wird der Text bei *Name* automatisch benutzt.
+
+===== Adresse
+
+Dies ist die Adresse des Veranstaltungsorts. Sie wird auf der Hauptseite angezeigt.
+
+===== Rechnungsadresse
+
+Diese Adresse wird auf der Rechnung von Flohmarkthelfer benutzt. Ist diese nicht angegeben, wird die *Adresse* benutzt.
+
+===== Einleitungstext auf Hauptseite
+
+Hier können Sie die Besucher der Seite über Ihren Flohmarkt informieren
+
+Dieser Text erscheint auf der Hauptseite unmittelbar nach der *Addresse*. Dieser Text ist frei formattierbar. Es können außerdem Bilder eingebettet und andere Dateien als Links hinzugefügt werden.
+
+Nach dem Einleitungstext folgt die Liste aller aktueller und zukünftiger Termine, die bereits angelegt wurden.
+
+===== Epilog auf Hauptseite
+
+Dieser Inhalt erscheint unmittelbar nach der Liste der aktuellen und zukünftigen Terminen.
+
+Wir empfehlen, hier weitere Detailinformationen über Ihre Organisation oder Veranstaltung einzubetten. Häufig werden hier bspw. Bilder mit Impressionen und eine *Google Map* zum Finden des Standards und einen Weg bis dahin.
+
+===== Teilnahmebedingungen
+
+Die Teilnahmebedingungen sind zentraler Bestandteil, wie Sie Verkäufer auf Rahmenbedingungen bei der Registrierung hinweisen können. Der Text sollte so allgemein sein, dass Sie diesen nicht vor jeden Termin anpassen müssen. Die Teilnahmebedingungen müssen bei einer Registrierung von Verkäufern akzeptiert werden.
+
+===== Standard für Preisangabenbasis
+
+Preise werden sowohl im Online-System als auch im Kassen-System auf Basis dieses Wertes gerundet. Ein Wert von *0.5* bedeutet, dass jeder Preis auf € 0,50 bzw. 50 Cent gerundet wird. Prinzipiell wird bei Auszahlbeträgen für Verkäufer zu Gunsten des Veranstalters abgerundet.
+
+Dieser Wert gilt als Standard-Einstellung und kann bei jedem Termin individuell angepasst werden.
+
+===== Standard für Reservierungsgebühr
+
+Dies definiert die Gebühr, die ein Verkäufer für eine Reservierung zu entrichten hat. Dieser Wert wird in der Regel vom Auszahlbetrag an den Verkäufer abgezogen oder sie wird für der Reservierungsvergabe vom Verkäufer verlangt. Ein Wert von 0 bedeutet dabei keine Reservierungsgebühr. Ein Wert von *2.5* entspricht 2,50 € Reservierungsgebühr.
+
+Dieser Wert gilt als Standard-Einstellung und kann bei jedem Termin und sogar bei jeder Reservierung individuell angepasst werden.
+
+===== Standard für Umsatzanteil bei Kommission
+
+Dies definiert den Standardwert für den prozentualen Anteil (zwischen 0 und 1) vom Umsatz, der vom Auszahlbetrag an den Verkäufer abgezogen und damit dem Veranstalter zugute kommt. Ein Wert von 0 bedeutet dabei, dass der gesamte Umsatz deb Verkäufern ausgezahlt wird. Ein Wert von *0.2* entspricht 20% Umsatzanteil, der beim Veranstalter verbleibt.
+
+Dieser Wert gilt als Standard-Einstellung und kann bei jedem Termin und sogar bei jeder Reservierung individuell angepasst werden.
+
+===== Standard für Spenden nicht verkaufter Artikel
+
+Diese Funktion bestimmt, ob Spenden nicht verkaufter Artikel standardmäßig aktiviert sein soll oder nicht. Diese Funktion erlaubt es den Verkäufern beim Anlegen eines Artikels zu entscheiden, ob dieser Artikel wohltätigen Zwecken gespendet werden sollte, falls er nicht auf der Veranstaltung regulär verkauft wird. Als Spende markierte Artikel haben ein großes "S" auf dem Etikett.
+
+Sollte die Funktion deaktiviert sein, haben Verkäufer nicht die Möglichkeit zur Spende.
+
+Dieser Wert gilt als Standard-Einstellung und kann bei jedem Termin individuell angepasst werden.
+
+===== Standardeinstellung für Spende bei Artikeleingabe
+
+Diese Einstellung legt fest, ob die Option Spende bei Nichtverkauf standardmäßig bei der Artikeleingabe aktiviert oder deaktiviert ist.
+
+Dieser Wert gilt als Standard-Einstellung und kann bei jedem Termin individuell angepasst werden.
+
+===== Reservierungen nur im Verwaltungsbereich durchführbar
+
+Diese Einstellung legt fest, ob Verkäufer selbst eine Reservierung durchführen können oder ob dies nur durch den Veranstalter im Verwaltungsbereich gemacht werden darf.
+
+Sollten Sie Reservierungen nur zulassen wollen, nachdem die Reservierungsgebühr an den Veranstalter durch die Verkäufer entrichtet wurde, dann aktivieren Sie diese Funktion und vergeben den Verkäufern dann die Reservierungsnummer, sobald die Zahlung eingegangen ist.
+
+Sie sollten bei Nutzung dieser Funktion auch darauf achten, die Standardmails entsprechend anzupassen. In der Einladungsmail ist zum Beispiel standardmäßig ein Reservierungslink enthalten, mit dem sofort eine Reservierung für den jeweiligen Termin angelegt werden kann, sofern noch Plätze vorhanden sind. Diese Reservierung würde aber nicht mehr erlaubt sein, wenn diese Funktion aktiviert ist.
+
+===== Reservierungsnummern werden individuell vergeben
+
+Mit dieser Funktion können im Verwaltungsbereich beim Anlegen von Resevierungen indidivuelle Reservierungsnummern an Verkäufer vergeben werden. So ist es möglich, jedem Verkäufer Wunschnummern zu vergeben und diese über mehrere Jahre hinweg zuordnen zu können.
+
+Die individuelle Vergabe von Reservierungsnummern steht ausschließlich im Verwaltungsbereich zur Verfügung. Sollten Verkäufer die Reservierung selbständig durchführen können, wird dabei automatisch die nächste Reservierungsnummer vergeben. Es ist daher zu empfehlen, zunächst einen Reservierungsnummernbereich (bspw. 1 bis 30) zu definieren, der für individuelle Nummernvergabe genutzt werden soll. Vergeben Sie, noch bevor der Reservierungsstartzeitpunkt erreicht ist, im Verwaltungsbereich einem Verkäufer individuell die höchste Nummer dieses Bereichs (30). Nach dem Reservierungsstart ist dann die Reservierung für Verkäufer möglich, denen dabei die Reservierungsnummern ab 31 automatisch zugeordnet werden.
+
+===== Einbetten von Bilddateien
 
 An allen Stellen an denen Sie formattierte Eingaben machen können (bspw. Hauptseite, Teilnahmebedingungen, eMails), können auch Bilddateien eingebunden werden.
 
@@ -193,7 +260,7 @@ Die Bildbeschreibung ist sichtbar, wenn sich bei der Bildanzeige der Mauszeiger 
 
 WARNING: Bitte beachten Sie, dass einige eMail-Programme standardmäßig beim Anzeigen einer eMail eingebettete Bilder aus dem Internet nicht nachladen und anzeigen. Dies muss erst durch den Nutzer bestätigt werden. Daher ist das Einbetten von Bildern in Mails nicht zu empfehlen.
 
-===== Dienste zum Speichern und Bereitstellen von Bildern
+====== Dienste zum Speichern und Bereitstellen von Bildern
 
 Sollten Sie selbst keine Möglichkeit haben, auf einen Webserver das Logo bereitzustellen, empfehlen wir den Dienst *Imgur*. Zum Benutzen dieses Dienstes geht man auf die Webseite https://imgur.com/upload:
 
@@ -222,6 +289,22 @@ Damit die Bilddatei direkt angezeigt wird muss unmittelbar davor noch ein Ausruf
 image:images/web/imgur_final.png[]
 
 Man kann sich bei *Imgur* auch einen Zugang einrichten, um so mehrere Bilder zu verwalten und jederzeit abändern zu können. Letztendlich ist dies aber nicht notwendig. Man kann auch jederzeit ein neues Bild hochladen und den eingebetteten Link anpassen.
+
+===== Einbetten/Verlinken zusätzlicher Dateien
+
+Sollten Sie andere Dateiformate (z.B. PDF-Dokumente, Word-Vorlagen, Präsentationen, usw.) auf der Seite oder in Mails verwenden/verlinken wollen, so müssen Sie auch diese Dateien zunächst im Internet frei zugänglich machen.
+
+Es gibt kostenlose Cloud-Lösungen vieler Anbieter. Hier eine Liste der namhaftesten Anbieter:
+
+* https://drive.google.com/drive[Google Drive]
+* https://www.apple.com/icloud/[Apple iCloud]
+* https://onedrive.live.com/[Microsoft OneDrive]
+* https://www.amazon.com/clouddrive/[Amazon Drive]
+* https://www.dropbox.com/plans[Dropbox]
+
+Alle diese Cloud-Anbieter erlauben neben dem Hochladen individueller Dateien auch das Öffentlichmachen (oder Sharen) dieser Dateien. Mit dieser Funktion erhält man einen öffentlich zugänglichen Link zu dieser Datei, der dann auf den Seiten und in den eMails verwendet werden kann.
+
+In der Regel haben aktuelle Betriebssysteme (Windows MacOS, Android) bereits diese Cloud-Lösungen einbegbaut. Informieren Sie sich bitte bei den jeweiligen Anbietern, wie das Hochladen und Sharen von Dateien in der Cloud funktioniert.  Mit diesen Cloud-Anbietern können Sie natürlich auch Bilddateien Hochladen und offentlich machen und ähnlich einbinden, wie es im vorigen Kapitel beschrieben wurde.
 
 ==== Verkäufer
 
@@ -259,11 +342,11 @@ image:images/web/sellers_edit.png[]
 
 WARNING: Bitte achten Sie auf die Korrektheit der eMail-Adresse, wenn Sie diese ändern wollen. Sollte diese nicht korrekt sein, kann der Verkäufer keine Nachrichten mehr erhalten oder es bekommt sogar eine dritte Person die Mails und erhält damit Zugang zum geschützten Bereich des Verkäufers.
 
-NOTE: Ein frisch angelegter Verkäufer gilt noch als nicht aktiv. Es wird zunäcsht eine Registrierungsbestätigungsmail an die eingegebene eMail-Adresse geschickt. Erst mit Klick auf einen Link in der Reservierungsbestätigungsmail wird der Verkäufer aktiviert.
+NOTE: Ein frisch angelegter Verkäufer gilt noch als nicht aktiv. Es wird zunäcsht eine Registrierungsbestätigungsmail an die eingegebene eMail-Adresse geschickt. Erst mit Klick auf einen Link in der Registrierungsbestätigungsmail wird der Verkäufer aktiviert.
 
 ==== Termine
 
-Hier können alle Flohmarkttermine und die zugehörigen Reservierungen verwaltet werden.
+Hier können alle Ttermine und die zugehörigen Reservierungen verwaltet werden.
 
 ===== Übersicht
 
@@ -428,6 +511,10 @@ image:images/web/reservations_edit.png[]
 Es können hier auch neue Reservierungen angelegt werden, selbst wenn die Reservierungsphase noch nicht gestartet oder bereits vorbei bzw. wenn das Limit der Reservierungen bereits erreicht ist. Beim Hinzufügen von Reservierungen müssen die Verkäufer ausgewählt werden, welche eine Reservierung erhalten sollen. Es werden nur Verkäufer aufgelistet, die noch keine Reservierung für diesen Termin haben, bzw. deren Reservierungskontingent noch nicht erschöpft ist.
 
 image:images/web/reservations_new.png[]
+
+Sollte in den Systemeinstellungen die Funktion aktiviert sein, dass Reservierungsnummern individuell vergeben werden können, so kann stets eine Reservierung erzeugt und dabei eine der noch freien Reservierungsnummern zugeordnet werden:
+
+image:images/web/reservation_new.png[]
 
 ===== Sperren
 
