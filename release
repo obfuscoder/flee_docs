@@ -1,6 +1,4 @@
 asciidoctor index.ad
-scp index.html flohmarkthelfer:www/shared/public/docs
-rsync -avz images flohmarkthelfer@flohmarkthelfer.de:www/shared/public/docs
 scp index.html flohmarkthelfer@netcup:www/shared/public/docs
 rsync -avz images flohmarkthelfer@netcup:www/shared/public/docs
 
