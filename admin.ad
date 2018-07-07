@@ -44,17 +44,36 @@ Es ist möglich Hierarchien in den Kategorien zu bilden. Dies erreichen Sie, ind
 
 Limitierungen von Überkategorien wirken sich auch auf die Unterkategorien aus. So können Sie festlegen, dass z.B. nur _20_ Artikel der Überkategorie __Kleidung__ erlaubt sind, aber _Spielzeug_ unbegrenzt ist. Weiterhin gelten natürlich die Limitierungen jeder Unterkategorie. Es gilt dabei stets das strengste Limit. Wenn bspw. _Kleidung_ auf 10 Artikel limitiert ist, _Schuhe_ aber als Unterkategorie mit 3, so kann jede Reservierung maximal 3 Artikel mit Kategorie _Schuhe_ anlegen, und weitere 7 Artikel mit anderen Kategorien dieser Überkategorie.
 
+===== Größenangaben
+
+Bei jeder Kategorie kann entschieden werden, wie Größenangaben von Artikeln dieser Kategorie durch die Verkäufer gemacht werden müssen.
+
+Es gibt folgende Optionen bei den Größenangaben:
+
+ - Die Eingabe einer Größe kann *optional* sein. Es ist den Verkäufern überlassen, eine Größe anzugeben oder nicht.
+ - Die Eingabe kann *verpflichtend* sein. Damit müssen Verkäufer eine Größe bei dieser Kategorie angeben.
+ - Die Eingabe ist *deaktiviert*. Damit ist keine Größenangabe durch die Verkäufer bei Artikel dieser Kategorie möglich.
+ - Es gibt eine Liste *fester Werte* für mögliche Größen dieser Kategorie. Es empfiehlt sich, bei Kleidung und Schuhen feste Größen zu definieren. Dies erlaubt eine exaktere Gruppierung nach Größen in der Artikelstatistik und hilft beim Berechnen des notwendigen Platzbedarfs für die jeweiligen Kleidergrößen.
+
 ===== Übersicht, bearbeiten, löschen
 
 Die Kategorieübersicht zeigt eine Liste aller angelegter Kategorien mit Name, Überkategorie, maximaler Artikelanzahl und ggf. Spendenzwang.
 
 image:images/web/categories_index.png[]
 
-Sie können jede Kategorie bearbeiten oder löschen.
+Sie können jede Kategorie bearbeiten oder löschen. Sollte bei einer Kategorie die Größenangabe auf *feste Werte* gestellt worden sein, so können bei dieser Kategorie zusätzlich die möglichen Werte für die Artikelgröße definiert werden.
 
 NOTE: Eine gelöschte Kategorie ist immer noch im System vorhanden. Sie steht nur nicht mehr zur Auswahl bei der Artikeleingabe.
 
 image:images/web/categories_edit.png[]
+
+Die Bearbeitung umfasst:
+
+ - Name der Kategorie
+ - Auswahl der Überkategorie
+ - maximale Anzahl von Artikeln pro Reserverierung, welche dieser Kategorie zugeordnet sein können
+ - Spendenzwang für diese Kategorie
+ - Regel bei der Angabe von Größen für diese Kategorie
 
 ==== Stammartikel
 
