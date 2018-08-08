@@ -6,7 +6,6 @@ Um als Verkäufer bei zukünftigen Flohmarktterminen dabei sein zu können, muss
 
 Die Registrierung ist über die Hauptseite erreichbar.
 
-
 image:images/web/home_register.png[]
 
 Bei der Registrierung wird zur Eingabe von Daten aufgefordert, die für die Abrechnungen verwendet werden und die es der Organisationsleitung ermöglicht, bei Notwendigkeit Kontakt zum Verkäufer aufzunehmen. Es sollte auf die Korrektheit der eMail-Adresse geachtet werden, da an diese Adresse die Zugangsinformationen für den persönlichen Verkäuferbereich gesendet werden.
@@ -35,7 +34,7 @@ Im geschützten Bereich hat der Verkäufer immer die Möglichkeit, seine Stammda
 
 image:images/web/seller_edit.png[]
 
-=== Reservierung
+=== Reservierungen
 
 Sofern Reservierungen für Termine möglich sind, werden diese auf der Hauptseite des geschützten Bereichs aufgelistet.
 
@@ -86,6 +85,18 @@ WARNING: Es ist darauf zu achten, dass freigegebene Etiketten nicht mehr verwend
 Es werden 6x3 Etiketten pro A4-Blatt generiert. Jedes Etikett hat die Größe von 64 x 45 mm. Sollten Sie Klebeetiketten verwenden wollen, können Sie diese hier verwenden:
 
 https://www.avery-zweckform.com/produkt/universal-etiketten-3671
+
+=== Helfer
+
+Sofern für einen Termin das Helfersystem für Verkäufer freigeschaltet ist, können Sie hier die benötigten Helfer einsehen und sich als Helfer eintragen.
+
+image:images/web/seller_support.png[]
+
+Ein Termin lässt sich oft nur mit Hilfe von Freiwilligen durchführen. In der Regel haben Helfer besondere Konditionen (z.B. weniger Gebühren, Reservierungsanrecht, vorzeitiger Einkauf) beim Termin.
+
+image:images/web/support.png[]
+
+Sie können als Helfer auch wieder zurücktreten, sollten Sie es doch nicht einrichten können. Sie verlieren damit aber auch die Sonderkonditionen.
 
 === Abrechnung
 

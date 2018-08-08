@@ -1,4 +1,3 @@
 asciidoctor index.ad
 scp index.html flohmarkthelfer@netcup:www/shared/public/docs
 rsync -avz images flohmarkthelfer@netcup:www/shared/public/docs
-

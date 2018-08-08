@@ -455,6 +455,8 @@ NOTE: Bei Terminen auf Tischbasis ist ausschließlich die Reservierungsgebühr z
 
 Bei aktivierter Option *Reservierungsgebühr wird im Voraus bezahlt* werden von Auszahlungsbeträgen auf Abrechnungen für diesen Termin keine Reservierungsgebühren abgezogen.
 
+Ist das *Helfersystem für Verkäufer freigeschaltet*, so können Verkäufer sich in Helfergruppen für diesen Termin innerhalb ihres geschützten Bereiches eintragen, sofern noch Helferplätze für diesen Termin frei sind. Sie können sich aber auch wieder austragen. Ist diese Option nicht aktiviert, können ausschließlich im Verwaltungsbereich Helferplätze an registrierte Verkäufer vergeben oder entfernt werden.
+
 ===== Termin Detailansicht
 
 In der Detailansicht können Sie die Stammdaten des Termins sehen und haben zudem Zugriff auf die Reservierungen, Statistiken und Bewertungen.
@@ -566,6 +568,26 @@ image:images/web/events_stats.png[]
 Es finden sich hier auch Details zu den Einnahmen, dem Gesamtumsatz sowie Ausgaben (System- und Leihgebühren).
 
 Ebenso ist eine Übersicht aller Reservierungen gruppiert nach Ort (Postleitzahl) sowie die Warteliste zu sehen.
+
+===== Helferverwaltung
+
+Hier gelangt man zur Verwaltung der Helfergruppen und der zugeordneten Helfer selbst.
+
+image:images/web/support_types.png[]
+
+Es können neue Helfergruppen angelegt, sowie bereits angelegte bearbeitet und gelöscht werden.
+
+image:images/web/support_type_edit.png[]
+
+Helfergruppen haben einen Namen, eine genauere Beschreibung sowie eine Anzahl von erforderlichen Helfern für diese Gruppe.
+
+Ebenso können die zugeordneten Helfer von Helfergruppen verwaltet werden.
+
+image:images/web/supporters.png[]
+
+Jedem Helfer kann ein Kommentar hinterlegt werden, um zum Beispiel besondere Vereinbarungen zu vermerken.
+
+image:images/web/supporter_edit.png[]
 
 ===== Bewertungen
 
