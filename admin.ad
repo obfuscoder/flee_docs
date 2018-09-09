@@ -455,7 +455,13 @@ NOTE: Bei Terminen auf Tischbasis ist ausschließlich die Reservierungsgebühr z
 
 Bei aktivierter Option *Reservierungsgebühr wird im Voraus bezahlt* werden von Auszahlungsbeträgen auf Abrechnungen für diesen Termin keine Reservierungsgebühren abgezogen.
 
-Ist das *Helfersystem für Verkäufer freigeschaltet*, so können Verkäufer sich in Helfergruppen für diesen Termin innerhalb ihres geschützten Bereiches eintragen, sofern noch Helferplätze für diesen Termin frei sind. Sie können sich aber auch wieder austragen. Ist diese Option nicht aktiviert, können ausschließlich im Verwaltungsbereich Helferplätze an registrierte Verkäufer vergeben oder entfernt werden.
+====== Helfersystem
+
+image:images/web/events_edit_support.png[]
+
+Ist das *Helfersystem für Verkäufer freigeschaltet*, so können Verkäufer sich in Helfergruppen für diesen Termin innerhalb ihres geschützten Bereiches eintragen, sofern noch Helferplätze für diesen Termin frei sind. Ist diese Option nicht aktiviert, können ausschließlich im Verwaltungsbereich Helferplätze an registrierte Verkäufer vergeben werden.
+
+Ist die Option *Helfer können sich wieder austragen* aktiviert, so können sich Verkäufer, die als Helfer in Helfergruppen für diesen Termin eingetragen sind, wieder selbständig austragen. Ist diese Option nicht aktiviert, erscheint stattdessen ein Hinweis, dass sich der Helfer den Veranstalter kontaktieren muss, sollte er als Helfer nicht mehr teilnehmen können. Es können ausschließlich im Verwaltungsbereich Helfer wieder entfernt werden.
 
 ===== Termin Detailansicht
 
