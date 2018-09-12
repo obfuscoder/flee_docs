@@ -117,26 +117,31 @@ Diese Mail sollte nach der Verkaufsphase (und nach dem Hochladen aller Transakti
 
 image:images/web/message_templates.png[]
 
+===== Standardmail bearbeiten
+
 Jede Standardmail kann individuell angepasst oder auf den Ursprungszustand zurückgesetzt werden. Es wird empfohlen, die Mailinhalte nicht komplett umzugestalten. Der Kerninhalt sollte erhalten bleiben.
 
 image:images/web/edit_message_template.png[]
 
 Der Inhalt wird als Text- und als HTML-Mail verschickt. Als Formattierung wird die https://de.wikipedia.org/wiki/Markdown[Markdown-Syntax] benutzt.
 
+===== Platzhalter
+
 Es können Platzhalter sowohl in der Betreffzeile als auch im Inhalt der Mail benutzt werden, die beim Verschicken der Mails mit den tatsächlichen Daten ersetzt werden. Alle Platzhalter sind in der Form `{{ platzhalter }}` anzugeben. Es stehen folgende Platzhalter zur Verfügung:
 
-===== Verkäuferdaten
+====== Verkäuferdaten
 
 `{{ registration_info }}`:: vollständige Registrierungsdaten inkl. Name, Adresse, Telefonnummer und eMail-Adresse
 `{{ seller_first_name }}`:: Vorname
 `{{ seller_last_name }}`:: Nachname
+`{{ seller_name }}`:: Name (Vor- und Nachname)
 `{{ seller_street }}`:: Straße
 `{{ seller_zip_code }}`:: Postleitzahl
 `{{ seller_city }}`:: Ort
 `{{ seller_phone }}`:: Telefonnummer
 `{{ seller_email }}`:: eMail-Adresse
 
-===== Termindaten (sofern Bezug vorhanden in Standardmail):
+====== Termindaten (sofern Bezug vorhanden in Standardmail):
 
 `{{ event_name }}`:: Name
 `{{ event_shopping_time }}`:: Verkaufszeiten
@@ -150,11 +155,11 @@ Es können Platzhalter sowohl in der Betreffzeile als auch im Inhalt der Mail be
 `{{ event_commission_rate }}`:: Kommissionsanteil
 `{{ event_reservation_fee }}`:: Reservierungsgebühr
 
-===== Reservierungsdaten (sofern Bezug vorhanden in Standardmail):
+====== Reservierungsdaten (sofern Bezug vorhanden in Standardmail):
 
 `{{ reservation_number }}`:: Reservierungsnummer
 
-===== Links
+====== Links
 
 Als Einsprungslinks in den gesicherten Bereich für Verkäufer stehen folgende Platzhalter zur Verfügung:
 
@@ -603,13 +608,15 @@ image:images/web/events_reviews.png[]
 
 ==== Mails
 
-Neben den vordefinierten Standardmails, die über die Detailansicht eines Termins ausgelöst werden können, kann man über diesen Menüpunkt individuelle Mails an bestimmte Verkäufer mit der im Flohmarkthelfer-System hinterlegten Absenderadresse verschicken.
+Neben den vordefinierten Standardmails, die über die Detailansicht eines Termins ausgelöst werden können oder automatisch ausgelöst werden, kann man über diesen Menüpunkt individuelle Mails an bestimmte Verkäufer mit der im Flohmarkthelfer-System hinterlegten Absenderadresse verschicken.
 
 image:images/web/emails.png[]
 
 Neben dem *Betreff* kann der *Inhalt* der Mail frei definiert werden. Besondere Formattierungen sind mit einer speziellen Notation möglich. Details dazu finden Sie https://de.wikipedia.org/wiki/Markdown[hier].
 
 Die Liste der Verkäufer, an welche die Mail verschickt werden soll, ist frei durchsuch- und auswählbar.
+
+Es können, wie bei den Standardmails auch, Platzhalter benutzt werden. Jedoch stehen nur die Verkäufer spezifischen Platzhalter zur Verfügung. Siehe hierzu die zur Verfügung stehenden Platzhalter bei <<Verkäuferdaten>>.
 
 image:images/web/emails_sellers.png[]
 
