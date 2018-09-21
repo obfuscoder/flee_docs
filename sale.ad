@@ -83,8 +83,6 @@ image:images/sale/setup2.png[]
 
 Der *Name der Kasse* wird als Kennung im Verbund mehrerer Kassensysteme benutzt. In der Regel nimmt man hier eine Nummerierung der Kassen vor. Wenn Sie nur eine Kasse einsetzen, ist dieser Wert uninteressant.
 
-Als *Hostnamen des Online-Systems* tragen Sie bitte den Teil der Webadresse zu Ihrem Online-System ein, welches nach *http://* zu sehen ist. Abschließende */* sollten ebenso entfernt werden. Ist die Internetadresse bspw. *http://meinflohmarkt.flohmarkthelfer.de/*, tragen Sie bitte *meinflohmarkt.flohmarkthelfer.de* in dieses Feld ein. In den Einstellungen lässt sich später dieser Wert wieder ändern.
-
 Wenn Sie mehrere Kassen haben, diese aber nicht über ein Netzwerk (WLAN) miteinander verbinden können, haben Sie die Möglichkeit, die Daten zwischen den Kassen per USB-Datenträger zu synchronisieren. Als *Verzeichnis zur automatischen Synchronisation* geben Sie dazu bitte den Verzeichnispfad an, der auf den eingesteckten USB-Stick verweist. Das Verzeichnis kann das gleiche sein, in dem sich *flohmarkthelfer-setup.exe* und *flohmarkthelfer.data* befinden. Der Datenträger sollte möglichst genug freien Speicherplatz für die Synchronisation haben (ca. 10 MB minimum). Sollten Sie die Synchronisation über USB-Datenträger nicht benötigen, ignorieren Sie den eingestellten Wert. Sie können ihn später mit einer Neuinstallation der Kassensoftware oder in der Konfigurationsdatei ändern.
 
 WARNING: Das gewählte Verzeichnis zur Synchronisierung muss auf den Wechseldatenträger zeigen und muss bei allen Kassen auf das selbe Verzeichnis verweisen. Achten Sie darauf, dass der Wechseldatenträger bei unterschiedlichen Kassen unter einem anderen Laufwerksbuchstaben (D:, E:, F: usw.) zu finden sein kann.
@@ -416,9 +414,7 @@ image:images/sale/settings.png[]
 
 Anstelle die Termindaten über USB in den Kassensystemen zu installieren, können Sie dies mit Hilfe dieser Funktion auch direkt bei bestehender Internetverbindung durchführen.
 
-Vergewissern Sie sich hierbei auf die Korrektheit der Angabe bei *Homepage*. Hier muss der Anteil der Internetadresse des Online-Systems stehen, der nach "http://" kommt. und vor dem nächsten "/" kommt.
-
-Ebenso müssen Sie das *Token* eintragen, was im Online-System unter den Termindetails [red]#rot# dargestellt zu finden ist. Dieses Token ist bereits vorausgefüllt, sollten Sie die Daten bereits auf das Kassensystem übertragen haben.
+Sie müssen hier das *Token* eintragen, was im Online-System unter den Termindetails [red]#rot# dargestellt zu finden ist. Dieses Token ist bereits vorausgefüllt, sollten Sie die Daten schon auf das Kassensystem übertragen haben.
 
 ====== Daten herunterladen
 

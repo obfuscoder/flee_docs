@@ -50,7 +50,6 @@ image:images/sale/setup1.png[]
 +
 image:images/sale/setup2.png[]
 +
-.. Bei *Hostname des Online-Systems* geben Sie bitte den Teil der Webadresse des Online-Systems ein, der nach "http://" kommt ein. Z.B. bei einer Adresse http://meinflohmarkt.flohmarkthelfer.de/ geben Sie bitte *meinflohmarkt.flohmarkthelfer.de* ein.
 .. Beim *Verzeichnis zur automatischen Synchronisierung* geben Sie bitte das Verzeichnis auf das Verzeichnis des USB-Sticks ein (z.B. *E:\flohmarkthelfer*).
 .. Bei *Modus setzen* wählen Sie bitte *Standardmodus* für eine Kasse, mit der Sie nur den Verkauf durchführen wollen. Wählen Sie *erweiterter Modus* für eine Kasse, mit der Sie auch Listen und Etiketten erzeugen/drucken oder Scantests und Abrechnungen durchführen wollen.
 +

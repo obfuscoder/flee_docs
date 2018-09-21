@@ -42,7 +42,7 @@ image:images/web/login.png[]
 +
 image:images/web/events_show.png[]
 +
-. Vergewissern Sie sich, dass in den **Einstellungen** bei **Homepage** die Adresse des Online-Systems und bei **Token** der selbe Wert wie auf der Detailansichtsseite steht.
+. Vergewissern Sie sich, dass in den **Einstellungen** bei **Token** der selbe Wert wie auf der Seite der **Termindetails** im **Onlinesystem** steht.
 . Klicken Sie nun auf **Transaktionen hochladen**.
 +
 image:images/sale/uploadcheck.png[]
