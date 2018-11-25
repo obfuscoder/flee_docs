@@ -40,7 +40,13 @@ Sofern Reservierungen für Termine möglich sind, werden diese auf der Hauptseit
 
 image:images/web/seller_events.png[]
 
-Sobald eine Reservierung durchgeführt wurde, können Artikel für diese Reservierung bearbeitet werden oder die Reservierung wieder freigegeben werden.
+Sie können eine **Reservierungsanfrage stellen**. Die Reservierungsanfrage wird automatisch im Hintergrund bearbeitet und Sie erhalten eine Reservierungsbestätigung mit Ihrer Nummer per Mail.
+
+image:images/web/seller_reservation_ordered.png[]
+
+Sollte bei der Verarbeitung der Reservierungsanfrage festgestellt werden, dass zu diesem Zeitpunkt bereits alle Plätze vergeben sind, werden Sie automatisch auf die Warteliste gesetzt. Auch hierfür erhalten Sie eine Mail als Bestätigung.
+
+Mit erfolgreicher Verarbeitung der Reservierungsanfrage, können Artikel für diese Reservierung bearbeitet werden oder die Reservierung wieder freigegeben werden.
 
 image:images/web/seller_reservations.png[]
 

@@ -103,6 +103,10 @@ Die Mail kann an alle registrierten Verkäufer vor Start der Reservierungsphase 
 
 Diese Mail wird automatisch an einen Verkäufer geschickt, sobald eine Reservierung durchgeführt werden konnte. Diese Reservierung kann manuell (durch Verkäufer selbst oder durch einen Administrator im Verwaltungsbereich) oder automatisch (durch Freiwerden eines Platzes, beim Nachrücken von der Warteliste) erfolgen. In der Mail steht üblicherweise die Reservierungsnummer sowie das Datum, bis wann die Artikel einzugeben sind.
 
+===== Reservierungsanfrage - Warteliste
+
+Diese Mail wird automatisch an einen Verkäufer geschickt, sobald eine Reservierungsanfrage verarbeitet und dabei festgestellt wurde, dass bereits alle Plätze vergeben sind. Bei der Verarbeitung wird der anfragende Verkäufer stattdessen automatisch auf die Warteliste gesetzt. Diese Mail informiert den Verkäufer über die Verarbeitung und das Eintragen in die Warteliste. Dem Verkäufer kann hiermiet seine Position in der Warteliste mitgeteilt werden.
+
 ===== Erinnerung vor Bearbeitungsschluss
 
 Diese Mail kann an alle Verkäufer mit einer Reservierung für einen Termin verschickt werden, um diese auf das Ende der Artikeleingabe hinzuweisen. Üblicherweise wird dieses Datum in der Mail angegeben.
@@ -158,6 +162,10 @@ Es können Platzhalter sowohl in der Betreffzeile als auch im Inhalt der Mail be
 ====== Reservierungsdaten (sofern Bezug vorhanden in Standardmail):
 
 `{{ reservation_number }}`:: Reservierungsnummer
+
+====== Wartelistedatem (sofern Bezug vorhanden in Standardmail):
+
+`{{ position }}`:: Position in der Warteliste
 
 ====== Links
 
