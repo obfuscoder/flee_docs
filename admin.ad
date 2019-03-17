@@ -270,6 +270,16 @@ Mit dieser Funktion können im Verwaltungsbereich beim Anlegen von Resevierungen
 
 Die individuelle Vergabe von Reservierungsnummern steht ausschließlich im Verwaltungsbereich zur Verfügung. Sollten Verkäufer die Reservierung selbständig durchführen können, wird dabei automatisch die nächste Reservierungsnummer vergeben. Es ist daher zu empfehlen, zunächst einen Reservierungsnummernbereich (bspw. 1 bis 30) zu definieren, der für individuelle Nummernvergabe genutzt werden soll. Vergeben Sie, noch bevor der Reservierungsstartzeitpunkt erreicht ist, im Verwaltungsbereich einem Verkäufer individuell die höchste Nummer dieses Bereichs (30). Nach dem Reservierungsstart ist dann die Reservierung für Verkäufer möglich, denen dabei die Reservierungsnummern ab 31 automatisch zugeordnet werden.
 
+===== Start für automatische Reservierungsnummernvergabe
+
+image:images/web/auto_reservation_numbers_start.png[]
+
+Mit dieser Option können Sie festlegen, mit welcher Nummer die automatische Reservierungsnummernvergabe beginnen soll. Wenn Sie hier nichts eintragen, beginnen die Reservierungsnummern bei **1**.
+
+Alle Nummern zwischen 1 und der hier konfigurierten Nummer können individuell an Verkäufer vergeben werden. Dies ermöglicht, dass bestimmte Stammverkäufer bei jedem Termin die gleiche Reservierungsnummer erhalten können. Diese Standardreservierungsnummer kann für jeden Verkäufer individuell eingestellt werden. Details dazu finden Sie im Kapitel <<Standardreservierungsnummer>>.
+
+Hier im Beispiel wurde als Startnummer die 200 gewählt. Damit steht der Reservierungsnummernbereich von 1 bis 199 für Stammverkäufer zur Verfügung, während alle anderen Verkäufer automatisch die Nummern ab 200 zugewiesen bekommen.
+
 ===== Einbetten von Bilddateien
 
 An allen Stellen an denen Sie formattierte Eingaben machen können (bspw. Hauptseite, Teilnahmebedingungen, eMails), können auch Bilddateien eingebunden werden.
@@ -374,11 +384,19 @@ image:images/web/sellers_edit.png[]
 
 WARNING: Bitte achten Sie auf die Korrektheit der eMail-Adresse, wenn Sie diese ändern wollen. Sollte diese nicht korrekt sein, kann der Verkäufer keine Nachrichten mehr erhalten oder es bekommt sogar eine dritte Person die Mails und erhält damit Zugang zum geschützten Bereich des Verkäufers.
 
-NOTE: Ein frisch angelegter Verkäufer gilt noch als nicht aktiv. Es wird zunäcsht eine Registrierungsbestätigungsmail an die eingegebene eMail-Adresse geschickt. Erst mit Klick auf einen Link in der Registrierungsbestätigungsmail wird der Verkäufer aktiviert.
+NOTE: Ein frisch angelegter Verkäufer gilt noch als nicht aktiv. Es wird zunächst eine Registrierungsbestätigungsmail an die eingegebene eMail-Adresse geschickt. Erst mit Klick auf einen Link in der Registrierungsbestätigungsmail wird der Verkäufer aktiviert.
+
+====== Standardreservierungsnummer
+
+Das Setzen einer Standardreservierungsnummer ist möglich, sobald Sie in den Systemeinstellungen unter <<Start für automatische Reservierungsnummernvergabe>> eine Zahl größer als 1 konfiguriert haben. Ist dies der Fall, können Sie einem Verkäufer eine Reservierungsnummer zuweisen, die kleiner sein muss, als die Startnummer für die automatische Nummernvergabe, die in den Systemeinstellungen konfiguriert ist.
+
+Ist beispielsweise in den Systemeinstellungen der Start für automatische Reservierungsnummernvergabe auf 200 konfiguriert, so können Sie hier für den Verkäufer eine Standardreservierungsnummer von 1 bis 199 vergeben. Bei jedem Termin, für den dieser Verkäufer dann eine Reservierung durchführt, erhält er diese Nummer.
+
+NOTE: Sollten Sie bei einem Termin **mehrerere Reservierungen pro Verkäufer** zulassen, benutzt die erste durchgeführte Reservierung die für einen Verkäufer eingestellte Standardreservierungsnummer. Jede weitere Reservierung für diesen Verkäufer bekommt eine Nummer aus dem automatisch vergebenen Nummernbereich.
 
 ==== Termine
 
-Hier können alle Ttermine und die zugehörigen Reservierungen verwaltet werden.
+Hier können alle Termine und die zugehörigen Reservierungen verwaltet werden.
 
 ===== Übersicht
 
