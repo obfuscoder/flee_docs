@@ -68,6 +68,26 @@ image:images/web/items_edit.png[]
 
 Abhängig von den Einstellungen kann es sein, dass für bestimmte Kategorien die Artkielanzahl dieser Kategorien pro Reservierung begrenz ist. Sollten Spenden für einen Flohmarkt möglich sein, kann für jeden Artikel bestimmt werden, ob dieser gespendet werden soll, falls er nicht verkauft werden sollte. Auch hier kann es sein, dass Artikel bestimmter Kategorien in jedem Fall zu spenden sind, sollten sie nicht verkauft werden.
 
+=== Artikel vergangener Termine importieren
+
+Sollten Sie bereits eine Reservierung aus einem vergangenem Termin haben und das Organisationsteam erlaubt das Importieren nicht verkaufter Artikel aus vergangenen Terminen, so steht Ihnen diese Option zur Verfügung. Zunächst müssen Sie hierbei den Termin und die Reservierung auswählen, aus welcher Sie Artikel importieren wollen. Es wird der Name des Termins sowie die Reservierungsnummer angezeigt, die Sie bei dem jeweiligen Termin hatten.
+
+image:images/web/import_from_reservation.png[]
+
+Mit Klick auf eine der Reservierung können Sie nun die Liste der Artikel auswählen, die Sie importieren wollen.
+
+image:images/web/import_items.png[]
+
+Es werden hier nur nicht verkäufte Artikel angezeigt. Mit Klick auf **Importieren** werden die gewählten Artikel in Ihre aktuelle Reservierung importiert.
+
+IMPORTANT: Es werden nur so viele Artikel importiert, solange noch Artikel in Ihrer aktuellen Reservierung angelegt werden können.
+
+Sollten die Reservierungsnummer des vergangenen Termins identisch mit Ihrer aktuellen Reservierungsnummer sein können Sie sogar die bereits zum vergangenen Termin erzeugten Etiketten für diese Artikel wiederverwenden. Ein erneutes Ausdrucken dieser Etiketten kann entfallen. Dies ist allerdings nur möglich, wenn das Orgateam diese Option erlaubt.
+
+NOTE: Bitte kontaktieren Sie das Orgateam, um eine Stammreservierungsnummer zu erhalten.
+
+IMPORTANT: Bei importierten Artikeln aus vergangenen Reservierungen kann zwar das Etikett wiederverwendet werden, sofern möglich, aber die Artikelnummer bleibt dabei leer, da diese bereits durch bereits angelegte Artikel in der aktuellen Reservierung belegt sein kann.
+
 === Etiketten erzeugen und drucken
 
 Etiketten können jederzeit für angelegte Artikel erzeugt und gedruckt werden. Dabei kann vorausgewählt werden, für welche Artikel die Etiketten erzeugt werden sollen.

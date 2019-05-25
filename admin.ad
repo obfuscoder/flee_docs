@@ -280,6 +280,18 @@ Alle Nummern zwischen 1 und der hier konfigurierten Nummer können individuell a
 
 Hier im Beispiel wurde als Startnummer die 200 gewählt. Damit steht der Reservierungsnummernbereich von 1 bis 199 für Stammverkäufer zur Verfügung, während alle anderen Verkäufer automatisch die Nummern ab 200 zugewiesen bekommen.
 
+===== Artikelimport aus älteren Reservierungen erlaubt
+
+Mit dieser Option erlauben Sie den Verkäufern, dass Sie nicht verkaufte Artikel aus vergangenen Terminen in die aktuelle Reservierung importieren können. Damit sparen sich die Verkäufer, das nochmalige Eingeben der Artikeldetails.
+
+IMPORTANT: Mit dem Importieren eines Artikels aus einem vergangenen Termin wird auch die Kategorie mit übernommen, auch wenn diese im aktuellen Termin nicht mehr zur Verfügung steht.
+
+===== Artikelcode beim Import behalten
+
+Diese Option ist nur dann gültig, wenn auch der **Artikelimport aus älteren Reservierungen erlaubt** ist. Mit dieser Option erlauben Sie zusätzlich, dass der Artikelcode aus den vergangenen Reservierungen übernommen werden kann, sofern die Reservierungsnummer des Verkäufers die gleiche war wie bei der aktuellen Reservierung. Damit kann der Verkäufer das damals erzeugte Etikett wiederverwenden und muss es nicht nocheinmal erzeugen, drucken und am Artikel anbringen.
+
+NOTE: Damit Verkäufer über mehrere Termine die gleiche Reservierungsnummer erhalten und somit die Etiketten wieder verwenden können, sollten diese Verkäufer eine <<Standardreservierungsnummer>> haben.
+
 ===== Einbetten von Bilddateien
 
 An allen Stellen an denen Sie formattierte Eingaben machen können (bspw. Hauptseite, Teilnahmebedingungen, eMails), können auch Bilddateien eingebunden werden.
@@ -598,7 +610,7 @@ Da die Anzahl der uns zur Verfügung stehenden Leihgeräte beschränkt ist, ist 
 
 ===== Statistiken
 
-In den Statistiken sieht man die für den Termin angelegten Artikel gruppiert nach Kategorie. Gleiches gilt für verkaufte Ware. Es lassen sich die Rohdaten über **Tabelle anzeigen** darstellen und somit in ein Tabellenverarbeitungsprogramm überführen, um weitere Auswertungen durchzuführen.
+In den Statistiken sieht man die für den Termin angelegten Artikel gruppiert nach Kategorie. Gleiches gilt für verkaufte Ware. Es lassen sich die Rohdaten über **Tabelle anzeigen** darstellen. Ebenso gibt es die Möglichkeit, die **Artikelliste herunterzuladen**. Damit wird eine Text-Datei heruntergeladen, welche Details zu allen Artikeln dieses Termins enthält. Diese Datei lässt sich mit herkömmlichen Tabellenkalkulationsprogrammen importieren, um weitere Auswertungen durchzuführen. Die Spalten sind mittels Tabulator getrennt.
 
 image:images/web/events_stats.png[]
 
