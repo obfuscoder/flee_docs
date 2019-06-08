@@ -74,6 +74,7 @@ Die Bearbeitung umfasst:
  - maximale Anzahl von Artikeln pro Reserverierung, welche dieser Kategorie zugeordnet sein können
  - Spendenzwang für diese Kategorie
  - Regel bei der Angabe von Größen für diese Kategorie
+ - Option, ob Kategorie geschlechtsspezifisch ist (männlich, weiblich, beides)
 
 ==== Stammartikel
 

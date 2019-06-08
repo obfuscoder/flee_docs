@@ -66,7 +66,7 @@ Artikel, für die noch kein Etikett erzeugt wurden, können jederzeit bearbeitet
 
 image:images/web/items_edit.png[]
 
-Abhängig von den Einstellungen kann es sein, dass für bestimmte Kategorien die Artkielanzahl dieser Kategorien pro Reservierung begrenz ist. Sollten Spenden für einen Flohmarkt möglich sein, kann für jeden Artikel bestimmt werden, ob dieser gespendet werden soll, falls er nicht verkauft werden sollte. Auch hier kann es sein, dass Artikel bestimmter Kategorien in jedem Fall zu spenden sind, sollten sie nicht verkauft werden.
+Abhängig von den Einstellungen kann es sein, dass für bestimmte Kategorien die Artikelanzahl dieser Kategorien pro Reservierung begrenzt ist. Sollten Spenden für einen Flohmarkt möglich sein, kann für jeden Artikel bestimmt werden, ob dieser gespendet werden soll, falls er nicht verkauft werden sollte. Auch hier kann es sein, dass Artikel bestimmter Kategorien in jedem Fall zu spenden sind, sollten sie nicht verkauft werden. Ebenso kann die Kategorie Einfluss auf die Angabe einer Größe für einen Artikel haben. So kann es sein, dass gar keine Größenangabe möglich ist, eine beliebige Größe eingegeben oder unter einer Liste vordefinierter Größen gewählt werden kann. Bestimmte Kategorien können außerdem die Angabe des Geschlechts, für die der Artikel ausgelegt ist, erfordern.
 
 === Artikel vergangener Termine importieren
 
