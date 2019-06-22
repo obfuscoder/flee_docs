@@ -227,9 +227,15 @@ Die Teilnahmebedingungen sind zentraler Bestandteil, wie Sie Verkäufer auf Rahm
 
 ===== Standard für Preisangabenbasis
 
-Preise werden sowohl im Online-System als auch im Kassen-System auf Basis dieses Wertes gerundet. Ein Wert von *0.5* bedeutet, dass jeder Preis auf € 0,50 bzw. 50 Cent gerundet wird. Prinzipiell wird bei Auszahlbeträgen für Verkäufer zu Gunsten des Veranstalters abgerundet.
+Dies definiert die Standardbasis für Preisangaben, die bei der Artikeleingabe sowie bei Auszahlbeträgen gilt. Preise werden sowohl im Online-System als auch im Kassen-System auf Basis dieses Wertes gerundet. Ein Wert von *0.5* bedeutet, dass jeder Preis auf € 0,50 bzw. 50 Cent gerundet wird. Es wird bei Auszahlbeträgen für Verkäufer zu Gunsten des Veranstalters gerundet.
 
 Dieser Wert gilt als Standard-Einstellung und kann bei jedem Termin individuell angepasst werden.
+
+===== Cent-genaue Rechnungsbeträge
+
+Mit dieser Option kann festgelegt werden, ob unabhängig vom *Standard für Preisangaben* die Rechnungs- und Auszahlbeträge cent-genau angegeben werden sollen.
+
+Dies stellt ebenfalls eine Standardeinstellung dar, die bei Anlegen eines jeden Termins entsprechend vorbelegt ist, jedoch für jeden Termin separat angepasst werden kann.
 
 ===== Standard für Reservierungsgebühr
 
@@ -489,6 +495,8 @@ image:images/web/events_edit_price.png[]
 
 Über *Basis für Preisangaben* lässt sich bestimmen, mit welcher Genauigkeit das System die Artikelpreise und Auszahlbeträge bestimmen soll. Ein Wert von *0,5* € bedeutet dabei, dass auf also 50 Cent Genauigkeit gearbeitet wird. Damit müssen Preise bei Artikeln immer ein Vielfaches von 50 Cent sein und Auszahlbeträge an die Verkäufer werden ebenso auf 50 Cent abgerundet.
 
+Wollen Sie unabhäng von der *Basis für Preisangaben* bei Artikeln *Cent-genaue Rechnungsbeträge* bei Auszahlbeträgen an Verkäufer, so aktivieren Sie bitte diese Funktion. Es wird beim Anlegen eines Termins die Voreinstellung aus den Systemeinstellungen übernommen. Bitte beachten Sie, dass Sie bei der Abrechnung und Auszahlung an die Verkäufer dann entsprechendes Kleingeld parat haben sollten, da Sie bei der Veranstaltung voraussichtlich diese Geldstücke nicht von den Käufern bekommen werden.
+
 Bei *Umsatzanteil für Kommission* wird bestimmt, welcher Anteil am Warenverkaufswert als Kommissionsgebühr einbehalten wird. Ein Wert von *0,2* bedeutet dabei zum Beispiel einen Anteil von *20%* - also einem Fünftel.
 
 Sofern die Funktion für Ihren Flohmarkt freigeschaltet, können Sie mit der Option *Spenden nicht verkaufter Artikel* festlegen, dass die Verkäufer bei der Artikeleingabe die Wahl für jeden Artikel haben, diesen zu spenden, sollte er nicht verkauft werden. Auf den Etiketten solcher Artikel befindet sich dann eine entsprechende Markierung, die es dem Organisationsteam erlaubt, beim Zurücksortieren Spendenartikel zu sondieren.
@@ -571,7 +579,11 @@ image:images/web/mails_finalize.png[]
 
 ===== Reservierungen
 
-Über die Detailansicht gelangen Sie zu den Reservierungen für einen Termin. Hier werden die aktuellen Reservierungen aufgelistet. Eine Suche auf Basis von Verkäuferstammdaten ist hier möglich. Es wird Verkäufername, Ort, eMailadresse, die Anzahl eingegebener Artikel für die Reservierung sowie Reservierungsgebühr und Kommissionsanteil angezeigt. Die Artikel für jede Reservierung kann angezeigt und bearbeitet werden. Jede Reservierung kann wieder freigegeben werden. Mit Klick auf den Namen für eine Reservierung sind die Details für einen Verkäufer einsehbar.
+Über die Detailansicht gelangen Sie zu den Reservierungen für einen Termin.
+
+image:images/web/reservations.png[]
+
+Hier werden die aktuellen Reservierungen aufgelistet. Eine Suche auf Basis von Verkäuferstammdaten ist hier möglich. Es wird Verkäufername, Ort, eMailadresse, die Anzahl eingegebener Artikel für die Reservierung sowie Reservierungsgebühr und Kommissionsanteil angezeigt. Die Artikel für jede Reservierung kann angezeigt und bearbeitet werden. Jede Reservierung kann wieder freigegeben werden. Mit Klick auf den Namen für eine Reservierung sind die Details für einen Verkäufer einsehbar.
 
 image:images/web/reservations_index.png[]
 
@@ -589,7 +601,11 @@ image:images/web/reservation_new.png[]
 
 ===== Sperren
 
-Über die Detailansicht eines Termins gelangen Sie zu den *Sperren* für diesen Termin. Eine Sperre für einen Verkäufer für einen Termin verhindert, dass dieser Verkäufer eine Reservierung für diesen Termin durchführen kann. Es werden alle gesetzten Sperren zu diesen Termin angezeigt. Jede Sperre gilt für einen Verkäufer und zeigt auch den Grund der Sperre an.
+Über die Detailansicht eines Termins gelangen Sie zu den *Sperren* für diesen Termin.
+
+image:images/web/suspensions.png[]
+
+Eine Sperre für einen Verkäufer für einen Termin verhindert, dass dieser Verkäufer eine Reservierung für diesen Termin durchführen kann. Es werden alle gesetzten Sperren zu diesen Termin angezeigt. Jede Sperre gilt für einen Verkäufer und zeigt auch den Grund der Sperre an.
 
 image:images/web/suspensions_index.png[]
 
@@ -603,13 +619,17 @@ image:images/web/suspensions_edit.png[]
 
 ===== Leihgeräte
 
+image:images/web/rentals.png[]
+
 Über diesen Punkt können Leihgeräte bestellt werden, die zum Durchführen des Termins benötigt werden.
 
-image:images/web/rentals.png[]
+image:images/web/rentals_index.png[]
 
 Da die Anzahl der uns zur Verfügung stehenden Leihgeräte beschränkt ist, ist eine zeitnahe Eintragung der benötigten Leihgeräte zu empfehlen. Die Eintragung der Leihgeräte gilt für uns als Hinweis und zur Planung der Leihgeräteverteilung. Sie ist keine Garantie, dass die Geräte auch wirklich zur Verfügung stehen. Es ist daher empfohlen, sich separat per Mail mit uns in Verbindung zu setzen.
 
 ===== Statistiken
+
+image:images/web/statistics.png[]
 
 In den Statistiken sieht man die für den Termin angelegten Artikel gruppiert nach Kategorie. Gleiches gilt für verkaufte Ware. Es lassen sich die Rohdaten über **Tabelle anzeigen** darstellen. Ebenso gibt es die Möglichkeit, die **Artikelliste herunterzuladen**. Damit wird eine Text-Datei heruntergeladen, welche Details zu allen Artikeln dieses Termins enthält. Diese Datei lässt sich mit herkömmlichen Tabellenkalkulationsprogrammen importieren, um weitere Auswertungen durchzuführen. Die Spalten sind mittels Tabulator getrennt.
 
@@ -620,6 +640,8 @@ Es finden sich hier auch Details zu den Einnahmen, dem Gesamtumsatz sowie Ausgab
 Ebenso ist eine Übersicht aller Reservierungen gruppiert nach Ort (Postleitzahl) sowie die Warteliste zu sehen.
 
 ===== Helferverwaltung
+
+image:images/web/manage_support.png[]
 
 Hier gelangt man zur Verwaltung der Helfergruppen und der zugeordneten Helfer selbst.
 
@@ -639,7 +661,25 @@ Jedem Helfer kann ein Kommentar hinterlegt werden, um zum Beispiel besondere Ver
 
 image:images/web/supporter_edit.png[]
 
+===== Daten herunterladen
+
+image:images/web/download.png[]
+
+Mit dieser Funktion laden sie die Termindaten als Datei herunter, die Sie dann anschließend im Kassensystem importieren bzw. installieren können.
+
+===== Etiketten drucken
+
+image:images/web/labels.png[]
+
+Mit dieser Funktion können Sie alle Etiketten dieses Termins für alle Reservierungen in einer PDF-Datei ausdrucken.
+
+WARNING: Das einfache Anklicken dieser Funktion löst das Erzeugen der PDF-Datei aus. Dies kann einige Zeit (bis zu einer Minute) dauern. Die erzeugte Datei kann auch sehr groß werden. Das Erzeugen der Datei ist unter Umständen nur am Laden des Browsers erkennbar. Es wird weiterhin die aktuelle Seite angezeigt. Lösen Sie den Etikettendruck bitte nicht mehrmals aus. Ein nochmaliges Betätigen der Funktion führt zum erneuten Erzeugen der PDF-Datei, was zu unnötigen Verzögerungen führt.
+
+NOTE: Diese Funktion steht erst nach Artikeleingabe zur Verfügung, nachdem alle Etiketten erzeugt wurden. Das Erzeugen der restlichen Etiketten wird mittels Verschicken der Bearbeitungsabschlussmail ausgelöst. Es kann danach aber noch einige Minuten dauern, bis wirklich alle Etiketten erzeugt wurden.
+
 ===== Bewertungen
+
+image:images/web/reviews.png[]
 
 Nach Abschluss des Termins kann hier die Übersicht der Bewertungen durch die am Verkauf teilgenommen Verkäufer eingesehen werden.
 

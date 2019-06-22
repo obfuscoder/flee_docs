@@ -40,7 +40,7 @@ image:images/web/mails_reservation_closed.png[]
 
 . Laden Sie die Daten des Termins (Datei *flohmarkthelfer.data*) in den Termindetails herunter:
 
-image:images/web/download_data.png[]
+image:images/web/download.png[]
 
 . Kopieren Sie die Installationsdatei *flohmarkthelfer-setup.exe* und die Termindaten *flohmarkthelfer.data* in ein extra dafür angelegtes und ansonsten leeres Verzeichnis auf einen USB-Datenträger (z.B. *E:\flohmarkthelfer*).
 
