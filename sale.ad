@@ -161,6 +161,8 @@ image:images/sale/expert.png[]
 
 Neben den gleichen Funktionen wie im Standardmodus werden hier zusätzliche Funktionen bereitgestellt.
 
+Sollte für einen Termin das <<Check-in/out System>> aktiviert sein, werden im erweiterten Modus zusätzlich die Funktionen *Check in* und *Check out* angezeigt.
+
 ==== Synchronisierung
 
 In den Kapiteln *Netzwerkeinstellung* und *Installation* wurde bereits auf die Möglichkeit und das Einrichten der Synchronisierung zwischen mehreren Kassen eingegangen.
@@ -382,6 +384,42 @@ Bei den Barcodeetiketten werden 14x4 pro Blatt erzeugt, was einer Etikettengrö�
 
 https://www.avery-zweckform.com/produkt/universal-etiketten-3668
 
+==== Check In
+
+Diese Funktion wird nur angezeigt, wenn das <<Check-in/out System>> für diesen Termin aktiviert wurde.
+
+Mit dieser Funktion wird zunächst eine Übersicht aller Reservierungen mit der Anzahl der online eingegebenen Artikel angezeigt. Es wird außerdem angezeigt, wie viele Artikel davon bereits eingecheckt wurden:
+
+image:images/sale/select_check_in.png[]
+
+Reservierungen bei denen alle Artikel vollständig eingecheckt wurden, werden grün markiert. Reservierungen, die gar keine Artikel enthalten, werden grau dargestellt.
+
+Mit Klick auf die Reservierung kann dann der Check-In Prozess für diese Reservierung durchgeführt werden:
+
+image:images/sale/check_in.png[]
+
+Hierbei werden alle online eingegebenen Artikel der Reservierung aufgelistet. Bereits eingecheckte Artikel werden grün markiert. Mit jedem Artikel-Scan wird die entsprechende Zeile gelb markiert und "GESCANNT" wird angezeigt. Sobald der Knopf "XX Artikel einchecken" gewählt wird, werden alle gescannten Artikel eingecheckt. Es wird dabei eine Checkin-Transaktion erzeugt, die dann auf die anderen Kassensysteme synchronisiert wird.
+
+==== Check Out
+
+Diese Funktion wird nur angezeigt, wenn das <<Check-in/out System>> für diesen Termin aktiviert wurde.
+
+Analog zu <<Check In>> wird zunächst die Übersicht aller Reservierungen gezeigt - diesmal jedoch mit der Anzahl der auszucheckenden und der bereits ausgecheckten Artikel:
+
+image:images/sale/select_check_out.png[]
+
+Die Menge der auszucheckenden Artikel bestimmt sich aus:
+
+Eingecheckte Artikel minus verkaufte Artikel minus gespendete Artikel.
+
+Reservierungen bei denen alle Artikel vollständig eingecheckt wurden, werden grün markiert. Reservierungen, bei denen nichts ausgecheckt werden muss (alles verkauft/gespendet bzw. nichts eingecheckt), werden grau dargestellt.
+
+Mit Klick auf die Reservierung kann dann der Check-Out für diese Reservierung durchgeführt werden:
+
+image:images/sale/check_out.png[]
+
+Hierbei werden alle auszucheckende Artikel der Reservierung aufgelistet. Bereits ausgecheckte Artikel werden grün markiert. Mit jedem Artikel-Scan wird die entsprechende Zeile gelb markiert und "GESCANNT" wird angezeigt. Sobald der Knopf "XX Artikel auschecken" gewählt wird, werden alle gescannten Artikel ausngecheckt. Es wird dabei eine Checkout-Transaktion erzeugt, die dann auf die anderen Kassensysteme synchronisiert wird.
+
 ==== Abrechnung
 
 WARNING: Bevor Sie die finale Abrechnung des Flohmarkts durchführen, vergewissern Sie sich bitte, dass alle Kassen die gleiche Anzahl von Transaktionen und verkauften Artikeln in den *Statistiken* aufweisen. Sollte dies nicht der Fall sein, sorgen Sie für eine korrekte Synchronisierung (über Netzwerk oder USB-Stick) zwischen den Kassen.
@@ -390,11 +428,11 @@ Mit der Abrechnungsfunktion stehen verschiedene Methoden zur Verfügung. Klicken
 
 image:images/sale/finalization.png[]
 
-Über die *Gesamtübersicht* erhalten Sie eine Abrechnung, welches die Einnahmen des Flohmarkts in der Summe zeigt und die Auszahlbeträge an die Verkäufer auflistet. Ebenso werden hier Auflistungen der Verkäufer nach denen, die Artikel zurückbekommen und denen, die keine Ware mehr zurückbekommen. Sollten Spenden für den Termin aktiviert gewesen sein, findet sich hier auch eine Aufstellung der Verkäufer die ihre gesamte Ware gespendet haben.
+Über die *Gesamtübersicht* erhalten Sie eine Abrechnung, welches die Einnahmen des Flohmarkts in der Summe zeigt und die Auszahlbeträge an die Verkäufer auflistet. Ebenso werden hier Auflistungen der Verkäufer nach denen, die Artikel zurückbekommen und denen, die keine Ware mehr zurückbekommen. Sollten Spenden für den Termin aktiviert gewesen sein, findet sich hier auch eine Aufstellung der Verkäufer die ihre gesamte Ware gespendet haben. Ist das <<Check-in/out System>> aktiviert, werden hier ebenso Listen für eingechkte, ausgescheckte und vermisste Artikel enthalten sein.
 
 image:images/sale/finalizationtotal.png[]
 
-Über die Abrechnung für *Alle Verkäufer* erzeugen Sie eine detaillierte Abrechnung für alle Reservierungen. Auf jeder Abrechnung ist für die Reservierung eine Gesamtübersicht zu sehen sowie Detaillisten der verkauften, zurückgegebenen und gespendeten Artikel.
+Über die Abrechnung für *Alle Verkäufer* erzeugen Sie eine detaillierte Abrechnung für alle Reservierungen. Auf jeder Abrechnung ist für die Reservierung eine Gesamtübersicht zu sehen sowie Detaillisten der verkauften, zurückgegebenen und gespendeten Artikel. Ist das <<Check-in/out System>> aktiviert, werden außerdem Listen für nicht abgegebene sowie vermisste Artikel enthalten sein.
 
 image:images/sale/finalizationall.png[]
 

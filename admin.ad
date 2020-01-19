@@ -299,6 +299,10 @@ Diese Option ist nur dann gültig, wenn auch der **Artikelimport aus älteren Re
 
 NOTE: Damit Verkäufer über mehrere Termine die gleiche Reservierungsnummer erhalten und somit die Etiketten wieder verwenden können, sollten diese Verkäufer eine <<Standardreservierungsnummer>> haben.
 
+====== Standard für Check-in/out System
+
+Diese Option legt die Standardeinstellung für das Check-in/out System fest. Die Option kann pro Termin in den Termineinstellungen festgelegt werden. Ein neu erstellter Termin übernimmt die hier vorgenommene Einstellung. Details zu diesem System finden sich unter <<Check-in/out System>>
+
 ===== Einbetten von Bilddateien
 
 An allen Stellen an denen Sie formattierte Eingaben machen können (bspw. Hauptseite, Teilnahmebedingungen, eMails), können auch Bilddateien eingebunden werden.
@@ -366,6 +370,24 @@ Es gibt kostenlose Cloud-Lösungen vieler Anbieter. Hier eine Liste der namhafte
 Alle diese Cloud-Anbieter erlauben neben dem Hochladen individueller Dateien auch das Öffentlichmachen (oder Sharen) dieser Dateien. Mit dieser Funktion erhält man einen öffentlich zugänglichen Link zu dieser Datei, der dann auf den Seiten und in den eMails verwendet werden kann.
 
 In der Regel haben aktuelle Betriebssysteme (Windows MacOS, Android) bereits diese Cloud-Lösungen einbegbaut. Informieren Sie sich bitte bei den jeweiligen Anbietern, wie das Hochladen und Sharen von Dateien in der Cloud funktioniert.  Mit diesen Cloud-Anbietern können Sie natürlich auch Bilddateien Hochladen und offentlich machen und ähnlich einbinden, wie es im vorigen Kapitel beschrieben wurde.
+
+==== Check-in/out System
+
+In der Regel geben Verkäufer Ihre Ware beim Veranstalter vorm Verkaufstermin ab. Der Veranstalter führt dabei ggf. Stichproben durch. Es wird jedoch in der Regel nicht geprüft, ob die abgegebene Ware vollständig ist. Es können so zum Beispiel vom Verkäufer Artikel im Onlinesystem eingegeben worden sein, aber letztendlich nicht beim Veranstalter abgegeben werden. Wird am Ende der Verkaufsveranstaltung die nicht verkaufte Ware an die Verkäufer zurückgegeben, fehlen diese Artikel dann, da sie weder verkauft noch zurücksortiert werden konnten.
+
+Des weiteren können beim Rücksortieren Fehler passieren. Artikel werden so hin und wieder falschen Verkäufern zurückgegeben. Auch werden Etiketten gelegentlich von Artikeln während der Veranstaltung getrennt. Diese Ware kann daher nicht den Verkäufern korrekt zurück sortiert werden.
+
+Aus diesen Gründen ist weder für den Veranstalter noch die Verkäufer ersichtlich, ob ein fehlender Artikel bei der Rückgabe tatsächlich auf der Veranstaltung verloren gegangen ist oder gar nicht erst abgegeben wurde.
+
+Veranstalter sichern sich daher in der Regel mit einem Haftungsausschluss in den Teilnahmebedingungen ab.
+
+Eine Alternative dazu stellt das Check-in/out System dar.
+
+Hierbei werden bei der Abgabge durch die Verkäufer alle Artikel einzeln eingescannt und damit im Kassensystem registriert (Check In). Hierbei fällt sofort auf, welche Artikel zwar online eingegeben wurden, aber nicht bei der Abgabge vorhanden sind. Nur registrierte / eingecheckte Ware kann verkauft werden. Auch werden Artikel erkannt, die gar nicht für die Veranstaltung eingetragen wurden. Außerdem kann so geprüft werden, dass alle Barcodes korrekt gelesen werden können.
+
+Nach dem Abschluss der Veranstaltung und dem Rücksortieren werden für jeden Verkäufer die zurückzugebenden Artikel im Check Out abermals gescannt. Wird dabei ein Artikel gescannt, der dem Verkäufer gar nicht gehört, wird dies sofort erkannt und kann korrigiert werden. Sollten nach vollständigem Scan der auszucheckenden Artikel noch einige Artikel fehlen, ist das ein Hinweis darauf, dass diese ggf. falsch einsortiert wurden oder sich die Artikel bei den Artikeln ohne Etikett befinden, die nicht zurücksortiert werden konnten.
+
+Das Check-in/out System lässt sich für jede Veranstaltung/jeden Termin einzeln aktivieren. Sobald die Option aktiviert ist und die Kassensoftware die Daten des Online-Systems eingespielt bekommt, steht an der Kassensoftware die Checkin/out Funktionalität zur Verfügung.
 
 ==== Verkäufer
 
@@ -506,6 +528,8 @@ Mit der *Reservierungsgebühr* können Sie eine Basisgebühr pro Reservierung de
 NOTE: Bei Terminen auf Tischbasis ist ausschließlich die Reservierungsgebühr zu definieren. Eine Abrechnung erfolgt hierbei nicht.
 
 Bei aktivierter Option *Reservierungsgebühr wird im Voraus bezahlt* werden von Auszahlungsbeträgen auf Abrechnungen für diesen Termin keine Reservierungsgebühren abgezogen.
+
+Mit *Check-in/out System* wird festgelegt, ob dieser Termin dieses System verwendet.
 
 ====== Helfersystem
 
