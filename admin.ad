@@ -10,13 +10,25 @@ Der Zugang zum Verwaltungsbereich ist durch Passwort geschützt:
 
 image:images/web/login.png[]
 
-Jede Person, die Zugang zum Verwaltungsbereich benötigt, erhält ein Passwort bei der Einrichtung, was nach dem ersten Anmelden im Verwaltungsbereich geändert werden muss. Die Anmeldung erfolgt mit der eMail-Adresse und diesem Passwort. Sollten Sie das Passwort einmal vergessen haben, kontaktieren Sie uns bitte per Mail (mit der Mail-Adresse, die Sie bei der Anmeldung verwenden). Wir setzen für Sie dann ein neues Passwort, dass Sie dann wieder nach einer erfolgreichen Anmeldung ändern sollten.
+Jede Person, die Zugang zum Verwaltungsbereich benötigt, erhält ein Passwort bei der Einrichtung des Zugangskontos, was nach dem ersten Anmelden im Verwaltungsbereich geändert werden kann. Die Anmeldung erfolgt mit der eMail-Adresse und diesem Passwort.
 
 Nach einer erfolgreichen Anmeldung gelangen Sie auf die Hauptseite des Verwaltungsbereichs. Im oberen rechten Teil können Sie sehen, dass Sie angemeldet sind. Hier können Sie sich auch wieder aus dem Verwaltungsbereich abmelden und ihr Passwort ändern.
 
-image:images/web/login_info.png[]
-
 image:images/web/password_change.png[]
+
+===== Passwort zurücksetzen
+
+Sollten Sie das Passwort für Ihr Zugangskonto einmal vergessen haben, können Sie die Funktion zum Zurücksetzen des Paassworts nutzen, die Sie unterhalb des Loginformulars aufrufen können:
+
+image:images/web/password_reset_init.png[]
+
+Geben Sie hier erneut die eMail-Adresse Ihres Verwaltungskontos an. Sie erhalten damit eine eMail mit einem Link, mit dessen Aufruf Sie ein neues Passwort für Ihr Zugangskonto definieren können:
+
+image:images/web/password_reset.png[]
+
+Nach erfolgreichem Neusetzen des Passworts für Ihren Verwaltungszugang können Sie sich sofort mit diesem anmelden.
+
+HINT: Aus Sicherheitsgründen ist das Zurücksetzen des Passworts zeitlichen Beschränkungen unterlegen. Einerseits kann die Funktion nur in bestimmten zeitlichen Abständen genutzt werden. Des weiteren ist der Link in der eMail, mit der Sie Ihr Passwort zurücksetzen können nur eine begrenzte Zeit lang gültig.
 
 ==== Hauptseite
 
@@ -182,6 +194,20 @@ Damit daraus ein anklickbarer und leserlicher Link wird, bitte folgende Syntax v
 `[Text des Einsprunglinks]({{ platzhalter }})`
 
 Darüberhinaus können natürlich andere Seiten mit dieser Schreibweise auch ohne Platzhalter verlinkt werden.
+
+==== Nutzerverwaltung
+
+Mit der Nutzerverwaltung können Sie weitere Zugänge für den Verwaltungsbereich hinzufügen sowie bestehende Zugänge bearbeiten oder löschen. Ihren eigenen Zugang können Sie nicht selbst löschen:
+
+image:images/web/users_index.png[]
+
+IMPORTANT: Sie sollten regelmäßig die Verwaltungszugänge auf Aktualität prüfen und nicht mehr benötigte Zugänge entfernen.
+
+image:images/web/users_edit.png[]
+
+Beim Anlegen eines weiteren Zugangs zum Verwaltungsbereich wird automatisch ein neues Passwort vergeben. Die Zugangsinformationen werden an die angegebene eMail-Adresse des neuen Verwaltungszugangs verschickt.
+
+HINT: Wir empfehlen, neben der eMail-Adresse auch einen Namen dem neuen Verwaltungszugang zu hinterlegen. Dies erlaubt es Ihnen später, die Verwaltungskonten besser voneinander zu unterscheiden, wenn diese wieder gelöscht werden sollen.
 
 ==== Systemeinstellungen
 
