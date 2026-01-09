@@ -547,15 +547,19 @@ Wollen Sie unabhäng von der *Basis für Preisangaben* bei Artikeln *Cent-genaue
 
 Bei *Umsatzanteil für Kommission* wird bestimmt, welcher Anteil am Warenverkaufswert als Kommissionsgebühr einbehalten wird. Ein Wert von *0,2* bedeutet dabei zum Beispiel einen Anteil von *20%* - also einem Fünftel.
 
-Sofern die Funktion für Ihren Flohmarkt freigeschaltet, können Sie mit der Option *Spenden nicht verkaufter Artikel* festlegen, dass die Verkäufer bei der Artikeleingabe die Wahl für jeden Artikel haben, diesen zu spenden, sollte er nicht verkauft werden. Auf den Etiketten solcher Artikel befindet sich dann eine entsprechende Markierung, die es dem Organisationsteam erlaubt, beim Zurücksortieren Spendenartikel zu sondieren.
-
 Mit der *Reservierungsgebühr* können Sie eine Basisgebühr pro Reservierung definieren, welche in jedem Fall vom Verkäufer zu entrichten ist. Diese Gebühr können Sie entweder im Vorfeld (z.B. bei der Artikelabgabe) vom Verkäufer abverlangen oder in der Abrechnung vom Auszahlbetrag an den Verkäufer abziehen. Das System berücksichtigt standardmäßig die Reservierungsgebühr in der Abrechnung.
 
 NOTE: Bei Terminen auf Tischbasis ist ausschließlich die Reservierungsgebühr zu definieren. Eine Abrechnung erfolgt hierbei nicht.
 
 Bei aktivierter Option *Reservierungsgebühr wird im Voraus bezahlt* werden von Auszahlungsbeträgen auf Abrechnungen für diesen Termin keine Reservierungsgebühren abgezogen.
 
-Mit *Check-in/out System* wird festgelegt, ob dieser Termin dieses System verwendet.
+====== Spenden
+
+image:images/web/events_edit_donations.png[]
+
+Mit *Spenden nicht verkaufter Artikel aktiviert* werden Spenden für diesen Termin aktiviert. Die Standardeinstellung dieser Funktion ist in den Systemeinstellungen festlegbar. Verkäufer haben bei aktivierter Spendenfunktion bei der Artikeleingabe die Wahl, diesen Artikel zu spenden, sollte er nicht verkauft werden. Auf den Etiketten solcher Artikel befindet sich dann eine entsprechende Markierung "S", die es dem Organisationsteam erlaubt, beim Zurücksortieren Spendenartikel zu sondieren.
+
+Es kann die *maximale Spendenanzahl ja Reservierung* festgelegt werden. Wenn das Feld leer bleibt, können unbegrenzt Artikel zur Spende freigegeben werden.
 
 ====== Helfersystem
 
@@ -564,6 +568,8 @@ image:images/web/events_edit_support.png[]
 Ist das *Helfersystem für Verkäufer freigeschaltet*, so können Verkäufer sich in Helfergruppen für diesen Termin innerhalb ihres geschützten Bereiches eintragen, sofern noch Helferplätze für diesen Termin frei sind. Ist diese Option nicht aktiviert, können ausschließlich im Verwaltungsbereich Helferplätze an registrierte Verkäufer vergeben werden.
 
 Ist die Option *Helfer können sich wieder austragen* aktiviert, so können sich Verkäufer, die als Helfer in Helfergruppen für diesen Termin eingetragen sind, wieder selbständig austragen. Ist diese Option nicht aktiviert, erscheint stattdessen ein Hinweis, dass sich der Helfer den Veranstalter kontaktieren muss, sollte er als Helfer nicht mehr teilnehmen können. Es können ausschließlich im Verwaltungsbereich Helfer wieder entfernt werden.
+
+Mit *Check-in/out System* wird festgelegt, ob bei diesem Termin jeder Artikel bei der Artikelannahme (bevor er verkauft werden kann) und Rückgabe erfasst werden soll. Mit der Funktion lässt sich genau dokumentieren, welche Artikel wirklich von den Verkäufern abgegeben bzw. welche an sie wieder zurückgegeben wurden.
 
 ===== Termin Detailansicht
 
@@ -633,11 +639,11 @@ image:images/web/mails_finalize.png[]
 
 image:images/web/reservations.png[]
 
-Hier werden die aktuellen Reservierungen aufgelistet. Eine Suche auf Basis von Verkäuferstammdaten ist hier möglich. Es wird Verkäufername, Ort, eMailadresse, die Anzahl eingegebener Artikel für die Reservierung sowie Reservierungsgebühr und Kommissionsanteil angezeigt. Die Artikel für jede Reservierung kann angezeigt und bearbeitet werden. Jede Reservierung kann wieder freigegeben werden. Mit Klick auf den Namen für eine Reservierung sind die Details für einen Verkäufer einsehbar.
+Hier werden die aktuellen Reservierungen aufgelistet. Eine Suche auf Basis von Verkäuferstammdaten ist hier möglich. Es wird Verkäufername, Ort, eMailadresse, die Anzahl eingegebener Artikel für die Reservierung sowie Reservierungsgebühr und Kommissionsanteil angezeigt. Sind für den Termin Artikelspenden möglich und diese limitiert, wird außerdem das Spendenlimit pro Reservierung angezeigt. Die Artikel für jede Reservierung kann angezeigt und bearbeitet werden. Jede Reservierung kann wieder freigegeben werden. Mit Klick auf den Namen für eine Reservierung sind die Details für einen Verkäufer einsehbar.
 
 image:images/web/reservations_index.png[]
 
-Es lassen sich Reservierungsgebühr, Kommissionsanteil und maximale Artikelzahl pro Reservierung individuell einstellen. Findet keine individuelle Einstellung statt, gelten die Daten, die beim Termin voreingestellt sind.
+Es lassen sich Reservierungsgebühr, Kommissionsanteil, maximale Artikelzahl und (falls Spenden aktiviert und ein Limit definiert ist) maximale Spendenzahl pro Reservierung individuell einstellen. Findet keine individuelle Einstellung statt, gelten die Daten, die beim Termin voreingestellt sind.
 
 image:images/web/reservations_edit.png[]
 
