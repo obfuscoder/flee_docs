@@ -69,7 +69,7 @@ Es gibt folgende Optionen bei den Größenangaben:
 
 ===== Übersicht, bearbeiten, löschen
 
-Die Kategorieübersicht zeigt eine Liste aller angelegter Kategorien mit Name, Überkategorie, maximaler Artikelanzahl und ggf. Spendenzwang.
+Die Kategorieübersicht zeigt eine Liste aller angelegter Kategorien mit Name, Überkategorie, maximaler Artikelanzahl und ggf. Spendenzwang, sowie Spendenlimits.
 
 image:images/web/categories_index.png[]
 
@@ -85,8 +85,11 @@ Die Bearbeitung umfasst:
  - Auswahl der Überkategorie
  - maximale Anzahl von Artikeln pro Reserverierung, welche dieser Kategorie zugeordnet sein können
  - Spendenzwang für diese Kategorie
+ - Spendenlimit, d.h. die maximale Anzahl von zur Spende freigegebenen Artikeln dieser Kategorie
  - Regel bei der Angabe von Größen für diese Kategorie
  - Option, ob Kategorie geschlechtsspezifisch ist (männlich, weiblich, beides)
+
+NOTE: Die Spendenfunktionen stehen nur zur Verfügung, wenn die Systemeinstellung "Standard für Spenden nicht verkaufter Artikel" aktiviert ist.
 
 ==== Stammartikel
 
